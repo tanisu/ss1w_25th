@@ -6,7 +6,7 @@ public class WaterGenerator : MonoBehaviour
 {
     [SerializeField] GameObject waterPrefab;
     [SerializeField] int setCount;
-    bool setted, startOnce;
+    bool setted,loopStart;
     
     void Start()
     {
@@ -16,10 +16,10 @@ public class WaterGenerator : MonoBehaviour
     
     void Update()
     {
-        if (setted & !startOnce)
-        {
-            StartCoroutine(_createWater());
-        }
+        //if (setted && !loopStart)
+        //{
+        //    StartCoroutine(_reCreateWater());
+        //}
     }
 
     IEnumerator _createWater()
@@ -30,10 +30,22 @@ public class WaterGenerator : MonoBehaviour
             float moveX = Random.Range(-180f,180f);
             Vector2 force = new Vector2(moveX, 0);
             water.GetComponent<Rigidbody2D>().AddForce(force);
-            yield return new WaitForFixedUpdate();
+            yield return null;
         }
-        setted = true;
-        startOnce = setted == true ? true : false;
+        StartCoroutine(_reCreateWater());
+    }
+    IEnumerator _reCreateWater()
+    {
 
+        yield return new WaitForSeconds(2f);
+
+        for (int i = 0; i < 1000; i++)
+        {
+            GameObject water = Instantiate(waterPrefab, transform.position, transform.rotation, transform.parent.transform);
+            float moveX = Random.Range(-180f, 180f);
+            Vector2 force = new Vector2(moveX, 0);
+            water.GetComponent<Rigidbody2D>().AddForce(force);
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 }
