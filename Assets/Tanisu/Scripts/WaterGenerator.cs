@@ -39,7 +39,7 @@ public class WaterGenerator : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 500; i++)
         {
             GameObject water = Instantiate(waterPrefab, transform.position, transform.rotation, transform.parent.transform);
             float moveX = Random.Range(-180f, 180f);
