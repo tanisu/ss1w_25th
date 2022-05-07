@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-    [SerializeField] float force = 200f;
+    [SerializeField] float force = 250f;
     int x = 1;
     float waveInterval, interval;
     Rigidbody2D rgbd2d;
 
     void Start()
     {
-        waveInterval = 2.5f;
+        waveInterval = 2.02f;
         rgbd2d = GetComponent<Rigidbody2D>();
         interval = waveInterval;
     }
