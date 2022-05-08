@@ -4,48 +4,34 @@ using UnityEngine;
 
 public class WaterGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject waterPrefab;
-    [SerializeField] int setCount;
-    bool setted,loopStart;
+    [SerializeField] ObjectPool waterPool;
     
     void Start()
     {
-        StartCoroutine(_createWater());
+        
+        StartCoroutine(_launchWater());
     }
 
     
     void Update()
     {
-        //if (setted && !loopStart)
-        //{
-        //    StartCoroutine(_reCreateWater());
-        //}
+
     }
 
-    IEnumerator _createWater()
+    IEnumerator _launchWater()
     {
-        for (int i = 0; i < setCount; i++)
-        {
-            GameObject water = Instantiate(waterPrefab, transform.position, transform.rotation,transform.parent.transform);
-            float moveX = Random.Range(-180f,180f);
-            Vector2 force = new Vector2(moveX, 0);
-            water.GetComponent<Rigidbody2D>().AddForce(force);
-            yield return null;
-        }
-        StartCoroutine(_reCreateWater());
-    }
-    IEnumerator _reCreateWater()
-    {
+ 
 
-        yield return new WaitForSeconds(2f);
-
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < waterPool.maxCount ; i++)
         {
-            GameObject water = Instantiate(waterPrefab, transform.position, transform.rotation, transform.parent.transform);
-            float moveX = Random.Range(-180f, 180f);
-            Vector2 force = new Vector2(moveX, 0);
-            water.GetComponent<Rigidbody2D>().AddForce(force);
-            yield return new WaitForSeconds(0.05f);
+            waterPool.Launch(transform.position);
+            yield return new WaitForSeconds(0.01f);
         }
+            
+
+
+        
+        //yield return null;
     }
+
 }

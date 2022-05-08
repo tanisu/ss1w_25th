@@ -25,10 +25,10 @@ public class Board : MonoBehaviour
             transform.DORotate(new Vector3(0, 0, -50f), 0.5f);
         }
 
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        {
-            transform.DORotate(Vector3.zero, 0.1f);
-        }
+        //if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        //{
+        //    transform.DORotate(Vector3.zero, 0.1f);
+        //}
     }
 
     private void FixedUpdate()
@@ -36,12 +36,12 @@ public class Board : MonoBehaviour
         if (!isWater) return;
         if (Input.GetKey(KeyCode.A))
         {
-            rgbd2d.AddForce(new Vector2(-10f, 0));
+            rgbd2d.AddForce(new Vector2(-1f, 0));
 
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rgbd2d.AddForce(new Vector2(10f, 0));
+            rgbd2d.AddForce(new Vector2(1f, 0));
 
         }
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
