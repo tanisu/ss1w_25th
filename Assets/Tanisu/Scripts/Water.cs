@@ -25,6 +25,7 @@ public class Water : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.I.gameState != GameManager.GAMESTATE.PLAY) return;
         interval -= Time.fixedDeltaTime;
         if(interval <= 0)
         {
@@ -37,7 +38,11 @@ public class Water : MonoBehaviour
 
 
 
-
+    public void StopMove()
+    {
+        
+        rgbd2d.velocity = Vector3.zero;
+    }
 
     public void EntryStage()
     {

@@ -22,7 +22,7 @@ public class PoolContent : MonoBehaviour
 
     }
 
-        public void HideFromStage()
+    public void HideFromStage()
     {
         pool.Collect(this);
     }
