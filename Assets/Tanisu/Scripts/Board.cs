@@ -29,6 +29,11 @@ public class Board : MonoBehaviour
         {
             //fall
         }
+        if(transform.position.y < -5.5f)
+        {
+            //retry
+            GameManager.I.gameState = GameManager.GAMESTATE.REPLAY;
+        }
         
     }
 

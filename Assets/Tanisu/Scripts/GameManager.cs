@@ -44,9 +44,11 @@ public class GameManager : MonoBehaviour
     {
         cups = stage.GetComponentsInChildren<Cup>();
         gameState = GAMESTATE.PLAY;
+        cups[currentCup].ChangeColor();
+
     }
 
-    
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -55,25 +57,32 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) || (gameState == GAMESTATE.PLAY && cupClear))
         {
-            
+            //if (currentCup - 1 >= cups.Length) return;
+
             gameState = GAMESTATE.CLEAR;
             cupClear = false;
             cups[currentCup].StopWaters();
             cups[currentCup].hideWaterGenerator();
             currentCup++;
-            //QuadRenderer.materials[0] = cups[currentCup].metaBallRenderer;
-            //QuadRenderer.gameObject.SetActive(false);
-            //QuadRenderer.gameObject.SetActive(true);
+
             SoundManager.I.StopBGM();
             player.switchRgbd();
             player.SetPlayerPos();
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(()=> {
+                cups[currentCup].ChangeColor();
+                QuadRenderer.gameObject.SetActive(false);
+                QuadRenderer.gameObject.SetActive(true);
                 cups[currentCup].showWaterGenerator();
                 player.switchRgbd();
                 gameState = GAMESTATE.PLAY;
                 SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
             });
         }
+        //if(gameState == GAMESTATE.REPLAY)
+        //{
+        //    cups[currentCup].StopWaters();
+
+        //}
     }
 
     public void CupClear()

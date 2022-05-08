@@ -14,13 +14,10 @@ public class Water : MonoBehaviour
 
     void Start()
     {
-        
-        
         waveInterval = 2.02f;
         rgbd2d = GetComponent<Rigidbody2D>();
         interval = waveInterval;
     }
-
 
 
     private void FixedUpdate()
@@ -29,7 +26,6 @@ public class Water : MonoBehaviour
         interval -= Time.fixedDeltaTime;
         if(interval <= 0)
         {
-            
             rgbd2d.AddForce(new Vector2(force * x, 0));
             interval = waveInterval;
             x *= -1;

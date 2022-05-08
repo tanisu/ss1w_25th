@@ -15,6 +15,14 @@ public class PoolContent : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void Update()
+    {
+        if(transform.position.y < -6f || transform.localPosition.x > 3.2f || transform.localPosition.x < -3.2f )
+        {
+            HideFromStage();
+        }
+    }
+
     public void ShowInStage(Vector3 _pos)
     {
         transform.position = _pos;
