@@ -7,12 +7,27 @@ public class Cup : MonoBehaviour
     public BGMSoundData.BGM BGMTitle;
     public Material metaBallRenderer;
     [SerializeField] GameObject waterGenerator;
-    
+    [SerializeField] Color color, strokeColor;
+
+    private void Start()
+    {
+        
+        //metaBallRenderer.SetColor("_Color",color);
+        //metaBallRenderer.SetColor("_StrokeColor", strokeColor);
+    }
+
     public void StopWaters()
     {
         PoolContent[] waters = GetComponentsInChildren<PoolContent>();      
         StartCoroutine(_collectWaters(waters));
     }
+
+    public void ChangeColor()
+    {
+        metaBallRenderer.SetColor("_Color", color);
+        metaBallRenderer.SetColor("_StrokeColor", strokeColor);
+    }
+
     public void hideWaterGenerator()
     {
         waterGenerator.SetActive(false);
