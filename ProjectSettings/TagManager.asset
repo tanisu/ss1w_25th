@@ -47,3 +47,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 232342207
+    locked: 0
+  - name: BackObjects
+    uniqueID: 1517955221
+    locked: 0
+  - name: Balls
+    uniqueID: 1762498903
+    locked: 0
+  - name: FrontObjects
+    uniqueID: 4052469023
+    locked: 0
+  - name: UI
+    uniqueID: 832561267
+    locked: 0
