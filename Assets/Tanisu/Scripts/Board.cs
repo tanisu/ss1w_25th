@@ -24,11 +24,6 @@ public class Board : MonoBehaviour
         {
             transform.DORotate(new Vector3(0, 0, -50f), 0.5f);
         }
-
-        //if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        //{
-        //    transform.DORotate(Vector3.zero, 0.1f);
-        //}
     }
 
     private void FixedUpdate()
