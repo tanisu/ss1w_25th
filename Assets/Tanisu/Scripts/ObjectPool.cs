@@ -23,6 +23,7 @@ public class ObjectPool : MonoBehaviour
     public void Collect(PoolContent _obj)
     {
         _obj.gameObject.SetActive(false);
+        _obj.transform.parent = transform;
         objQueue.Enqueue(_obj);
     }
 

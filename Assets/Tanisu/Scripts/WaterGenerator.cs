@@ -5,33 +5,30 @@ using UnityEngine;
 public class WaterGenerator : MonoBehaviour
 {
     [SerializeField] ObjectPool waterPool;
+    Coroutine coroutine;
     
     void Start()
     {
-        
-        StartCoroutine(_launchWater());
+        coroutine = StartCoroutine(_launchWater());
     }
 
     
     void Update()
     {
-
+        if(GameManager.I.gameState == GameManager.GAMESTATE.CLEAR)
+        {
+            StopCoroutine(coroutine);
+        }
     }
 
     IEnumerator _launchWater()
     {
- 
-
         for (int i = 0; i < waterPool.maxCount ; i++)
         {
-            waterPool.Launch(transform.position);
+            PoolContent obj = waterPool.Launch(transform.position);
+            obj.transform.parent = transform.parent;
             yield return new WaitForSeconds(0.01f);
         }
-            
-
-
-        
-        //yield return null;
     }
 
 }

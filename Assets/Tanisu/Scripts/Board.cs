@@ -7,6 +7,7 @@ public class Board : MonoBehaviour
 {
     Rigidbody2D rgbd2d;
     bool isWater;
+
     void Start()
     {
         rgbd2d = GetComponent<Rigidbody2D>();
@@ -24,6 +25,11 @@ public class Board : MonoBehaviour
         {
             transform.DORotate(new Vector3(0, 0, -50f), 0.5f);
         }
+        if(transform.rotation.z > Mathf.Abs(0.7f))
+        {
+            //fall
+        }
+        
     }
 
     private void FixedUpdate()
@@ -45,7 +51,7 @@ public class Board : MonoBehaviour
             rgbd2d.angularVelocity = 0f;
         }
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Water"))
@@ -59,6 +65,19 @@ public class Board : MonoBehaviour
         if (collision.gameObject.CompareTag("Water"))
         {
             isWater = false;
+        }
+    }
+    
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("ClearLine"))
+        {
+            if(collision.transform.position.y < transform.position.y)
+            {
+                
+                GameManager.I.CupClear();
+            }
         }
     }
 }
