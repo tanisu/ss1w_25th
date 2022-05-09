@@ -5,8 +5,9 @@ using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] GameObject board, surfer;
-    [SerializeField] float startPosX = -1.5f;
+    [SerializeField] Board board;
+    [SerializeField] Surfer surfer;
+    [SerializeField] Vector2 startPos;
     bool ready;
 
     
@@ -14,26 +15,33 @@ public class Player : MonoBehaviour
     {
         if (!ready)
         {
-            board.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-            board.GetComponent<BoxCollider2D>().enabled = false;
+
+            board.OffPhysics();
             ready = true;
         }
         else
         {
-            board.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            board.GetComponent<BoxCollider2D>().enabled = true;
+            board.OnPhysics();
             ready = false;
         }
     }
 
     public void SetPlayerPos()
     {
-        board.transform.DOLocalMoveX(startPosX, GameManager.I.cupChangeTime);
+        board.SetStartPos(startPos);
     }
 
     public void SetRetry()
     {
-        surfer.transform.parent = board.transform;
-        //board.transform.position = 
+        StartCoroutine(_setStartPos());
+    }
+
+    IEnumerator _setStartPos()
+    {
+        yield return new WaitForSeconds(2.5f);
+        board.SetBeforePos(startPos);
+        surfer.SetOnBoard();
+        switchRgbd();
+        board.transform.DOMove(startPos, 1f).OnComplete(()=> { switchRgbd(); });
     }
 }

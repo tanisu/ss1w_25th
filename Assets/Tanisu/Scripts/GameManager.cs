@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
                 QuadRenderer.gameObject.SetActive(true);
                 cups[currentCup].showWaterGenerator();
                 player.switchRgbd();
-                gameState = GAMESTATE.PLAY;
                 SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
             });
         }
@@ -84,6 +83,7 @@ public class GameManager : MonoBehaviour
             gameOver = false;
             cups[currentCup].StopWaters();
             cups[currentCup].hideWaterGenerator();
+            player.SetRetry();
         }
 
     }

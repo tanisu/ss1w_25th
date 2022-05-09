@@ -6,15 +6,18 @@ using DG.Tweening;
 public class Board : MonoBehaviour
 {
 
-    [SerializeField] float timeLimit,roteLimit;
-    [SerializeField] GameObject surfer;
+    [SerializeField] float timeLimit,roteLimit,roteMax;
+    [SerializeField] Surfer surfer;
     float time;
     Rigidbody2D rgbd2d;
+    BoxCollider2D bc2d;
     bool isWater;
+    //Tween tween;
 
     void Start()
     {
         rgbd2d = GetComponent<Rigidbody2D>();
+        bc2d = GetComponent<BoxCollider2D>();
     }
 
     
@@ -22,26 +25,29 @@ public class Board : MonoBehaviour
     {
 
         if (GameManager.I.gameState != GameManager.GAMESTATE.PLAY) return;
+
         if (Input.GetKeyDown(KeyCode.A))
         {
-            transform.DORotate(new Vector3(0, 0, 50f), 0.5f);
+            transform.DOLocalRotate(new Vector3(0, 0, roteMax), 0.5f);
+            
 
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.DORotate(new Vector3(0, 0, -50f), 0.5f);
+            transform.DOLocalRotate(new Vector3(0, 0, -roteMax), 0.5f);
         }
-        
-        if(Mathf.Abs(transform.rotation.z) > roteLimit)
+        //if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        //{
+        //    tween.Kill();
+        //    transform.DOLocalRotate(new Vector3(0, 0, 0), 0.1f);
+        //}
+
+
+        if (Mathf.Abs(transform.rotation.z) > roteLimit)
         {
             if(_updateTimer() >= 1)
             {
-                
-                surfer.transform.parent = transform.parent;
-                Rigidbody2D surferRgbd2d =  surfer.GetComponent<Rigidbody2D>();
-                surferRgbd2d.bodyType = RigidbodyType2D.Dynamic;
-                surferRgbd2d.simulated = true;
-                
+                surfer.LeaveBoard();
                 GameManager.I.GameOver();
             }
         }
@@ -55,38 +61,33 @@ public class Board : MonoBehaviour
 
         if(transform.position.y < -5.5f)
         {
-            //retry
-            GameManager.I.gameState = GameManager.GAMESTATE.REPLAY;
+            GameManager.I.GameOver();
         }
-        
     }
+
+
 
     float _updateTimer()
     {
         time += Time.deltaTime;
         float timer = time / timeLimit;
-        //Debug.Log(timer);
         return timer;
     }
 
     private void FixedUpdate()
     {
-        if (!isWater) return;
-        if (Input.GetKey(KeyCode.A))
-        {
-            rgbd2d.AddForce(new Vector2(-1f, 0));
+        //if (!isWater) return;
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    rgbd2d.AddForce(new Vector2(-1f, 0));
 
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            rgbd2d.AddForce(new Vector2(1f, 0));
+        //}
+        //if (Input.GetKey(KeyCode.D))
+        //{
+        //    rgbd2d.AddForce(new Vector2(1f, 0));
 
-        }
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        {
-            rgbd2d.velocity = Vector3.zero;
-            rgbd2d.angularVelocity = 0f;
-        }
+        //}
+
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -112,9 +113,36 @@ public class Board : MonoBehaviour
         {
             if(collision.transform.position.y < transform.position.y)
             {
-                
                 GameManager.I.CupClear();
             }
         }
+    }
+
+    public void OffPhysics()
+    {
+        rgbd2d.bodyType = RigidbodyType2D.Kinematic;
+        rgbd2d.simulated = false;
+        bc2d.enabled = false;
+    }
+
+    public void OnPhysics()
+    {
+        rgbd2d.velocity = Vector3.zero;
+        rgbd2d.angularVelocity = 0f;
+        rgbd2d.bodyType = RigidbodyType2D.Dynamic;
+        rgbd2d.simulated = true;
+        bc2d.enabled = true;
+    }
+
+    public void SetStartPos(Vector2 _startPos)
+    {
+        transform.DOLocalMove(_startPos, GameManager.I.cupChangeTime);
+        transform.DORotate(Vector3.zero, GameManager.I.cupChangeTime);
+    }
+
+    public void SetBeforePos(Vector2 _startPos)
+    {
+        transform.position = new Vector3(-4.5f, _startPos.y);
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }
