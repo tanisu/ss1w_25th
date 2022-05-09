@@ -30,4 +30,10 @@ public class Player : MonoBehaviour
     {
         board.transform.DOLocalMoveX(startPosX, GameManager.I.cupChangeTime);
     }
+
+    public void SetRetry()
+    {
+        surfer.transform.parent = board.transform;
+        //board.transform.position = 
+    }
 }
