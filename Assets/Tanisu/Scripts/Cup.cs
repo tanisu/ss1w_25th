@@ -38,6 +38,14 @@ public class Cup : MonoBehaviour
         waterGenerator.SetActive(true);
     }
 
+    public void Restart()
+    {
+        waterGenerator.SetActive(true);
+        waterGenerator.GetComponent<WaterGenerator>().ReStart();
+    }
+
+    
+
     IEnumerator _collectWaters(PoolContent[] _waters)
     {
         foreach(PoolContent water in _waters)
@@ -48,7 +56,13 @@ public class Cup : MonoBehaviour
         foreach (PoolContent water in _waters)
         {
             water.HideFromStage();
-
         }
+        if(GameManager.I.gameState == GameManager.GAMESTATE.REPLAY)
+        {
+            Debug.Log("replay");
+            yield return new WaitForSeconds(2f);
+            Restart();
+        }
+        GameManager.I.gameState = GameManager.GAMESTATE.PLAY;
     }
 }

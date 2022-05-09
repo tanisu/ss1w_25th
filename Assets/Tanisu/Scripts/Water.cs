@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
+
 
 public class Water : MonoBehaviour
 {
     
-    [SerializeField] float force = 50f;
+    [SerializeField] float force;
     int x = 1;
     float waveInterval, interval;
     Rigidbody2D rgbd2d;
@@ -36,12 +36,12 @@ public class Water : MonoBehaviour
 
     public void StopMove()
     {
-        
         rgbd2d.velocity = Vector3.zero;
     }
 
     public void EntryStage()
     {
+        rgbd2d.velocity = Vector3.zero;
         rgbd2d.AddForce(new Vector2(force, 0));
     }
 

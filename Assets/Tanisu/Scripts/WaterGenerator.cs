@@ -21,6 +21,11 @@ public class WaterGenerator : MonoBehaviour
         }
     }
 
+    public void ReStart()
+    {
+        StartCoroutine(_launchWater());
+    }
+
     IEnumerator _launchWater()
     {
         for (int i = 0; i < waterPool.maxCount ; i++)
