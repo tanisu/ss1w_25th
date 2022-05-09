@@ -12,7 +12,7 @@ public class Board : MonoBehaviour
     Rigidbody2D rgbd2d;
     BoxCollider2D bc2d;
     bool isWater;
-    //Tween tween;
+    Tween tween;
 
     void Start()
     {
@@ -28,19 +28,19 @@ public class Board : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            transform.DOLocalRotate(new Vector3(0, 0, roteMax), 0.5f);
+            tween = transform.DORotate(new Vector3(0, 0, roteMax), 0.5f);
             
 
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.DOLocalRotate(new Vector3(0, 0, -roteMax), 0.5f);
+            tween = transform.DORotate(new Vector3(0, 0, -roteMax), 0.5f);
         }
-        //if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        //{
-        //    tween.Kill();
-        //    transform.DOLocalRotate(new Vector3(0, 0, 0), 0.1f);
-        //}
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            tween.Kill();
+            //transform.DOLocalRotate(new Vector3(0, 0, 0), 0.1f);
+        }
 
 
         if (Mathf.Abs(transform.rotation.z) > roteLimit)

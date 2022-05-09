@@ -42,6 +42,7 @@ public class Water : MonoBehaviour
     public void EntryStage()
     {
         rgbd2d.velocity = Vector3.zero;
+        rgbd2d.angularVelocity = 0f;
         rgbd2d.AddForce(new Vector2(force, 0));
     }
 

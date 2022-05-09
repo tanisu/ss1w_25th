@@ -32,6 +32,7 @@ public class WaterGenerator : MonoBehaviour
         {
             PoolContent obj = waterPool.Launch(transform.position);
             obj.transform.parent = transform.parent;
+            
             yield return new WaitForSeconds(0.03f);
         }
     }

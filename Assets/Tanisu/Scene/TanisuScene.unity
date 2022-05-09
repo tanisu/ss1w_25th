@@ -1487,7 +1487,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1541661944056610186, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}
       propertyPath: roteMax
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 1541661944056610193, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}
       propertyPath: m_Name
@@ -1503,7 +1503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1541661944056610197, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 3.42
       objectReference: {fileID: 0}
     - target: {fileID: 1541661944056610197, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1539,7 +1539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1541661944056610198, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}
       propertyPath: m_Mass
-      value: 0.5
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 1541661944056610198, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}
       propertyPath: m_Constraints
