@@ -88,6 +88,8 @@ public class BGMSoundData
         CALYPSO,
         CHINA,
         DARK,
+        REGGAETON1,
+        JAPANESE
 
     }
 
