@@ -5,6 +5,9 @@ using DG.Tweening;
 
 public class Board : MonoBehaviour
 {
+
+    [SerializeField] float timeLimit;
+    float time;
     Rigidbody2D rgbd2d;
     bool isWater;
 
@@ -16,6 +19,8 @@ public class Board : MonoBehaviour
     
     void Update()
     {
+
+        
         if (Input.GetKeyDown(KeyCode.A))
         {
             transform.DORotate(new Vector3(0, 0, 50f), 0.5f);
@@ -27,7 +32,10 @@ public class Board : MonoBehaviour
         }
         if(transform.rotation.z > Mathf.Abs(0.7f))
         {
-            //fall
+            if(_updateTimer() >= 1)
+            {
+                Debug.Log("fall");
+            }
         }
         if(transform.position.y < -5.5f)
         {
@@ -35,6 +43,14 @@ public class Board : MonoBehaviour
             GameManager.I.gameState = GameManager.GAMESTATE.REPLAY;
         }
         
+    }
+
+    float _updateTimer()
+    {
+        time += Time.deltaTime;
+        float timer = time / timeLimit;
+        //Debug.Log(timer);
+        return timer;
     }
 
     private void FixedUpdate()
