@@ -16,7 +16,7 @@ public class Surfer : MonoBehaviour
     {
         transform.parent = transform.parent;
         rgbd2d.bodyType = RigidbodyType2D.Dynamic;
-        rgbd2d.simulated = true;
+       // rgbd2d.simulated = true;
     }
 
     public void SetOnBoard()
@@ -27,6 +27,8 @@ public class Surfer : MonoBehaviour
         rgbd2d.velocity = Vector3.zero;
         rgbd2d.bodyType = RigidbodyType2D.Kinematic;
         
-        rgbd2d.simulated = false;
+       // rgbd2d.simulated = false;
     }
+
+
 }

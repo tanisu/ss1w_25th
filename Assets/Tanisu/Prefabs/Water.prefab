@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 200
+  sibuki: {fileID: 5506308439204197074, guid: 065d220c0a556a94db3ac309264cc69d, type: 3}
 --- !u!114 &7936338348946585155
 MonoBehaviour:
   m_ObjectHideFlags: 0

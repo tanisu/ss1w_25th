@@ -7,10 +7,11 @@ public class Water : MonoBehaviour
 {
     
     [SerializeField] float force;
+    [SerializeField] ParticleSystem sibuki;
     int x = 1;
     float waveInterval, interval;
     Rigidbody2D rgbd2d;
-    
+   // bool leaveWater;
 
     void Start()
     {
@@ -46,7 +47,35 @@ public class Water : MonoBehaviour
         rgbd2d.AddForce(new Vector2(force, 0));
     }
 
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Water"))
+    //    {
+    //        leaveWater = true;
+    //    }
+    //}
 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Water"))
+    //    {
+    //        leaveWater = false;
+    //    }
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Surfer"))
+        {
+            
+            if(collision.transform.position.y < transform.position.y)
+            {
+                Instantiate(sibuki,transform);
+                //GetComponent<PoolContent>().HideFromStage();
+            }
+            
+        }
+    }
 
 
 }

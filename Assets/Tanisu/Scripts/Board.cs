@@ -11,7 +11,7 @@ public class Board : MonoBehaviour
     float time;
     Rigidbody2D rgbd2d;
     BoxCollider2D bc2d;
-    bool isWater;
+    //bool isWater;
     Tween tween;
 
     void Start()
@@ -90,21 +90,21 @@ public class Board : MonoBehaviour
 
     }
     
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Water"))
-        {
-            isWater = true;
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Water"))
+    //    {
+    //        isWater = true;
+    //    }
+    //}
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Water"))
-        {
-            isWater = false;
-        }
-    }
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Water"))
+    //    {
+    //        isWater = false;
+    //    }
+    //}
     
 
     private void OnTriggerExit2D(Collider2D collision)
