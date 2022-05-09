@@ -70,8 +70,8 @@ public class Water : MonoBehaviour
             
             if(collision.transform.position.y < transform.position.y)
             {
-                Instantiate(sibuki,transform);
-                //GetComponent<PoolContent>().HideFromStage();
+                Instantiate(sibuki,new Vector3(transform.position.x,transform.position.y),transform.rotation);
+                GetComponent<PoolContent>().HideFromStage();
             }
             
         }

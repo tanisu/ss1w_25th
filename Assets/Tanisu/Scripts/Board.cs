@@ -8,10 +8,11 @@ public class Board : MonoBehaviour
 
     [SerializeField] float timeLimit,roteLimit,roteMax;
     [SerializeField] Surfer surfer;
+    [SerializeField] GameObject namiL, namiR;
     float time;
     Rigidbody2D rgbd2d;
     BoxCollider2D bc2d;
-    //bool isWater;
+    bool isWater;
     Tween tween;
 
     void Start()
@@ -29,16 +30,26 @@ public class Board : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             tween = transform.DORotate(new Vector3(0, 0, roteMax), 0.5f);
+            //if (isWater)
+            //{
+            //    namiL.SetActive(true);
+            //}
             
-
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             tween = transform.DORotate(new Vector3(0, 0, -roteMax), 0.5f);
+            //if (isWater)
+            //{
+            //    namiR.SetActive(true);
+            //}
+            
         }
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             tween.Kill();
+            namiL.SetActive(false);
+            namiR.SetActive(false);
             //transform.DOLocalRotate(new Vector3(0, 0, 0), 0.1f);
         }
 
@@ -89,23 +100,31 @@ public class Board : MonoBehaviour
         //}
 
     }
-    
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Water"))
-    //    {
-    //        isWater = true;
-    //    }
-    //}
 
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Water"))
-    //    {
-    //        isWater = false;
-    //    }
-    //}
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            isWater = true;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            isWater = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            isWater = false;
+        }
+    }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
