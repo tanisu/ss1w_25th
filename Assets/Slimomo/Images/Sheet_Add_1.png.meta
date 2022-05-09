@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07e4be1bf17e2493fabb7afe72b5293f
+guid: e120b6d84c9c7438695b71338d05e74b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,139 +128,160 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sheet_5_0
+      name: Sheet_Add_1_0
       rect:
         serializedVersion: 2
-        x: 431
-        y: 1795
-        width: 184
-        height: 156
+        x: 141
+        y: 529
+        width: 378
+        height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33d4a4b0d71b44a50ac574a39742004c
-      internalID: -464352861
+      spriteID: 816b7b30c743d41b4b37e6b051169f32
+      internalID: -1454127659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet_5_1
+      name: Sheet_Add_1_1
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1152
-        width: 501
-        height: 699
+        x: 170
+        y: 709
+        width: 187
+        height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82d845e2b8ec040c09e31fae8091748f
-      internalID: 1624963267
+      spriteID: dd3461a7bd609401e9dd7fe35fded9d2
+      internalID: -838760479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet_5_2
+      name: Sheet_Add_1_2
       rect:
         serializedVersion: 2
-        x: 1802
-        y: 1738
-        width: 138
-        height: 132
+        x: 413
+        y: 698
+        width: 139
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c91048cc9a244ca990546b0b769f8ff
-      internalID: -1293176990
+      spriteID: 2f563de3077584565b3f964c812fdb4f
+      internalID: 1990632195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet_5_3
+      name: Sheet_Add_1_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 1240
-        width: 564
-        height: 546
+        x: 419
+        y: 826
+        width: 91
+        height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 958dd9a602751494a89a72a66c0e6190
-      internalID: -1929817175
+      spriteID: 1c5061e1378bb499ab53bc33fa6e1e97
+      internalID: 213919811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet_5_4
+      name: Sheet_Add_1_4
       rect:
         serializedVersion: 2
-        x: 1739
-        y: 1435
-        width: 213
-        height: 158
+        x: 202
+        y: 831
+        width: 148
+        height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a543ce986ffc45b4bdefee2b3ff28dd
-      internalID: -105237898
+      spriteID: d494522ce0510466f839b882b1ceb822
+      internalID: 1840650175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet_5_5
+      name: Sheet_Add_1_5
       rect:
         serializedVersion: 2
-        x: 87
-        y: 319
-        width: 667
-        height: 585
+        x: 744
+        y: 829
+        width: 139
+        height: 134
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f2c0def9b2b849c6bf09d710315fbb9
-      internalID: 1864278690
+      spriteID: dc96b911382be458f88324c5e7b809d6
+      internalID: 2069868791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet_5_6
+      name: Sheet_Add_1_6
       rect:
         serializedVersion: 2
-        x: 898
-        y: 258
-        width: 667
-        height: 690
+        x: 351
+        y: 61
+        width: 381
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d123c406da2764d339a432d751e46933
+      internalID: -1466427522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet_Add_1_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 397
+        width: 454
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +289,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ccb985f691554f7c965afb02b76f074
-      internalID: 1583212188
+      spriteID: 99c012ee1b688475d87d66aed137184f
+      internalID: -1982678968
       vertices: []
       indices: 
       edges: []
@@ -285,13 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sheet_5_5: 1864278690
-      Sheet_5_3: -1929817175
-      Sheet_5_4: -105237898
-      Sheet_5_1: 1624963267
-      Sheet_5_6: 1583212188
-      Sheet_5_2: -1293176990
-      Sheet_5_0: -464352861
+      Sheet_Add_1_5: 2069868791
+      Sheet_Add_1_6: -1466427522
+      Sheet_Add_1_0: -1454127659
+      Sheet_Add_1_2: 1990632195
+      Sheet_Add_1_3: 213919811
+      Sheet_Add_1_1: -838760479
+      Sheet_Add_1_7: -1982678968
+      Sheet_Add_1_4: 1840650175
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
