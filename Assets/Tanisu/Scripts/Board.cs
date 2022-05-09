@@ -6,7 +6,8 @@ using DG.Tweening;
 public class Board : MonoBehaviour
 {
 
-    [SerializeField] float timeLimit;
+    [SerializeField] float timeLimit,roteLimit;
+    [SerializeField] GameObject surfer;
     float time;
     Rigidbody2D rgbd2d;
     bool isWater;
@@ -20,7 +21,7 @@ public class Board : MonoBehaviour
     void Update()
     {
 
-        
+        if (GameManager.I.gameState != GameManager.GAMESTATE.PLAY) return;
         if (Input.GetKeyDown(KeyCode.A))
         {
             transform.DORotate(new Vector3(0, 0, 50f), 0.5f);
@@ -30,13 +31,28 @@ public class Board : MonoBehaviour
         {
             transform.DORotate(new Vector3(0, 0, -50f), 0.5f);
         }
-        if(transform.rotation.z > Mathf.Abs(0.7f))
+        
+        if(Mathf.Abs(transform.rotation.z) > roteLimit)
         {
             if(_updateTimer() >= 1)
             {
-                Debug.Log("fall");
+                
+                surfer.transform.parent = transform.parent;
+                Rigidbody2D surferRgbd2d =  surfer.GetComponent<Rigidbody2D>();
+                surferRgbd2d.bodyType = RigidbodyType2D.Dynamic;
+                surferRgbd2d.simulated = true;
+                
+                GameManager.I.GameOver();
             }
         }
+        else
+        {
+            if(time > 0)
+            {
+                time = 0;
+            }
+        }
+
         if(transform.position.y < -5.5f)
         {
             //retry

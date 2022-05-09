@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] MeshRenderer QuadRenderer;
     int currentCup = 0;
     Cup[] cups;
-    bool cupClear;
+    bool cupClear,gameOver;
     public enum GAMESTATE
     {
         WAIT,
@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) || (gameState == GAMESTATE.PLAY && cupClear))
         {
-            //if (currentCup - 1 >= cups.Length) return;
 
             gameState = GAMESTATE.CLEAR;
             cupClear = false;
@@ -78,16 +77,25 @@ public class GameManager : MonoBehaviour
                 SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
             });
         }
-        //if(gameState == GAMESTATE.REPLAY)
-        //{
-        //    cups[currentCup].StopWaters();
 
-        //}
+        if(gameState == GAMESTATE.PLAY && gameOver)
+        {
+            gameState = GAMESTATE.REPLAY;
+            gameOver = false;
+            cups[currentCup].StopWaters();
+            cups[currentCup].hideWaterGenerator();
+        }
+
     }
 
     public void CupClear()
     {
         cupClear = true;
+    }
+
+    public void GameOver()
+    {
+        gameOver = true;
     }
 
     
