@@ -28,6 +28,7 @@ public class WaterGenerator : MonoBehaviour
 
     IEnumerator _launchWater()
     {
+        yield return new WaitForSeconds(0.001f);
         for (int i = 0; i < waterPool.maxCount ; i++)
         {
             PoolContent obj = waterPool.Launch(transform.position);

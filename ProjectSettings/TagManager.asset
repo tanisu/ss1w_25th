@@ -42,8 +42,8 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Water
-    uniqueID: 1387659463
+  - name: BackObjects
+    uniqueID: 1517955221
     locked: 0
   - name: Default
     uniqueID: 0
@@ -51,11 +51,17 @@ TagManager:
   - name: BG
     uniqueID: 232342207
     locked: 0
-  - name: BackObjects
-    uniqueID: 1517955221
+  - name: Player
+    uniqueID: 3413080161
+    locked: 0
+  - name: Water
+    uniqueID: 1387659463
     locked: 0
   - name: Balls
     uniqueID: 1762498903
+    locked: 0
+  - name: CupFrame
+    uniqueID: 426757231
     locked: 0
   - name: FrontObjects
     uniqueID: 4052469023
