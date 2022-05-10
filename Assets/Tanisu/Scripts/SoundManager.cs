@@ -104,7 +104,13 @@ public class SESoundData
 {
     public enum SE
     {
-
+        WAVE1,
+        WAVE2,
+        WAVE3,
+        OBORERU,
+        START,
+        CLEAR,
+        SHIBUKI
     }
 
     public SE se;

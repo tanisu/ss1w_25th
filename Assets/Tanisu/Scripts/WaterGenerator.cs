@@ -5,18 +5,48 @@ using UnityEngine;
 public class WaterGenerator : MonoBehaviour
 {
     [SerializeField] ObjectPool waterPool;
+    [SerializeField] float waveInterval,force;
+    [SerializeField] int waveSoundTime = 1;
+
+    float interval;
+    int vec = 1;
+    int waru = 3;
     Coroutine coroutine;
+    List<Water> waters;
     
     void Start()
     {
+        waters = new List<Water>();
         coroutine = StartCoroutine(_launchWater());
+        interval = waveInterval;
     }
 
     
     void Update()
     {
+        if(GameManager.I.gameState == GameManager.GAMESTATE.PLAY)
+        {
+            interval -= Time.deltaTime;
+            if(interval <= 0)
+            {
+                if(waveSoundTime % waru == 0)
+                {
+                    SoundManager.I.PlaySE(SESoundData.SE.WAVE1);
+                }
+                
+                foreach(Water water in waters)
+                {
+                    water.Wave(force,vec);
+                }
+                interval = waveInterval;
+                vec *= -1;
+                waveSoundTime++;
+            }
+        }
         if(GameManager.I.gameState == GameManager.GAMESTATE.CLEAR)
         {
+            interval = 0;
+            vec = 1;
             StopCoroutine(coroutine);
         }
     }
@@ -33,9 +63,18 @@ public class WaterGenerator : MonoBehaviour
         {
             PoolContent obj = waterPool.Launch(transform.position);
             obj.transform.parent = transform.parent;
+            Water water = obj.GetComponent<Water>();
+            water.waterGenerator = this;
+            waters.Add(water);
             
             yield return new WaitForSeconds(0.03f);
         }
+    }
+
+    public void RemoveWater(Water _water)
+    {
+        Debug.Log("RemoveList water");
+        waters.Remove(_water);
     }
 
 }

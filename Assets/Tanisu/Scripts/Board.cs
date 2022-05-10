@@ -50,7 +50,7 @@ public class Board : MonoBehaviour
             tween.Kill();
             namiL.SetActive(false);
             namiR.SetActive(false);
-            //transform.DOLocalRotate(new Vector3(0, 0, 0), 0.1f);
+            
         }
 
 
@@ -90,12 +90,12 @@ public class Board : MonoBehaviour
         if (!isWater) return;
         if (Input.GetKey(KeyCode.A))
         {
-            rgbd2d.AddForce(new Vector2(-1f, 0));
+            rgbd2d.AddForce(new Vector2(1f, 0));
 
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rgbd2d.AddForce(new Vector2(1f, 0));
+            rgbd2d.AddForce(new Vector2(-1f, 0));
 
         }
 
@@ -133,6 +133,7 @@ public class Board : MonoBehaviour
             if(collision.transform.position.y < transform.position.y)
             {
                 GameManager.I.CupClear();
+                collision.gameObject.SetActive(false);
             }
         }
     }

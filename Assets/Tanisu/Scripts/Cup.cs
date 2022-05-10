@@ -8,12 +8,17 @@ public class Cup : MonoBehaviour
     public Material metaBallRenderer;
     [SerializeField] GameObject waterGenerator;
     [SerializeField] Color color, strokeColor;
+    
 
     private void Start()
     {
         
-        //metaBallRenderer.SetColor("_Color",color);
-        //metaBallRenderer.SetColor("_StrokeColor", strokeColor);
+        
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void StopWaters()
@@ -48,18 +53,21 @@ public class Cup : MonoBehaviour
 
     IEnumerator _collectWaters(PoolContent[] _waters)
     {
-        foreach(PoolContent water in _waters)
+        
+        foreach (PoolContent water in _waters)
         {
             water.GetComponent<Water>().StopMove();
         }
         yield return new WaitForSeconds(2f);
+        
         foreach (PoolContent water in _waters)
         {
+            water.GetComponent<Water>().waterGenerator.RemoveWater(water.GetComponent<Water>());
             water.HideFromStage();
         }
         if(GameManager.I.gameState == GameManager.GAMESTATE.REPLAY)
         {
-            Debug.Log("replay");
+            
             yield return new WaitForSeconds(2f);
             Restart();
         }

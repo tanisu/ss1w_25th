@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2286706012563000739}
   - component: {fileID: 2286706012563000764}
   - component: {fileID: 2286706012563000765}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Confetti_m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
