@@ -6,19 +6,22 @@ using DG.Tweening;
 public class Board : MonoBehaviour
 {
 
-    [SerializeField] float timeLimit,roteLimit,roteMax;
+    [SerializeField] float timeLimit,roteLimit,roteMax,beforePosX;
     [SerializeField] Surfer surfer;
     [SerializeField] GameObject namiL, namiR;
+    [SerializeField] string frontLayer, backLayer;
     float time;
     Rigidbody2D rgbd2d;
     BoxCollider2D bc2d;
     bool isWater;
     Tween tween;
+    SpriteRenderer sp;
 
     void Start()
     {
         rgbd2d = GetComponent<Rigidbody2D>();
         bc2d = GetComponent<BoxCollider2D>();
+        sp = GetComponent<SpriteRenderer>();
     }
 
     
@@ -32,24 +35,23 @@ public class Board : MonoBehaviour
             tween = transform.DORotate(new Vector3(0, 0, roteMax), 0.5f);
             //if (isWater)
             //{
-            //    namiL.SetActive(true);
+            //    Instantiate(namiL,transform.position,Quaternion.identity);
             //}
-            
+
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             tween = transform.DORotate(new Vector3(0, 0, -roteMax), 0.5f);
             //if (isWater)
             //{
-            //    namiR.SetActive(true);
+            //    Instantiate(namiR, transform.position, Quaternion.identity);
             //}
-            
+
         }
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             tween.Kill();
-            namiL.SetActive(false);
-            namiR.SetActive(false);
+
             
         }
 
@@ -140,6 +142,8 @@ public class Board : MonoBehaviour
 
     public void OffPhysics()
     {
+        sp.sortingLayerName = frontLayer;
+        surfer.SetSortingLayerName(frontLayer);
         rgbd2d.bodyType = RigidbodyType2D.Kinematic;
         rgbd2d.simulated = false;
         bc2d.enabled = false;
@@ -147,6 +151,8 @@ public class Board : MonoBehaviour
 
     public void OnPhysics()
     {
+        sp.sortingLayerName = backLayer;
+        surfer.SetSortingLayerName(backLayer);
         rgbd2d.velocity = Vector3.zero;
         rgbd2d.angularVelocity = 0f;
         rgbd2d.bodyType = RigidbodyType2D.Dynamic;
@@ -156,13 +162,14 @@ public class Board : MonoBehaviour
 
     public void SetStartPos(Vector2 _startPos)
     {
+        
         transform.DOLocalMove(_startPos, GameManager.I.cupChangeTime);
         transform.DORotate(Vector3.zero, GameManager.I.cupChangeTime);
     }
 
     public void SetBeforePos(Vector2 _startPos)
     {
-        transform.position = new Vector3(-4.5f, _startPos.y);
+        transform.position = new Vector3(beforePosX, _startPos.y);
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }

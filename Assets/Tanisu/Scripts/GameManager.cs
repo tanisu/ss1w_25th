@@ -43,8 +43,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         cups = stage.GetComponentsInChildren<Cup>();
-        gameState = GAMESTATE.PLAY;
+        gameState = GAMESTATE.WAIT;
         cups[currentCup].ChangeColor();
+        //player.switchRgbd();
+        player.ToStartPos();
 
     }
 
@@ -88,6 +90,7 @@ public class GameManager : MonoBehaviour
 
         gameState = GAMESTATE.CLEAR;
         SoundManager.I.PlaySE(SESoundData.SE.CLEAR);
+        SoundManager.I.PlaySE(SESoundData.SE.CHEERS1);
         Instantiate(clearEffect,new Vector3(1.5f,3f),Quaternion.identity,transform.parent);
         Instantiate(clearEffect, new Vector3(-1.5f, 3f), Quaternion.identity, transform.parent);
 
@@ -100,6 +103,7 @@ public class GameManager : MonoBehaviour
         
         currentCup++;
         player.SetPlayerPos();
+        
         stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
             cups[currentCup].ChangeColor();
             QuadRenderer.gameObject.SetActive(false);
@@ -107,6 +111,7 @@ public class GameManager : MonoBehaviour
             cups[currentCup].showWaterGenerator();
             player.switchRgbd();
             SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
+            gameState = GAMESTATE.PLAY;
         });
     }
     

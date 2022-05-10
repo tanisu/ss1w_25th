@@ -42,6 +42,17 @@ public class Player : MonoBehaviour
         board.SetBeforePos(startPos);
         surfer.SetOnBoard();
         switchRgbd();
-        board.transform.DOMove(startPos, 1f).OnComplete(()=> { switchRgbd(); });
+        board.transform.DOMove(startPos, 1f).OnComplete(()=> { 
+            switchRgbd();
+            GameManager.I.gameState = GameManager.GAMESTATE.PLAY;
+        });
+    }
+
+    public void ToStartPos()
+    {
+        board.transform.DOMove(startPos, 1f).OnComplete(() => {
+            //switchRgbd();
+            GameManager.I.gameState = GameManager.GAMESTATE.PLAY;
+        });
     }
 }

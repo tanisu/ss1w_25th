@@ -73,7 +73,7 @@ public class WaterGenerator : MonoBehaviour
 
     public void RemoveWater(Water _water)
     {
-        Debug.Log("RemoveList water");
+        
         waters.Remove(_water);
     }
 

@@ -49,7 +49,8 @@ public class Water : MonoBehaviour
     {
         rgbd2d.velocity = Vector3.zero;
         rgbd2d.angularVelocity = 0f;
-        rgbd2d.AddForce(new Vector2(force, 0));
+        int x = Random.Range(-1, 2);
+        rgbd2d.AddForce(new Vector2(x * force, x));
     }
 
     public void EixtStage()
@@ -69,7 +70,13 @@ public class Water : MonoBehaviour
             
             if(collision.transform.position.y < transform.position.y)
             {
-                SoundManager.I.PlaySE(SESoundData.SE.SHIBUKI);
+                if (!SoundManager.I.isSibuki)
+                {
+                    SoundManager.I.PlaySE(SESoundData.SE.SHIBUKI);
+                    SoundManager.I.SibukiChu();
+                }
+                
+                
                 Instantiate(sibuki,new Vector3(transform.position.x,transform.position.y),transform.rotation);
                 GetComponent<PoolContent>().HideFromStage();
             }

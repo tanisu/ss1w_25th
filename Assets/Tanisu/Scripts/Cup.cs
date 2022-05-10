@@ -7,12 +7,15 @@ public class Cup : MonoBehaviour
     public BGMSoundData.BGM BGMTitle;
     public Material metaBallRenderer;
     [SerializeField] GameObject waterGenerator;
-    [SerializeField] Color color, strokeColor;
-    
+    [SerializeField] Color color, strokeColor,sibukiColor;
+    [SerializeField] ParticleSystem sibuki;
+    ParticleSystem.MainModule main;
 
     private void Start()
     {
         
+        main = sibuki.main;
+
         
     }
 
@@ -29,6 +32,7 @@ public class Cup : MonoBehaviour
 
     public void ChangeColor()
     {
+        main.startColor = sibukiColor;
         metaBallRenderer.SetColor("_Color", color);
         metaBallRenderer.SetColor("_StrokeColor", strokeColor);
     }
@@ -71,6 +75,6 @@ public class Cup : MonoBehaviour
             yield return new WaitForSeconds(2f);
             Restart();
         }
-        GameManager.I.gameState = GameManager.GAMESTATE.PLAY;
+        
     }
 }
