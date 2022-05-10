@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219442793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24, y: -1.41, z: 0}
+  m_LocalPosition: {x: 30, y: -1.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -563,7 +563,7 @@ Transform:
   - {fileID: 1298530060}
   - {fileID: 2028733489}
   m_Father: {fileID: 545078505}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &219442795
 MonoBehaviour:
@@ -2282,7 +2282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 2.35
+  waveInterval: 2.55
   force: 110
   waveSoundTime: 2
 --- !u!1 &480297659
@@ -2460,11 +2460,11 @@ Transform:
   - {fileID: 1167535955}
   - {fileID: 1438528561}
   - {fileID: 2018876794}
+  - {fileID: 724107585}
   - {fileID: 219442794}
-  - {fileID: 1487195273}
   - {fileID: 1242876405}
   - {fileID: 1864044212}
-  - {fileID: 724107585}
+  - {fileID: 1487195273}
   - {fileID: 549780560}
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acb00a602b19f4458d37a77b605de58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMTitle: 6
+  BGMTitle: 7
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
   waterGenerator: {fileID: 1006122177}
   traps: []
@@ -3081,7 +3081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724107584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48, y: -1.41, z: 0}
+  m_LocalPosition: {x: 24, y: -1.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3091,7 +3091,7 @@ Transform:
   - {fileID: 1378593676}
   - {fileID: 707055048}
   m_Father: {fileID: 545078505}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &724107586
 MonoBehaviour:
@@ -5031,7 +5031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
   waveInterval: 2.3
-  force: 135
+  force: 115
   waveSoundTime: 2
 --- !u!1 &1223577394
 GameObject:
@@ -6332,7 +6332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 1.5
+  waveInterval: 2
   force: 105
   waveSoundTime: 2
 --- !u!1 &1438528560
@@ -6502,7 +6502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487195272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: -1.41, z: 0}
+  m_LocalPosition: {x: 48, y: -1.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6512,7 +6512,7 @@ Transform:
   - {fileID: 1805575795}
   - {fileID: 637743485}
   m_Father: {fileID: 545078505}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1487195274
 MonoBehaviour:

@@ -108,7 +108,8 @@ public class BGMSoundData
         CHINA,
         DARK,
         REGGAETON1,
-        JAPANESE
+        JAPANESE,
+        ONSEN
 
     }
 
