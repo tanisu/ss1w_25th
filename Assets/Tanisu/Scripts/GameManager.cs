@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
         cups = stage.GetComponentsInChildren<Cup>();
         gameState = GAMESTATE.WAIT;
         cups[currentCup].ChangeColor();
+        cups[currentCup].showWaterGenerator();
+
         //player.switchRgbd();
         player.ToStartPos();
 
