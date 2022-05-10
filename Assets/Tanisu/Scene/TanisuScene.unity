@@ -226,7 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
   waveInterval: 2
-  force: 200
+  force: 120
   waveSoundTime: 2
 --- !u!1 &83561034
 GameObject:
@@ -337,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117227688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25, y: 0.19, z: 0}
+  m_LocalPosition: {x: 1.25, y: 0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2278,8 +2278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 0
-  force: 0
+  waveInterval: 4
+  force: 110
   waveSoundTime: 2
 --- !u!1 &480297659
 GameObject:
@@ -4383,8 +4383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 0
-  force: 0
+  waveInterval: 2.8
+  force: 65
   waveSoundTime: 2
 --- !u!1 &1008098967
 GameObject:
@@ -4817,7 +4817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
   waveInterval: 3
-  force: 250
+  force: 135
   waveSoundTime: 2
 --- !u!1 &1223577394
 GameObject:
@@ -5520,8 +5520,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 0
-  force: 0
+  waveInterval: 5
+  force: 160
   waveSoundTime: 2
 --- !u!1 &1324637087
 GameObject:
@@ -6026,8 +6026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 1.25
-  force: 210
+  waveInterval: 1.5
+  force: 105
   waveSoundTime: 2
 --- !u!1 &1438528560
 GameObject:
@@ -8443,7 +8443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
   waveInterval: 1.5
-  force: 100
+  force: 90
   waveSoundTime: 2
 --- !u!1 &2078663134
 GameObject:
@@ -9080,9 +9080,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11994cceb7915d54994f14e2c69f3c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 0.6
-  roteLimit: 0.7
-  roteMax: 70
+  timeLimit: 0.5
+  roteLimit: 0.6
+  roteMax: 65
   surfer: {fileID: 2563258609286256664}
   namiL: {fileID: 51483472395431785}
   namiR: {fileID: 2949430812280619574}
