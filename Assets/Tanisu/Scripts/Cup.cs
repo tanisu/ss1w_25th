@@ -7,22 +7,46 @@ public class Cup : MonoBehaviour
     public BGMSoundData.BGM BGMTitle;
     public Material metaBallRenderer;
     [SerializeField] GameObject waterGenerator;
+    [SerializeField] Trap[] traps;
     [SerializeField] Color color, strokeColor,sibukiColor;
     [SerializeField] ParticleSystem sibuki;
+    [SerializeField] float trapStartTime;
+    float time;
+    int currentTrap = 0;
     ParticleSystem.MainModule main;
+    bool isCurrentCup;
 
     private void Start()
     {
-        
         main = sibuki.main;
-
-        
+        foreach (Trap trap in traps)
+        {
+            trap.InitTrap();
+        }
     }
 
     private void Update()
     {
-        
+        if (isCurrentCup && GameManager.I.gameState == GameManager.GAMESTATE.PLAY)
+        {
+
+            if(_updateTimer() >= 1 && currentTrap <traps.Length)
+            {
+                traps[currentTrap].TrapActivation();
+                currentTrap++;
+                time = 0;
+            }
+        }
     }
+
+
+    float _updateTimer()
+    {
+        time += Time.deltaTime;
+        float timer = time / trapStartTime;
+        return timer;
+    }
+
 
     public void StopWaters()
     {
@@ -39,17 +63,19 @@ public class Cup : MonoBehaviour
 
     public void hideWaterGenerator()
     {
+        isCurrentCup = false;
         waterGenerator.SetActive(false);
     }
 
     public void showWaterGenerator()
     {
+        isCurrentCup = true;
         waterGenerator.SetActive(true);
     }
 
     public void Restart()
     {
-        waterGenerator.SetActive(true);
+        showWaterGenerator();
         waterGenerator.GetComponent<WaterGenerator>().ReStart();
     }
 
@@ -69,9 +95,15 @@ public class Cup : MonoBehaviour
             water.GetComponent<Water>().waterGenerator.RemoveWater(water.GetComponent<Water>());
             water.HideFromStage();
         }
-        if(GameManager.I.gameState == GameManager.GAMESTATE.REPLAY)
+        foreach (Trap trap in traps)
         {
-            
+            trap.ResetTrap();
+        }
+        currentTrap = 0;
+        time = 0;
+        if (GameManager.I.gameState == GameManager.GAMESTATE.REPLAY)
+        {
+
             yield return new WaitForSeconds(2f);
             Restart();
         }
