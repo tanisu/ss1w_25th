@@ -14,10 +14,13 @@ public class SoundManager : MonoBehaviour
     public float mastarVolume = 1;
     public float bgmVolume = 1;
     public float seVolume = 1;
+    public bool isSibuki;
 
     public static SoundManager I { get; private set; }
 
+
     bool isPlayBGM;
+
 
     private void Awake()
     {
@@ -71,12 +74,28 @@ public class SoundManager : MonoBehaviour
     }
 
 
+
+
     public void PlaySE(SESoundData.SE se)
     {
         SESoundData data = SESoundDatas.Find(data => data.se == se);
         seAudioSource.volume = data.volume * seVolume * mastarVolume;
         seAudioSource.PlayOneShot(data.audioClip);
     }
+
+    public void SibukiChu()
+    {
+        StartCoroutine(_sibukichu());
+    }
+
+    IEnumerator _sibukichu()
+    {
+        isSibuki = true;
+        yield return new WaitForSeconds(1f);
+        isSibuki = false;
+    }
+
+
 }
 [System.Serializable]
 public class BGMSoundData
@@ -110,7 +129,9 @@ public class SESoundData
         OBORERU,
         START,
         CLEAR,
-        SHIBUKI
+        SHIBUKI,
+        CHEERS1,
+        CHEERS2
     }
 
     public SE se;
