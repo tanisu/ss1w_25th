@@ -87,17 +87,17 @@ public class Board : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (!isWater) return;
-        //if (Input.GetKey(KeyCode.A))
-        //{
-        //    rgbd2d.AddForce(new Vector2(-1f, 0));
+        if (!isWater) return;
+        if (Input.GetKey(KeyCode.A))
+        {
+            rgbd2d.AddForce(new Vector2(-1f, 0));
 
-        //}
-        //if (Input.GetKey(KeyCode.D))
-        //{
-        //    rgbd2d.AddForce(new Vector2(1f, 0));
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            rgbd2d.AddForce(new Vector2(1f, 0));
 
-        //}
+        }
 
     }
 

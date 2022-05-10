@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         {
             SceneController.I.ToTitle();
         }
-        if (Input.GetKeyDown(KeyCode.Space) || (gameState == GAMESTATE.PLAY && cupClear))
+        if ( (Input.GetKeyDown(KeyCode.Space) && gameState == GAMESTATE.PLAY) || (gameState == GAMESTATE.PLAY && cupClear))
         {
 
             gameState = GAMESTATE.CLEAR;
