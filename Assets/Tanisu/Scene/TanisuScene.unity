@@ -225,6 +225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 2
+  force: 200
+  waveSoundTime: 2
 --- !u!1 &83561034
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +357,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 2
+  force: 100
+  waveSoundTime: 2
 --- !u!1 &134306042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,6 +2113,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 2.5
+  force: 75
+  waveSoundTime: 2
 --- !u!1 &429370398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,6 +2278,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 0
+  force: 0
+  waveSoundTime: 2
 --- !u!1 &480297659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,6 +2629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage: {fileID: 545078504}
+  clearEffect: {fileID: 2286706012563000766, guid: 179b7729a755d454eab7ecfe1cbd3117, type: 3}
   player: {fileID: 1541661944980330187}
   stageX: 6
   cupChangeTime: 3
@@ -4370,6 +4383,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 0
+  force: 0
+  waveSoundTime: 2
 --- !u!1 &1008098967
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,6 +4542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 1
+  force: 50
+  waveSoundTime: 2
 --- !u!1 &1161902186
 GameObject:
   m_ObjectHideFlags: 0
@@ -4797,6 +4816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 3
+  force: 250
+  waveSoundTime: 2
 --- !u!1 &1223577394
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,6 +5520,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 0
+  force: 0
+  waveSoundTime: 2
 --- !u!1 &1324637087
 GameObject:
   m_ObjectHideFlags: 0
@@ -6001,6 +6026,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 1.25
+  force: 210
+  waveSoundTime: 2
 --- !u!1 &1438528560
 GameObject:
   m_ObjectHideFlags: 0
@@ -8414,6 +8442,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
+  waveInterval: 1.5
+  force: 100
+  waveSoundTime: 2
 --- !u!1 &2078663134
 GameObject:
   m_ObjectHideFlags: 0

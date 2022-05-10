@@ -19,6 +19,7 @@ public class PoolContent : MonoBehaviour
     {
         if(transform.position.y < -6f || transform.localPosition.x > 3.2f || transform.localPosition.x < -3.2f )
         {
+            water.EixtStage();
             HideFromStage();
         }
     }
