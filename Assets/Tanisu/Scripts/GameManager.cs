@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] Fade fade;
     [SerializeField] GameObject stage,clearEffect;
     [SerializeField] Player player;
     [SerializeField] float stageX = 6f;
@@ -31,25 +32,34 @@ public class GameManager : MonoBehaviour
         if (I == null)
         {
             I = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
-        else
+        /*else
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
 
     void Start()
     {
+        StartCoroutine(_start());
+
+
+    }
+    IEnumerator _start()
+    {
+        fade.FadeOut(1f);
         cups = stage.GetComponentsInChildren<Cup>();
         gameState = GAMESTATE.WAIT;
         cups[currentCup].ChangeColor();
+        player.ToStartPos();
+        yield return new WaitForSeconds(1f);
+
         cups[currentCup].showWaterGenerator();
 
-        //player.switchRgbd();
-        player.ToStartPos();
 
+        
     }
 
 
