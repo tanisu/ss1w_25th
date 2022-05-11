@@ -57,8 +57,11 @@ public class GameManager : MonoBehaviour
         gameState = GAMESTATE.WAIT;
         cups[currentCup].ChangeColor();
         player.ToStartPos();
-        yield return new WaitForSeconds(1f);
+        SoundManager.I.FadeInBGM();
+        SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
 
+        yield return new WaitForSeconds(1f);
+        
         cups[currentCup].showWaterGenerator();
 
 
