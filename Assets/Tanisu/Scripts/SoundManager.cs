@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SoundManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class SoundManager : MonoBehaviour
     public float bgmVolume = 1;
     public float seVolume = 1;
     public bool isSibuki;
-
+    float beforeVolume = 1f;
     public static SoundManager I { get; private set; }
 
 
@@ -39,7 +40,7 @@ public class SoundManager : MonoBehaviour
     {
         if (!isPlayBGM)
         {
-            PlayBGM(BGMSoundData.BGM.CALYPSO);
+            PlayBGM(BGMSoundData.BGM.TITLE);
             isPlayBGM = true;
         }
     }
@@ -73,7 +74,16 @@ public class SoundManager : MonoBehaviour
         seAudioSource.volume = seVolume;
     }
 
+    public void FadeOutBGM()
+    {
+        beforeVolume = bgmAudioSource.volume;
+        bgmAudioSource.DOFade(0f, 0.8f);
+    }
 
+    public void FadeInBGM()
+    {
+        bgmAudioSource.DOFade(beforeVolume, 0.8f);
+    }
 
 
     public void PlaySE(SESoundData.SE se)

@@ -70,6 +70,9 @@ MonoBehaviour:
   - bgm: 7
     audioClip: {fileID: 8300000, guid: 12ce726936a99ef49b71c8e9351d65cf, type: 3}
     volume: 1
+  - bgm: 0
+    audioClip: {fileID: 8300000, guid: 4637406478c832a4bb72fae235d5561b, type: 3}
+    volume: 1
   SESoundDatas:
   - se: 0
     audioClip: {fileID: 8300000, guid: 565740a6a20964b93ae6c271a000a2d9, type: 3}
