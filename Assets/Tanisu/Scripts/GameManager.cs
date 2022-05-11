@@ -20,10 +20,13 @@ public class GameManager : MonoBehaviour
         WAIT,
         PLAY,
         REPLAY,
-        CLEAR
+        CLEAR,
+        
+
     }
 
     public GAMESTATE gameState;
+    public GAMESTATE beforePause;
 
     public static GameManager I { get; private set; }
 
@@ -65,6 +68,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        //if( !isPause)
+        //{
+            
+        //    isPause = true;
+        //}
+
+        //if(isPause)
+        //{
+            
+        //    isPause = false;
+        //}
+
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             SceneController.I.ToTitle();
