@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    [SerializeField] Fade fade;
     public static SceneController I { get; private set; }
 
     private void Awake()
@@ -12,18 +13,15 @@ public class SceneController : MonoBehaviour
         if (I == null)
         {
             I = this;
-            DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+   
     }
-    
+
 
     public void StartGame()
     {
-        SceneManager.LoadScene("TanisuScene");
+        fade.FadeIn(1f, () =>  SceneManager.LoadScene("TanisuScene"));
+        
     }
 
     public void ToTitle()
