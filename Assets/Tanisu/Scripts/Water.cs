@@ -11,10 +11,10 @@ public class Water : MonoBehaviour
     
     Rigidbody2D rgbd2d;
     public WaterGenerator waterGenerator;
-    bool isWater;
+   // bool isWater;
     void Start()
     {
-        isWater = gameObject.name == "Water";
+        //isWater = gameObject.name == "Water";
 
         rgbd2d = GetComponent<Rigidbody2D>();
         
@@ -54,7 +54,7 @@ public class Water : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Surfer") && isWater)
+        if (collision.CompareTag("Surfer") /*&& isWater*/)
         {
             if(collision.transform.position.y < transform.position.y)
             {
