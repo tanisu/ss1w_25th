@@ -70,16 +70,20 @@ public class GameManager : MonoBehaviour
     {
         //if( !isPause)
         //{
-            
+
         //    isPause = true;
         //}
 
         //if(isPause)
         //{
-            
+
         //    isPause = false;
         //}
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameOver();
+        }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             SceneController.I.ToTitle();
