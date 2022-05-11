@@ -4390,7 +4390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55455dcd1bc84e49afd390bc2595332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterPool: {fileID: 1161176995}
+  waterPool: {fileID: 323445837}
   waveInterval: 1
   force: 70
   waveSoundTime: 2
@@ -5512,7 +5512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55455dcd1bc84e49afd390bc2595332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterPool: {fileID: 323445837}
+  waterPool: {fileID: 1161176995}
   waveInterval: 1
   force: 160
   waveSoundTime: 2
