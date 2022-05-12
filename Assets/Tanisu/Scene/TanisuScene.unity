@@ -5464,6 +5464,7 @@ GameObject:
   - component: {fileID: 983499561}
   - component: {fileID: 983499560}
   - component: {fileID: 983499559}
+  - component: {fileID: 983499562}
   m_Layer: 7
   m_Name: Futa
   m_TagString: Untagged
@@ -5556,7 +5557,7 @@ MonoBehaviour:
   loopY: 0
   size: 0
   time: 0
-  trapType: 4
+  trapType: 5
 --- !u!50 &983499560
 Rigidbody2D:
   serializedVersion: 4
@@ -5658,6 +5659,26 @@ PolygonCollider2D:
       - {x: 0.07857143, y: -1.8285714}
       - {x: 0.08571429, y: -1.7714286}
       - {x: 0.10714286, y: -1.65}
+--- !u!95 &983499562
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983499556}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c96e89e2462e1e499a6403366099b38, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1006122177
 GameObject:
   m_ObjectHideFlags: 0
@@ -6121,7 +6142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7699013812174132807, guid: 5e5d66c365b60e644ae36d539718931d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 191
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 7699013812174132807, guid: 5e5d66c365b60e644ae36d539718931d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8359,10 +8380,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 360, y: 660}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
