@@ -76,17 +76,6 @@ public class WaterGenerator : MonoBehaviour
             
             yield return new WaitForSeconds(launcInterval);
         }
-
-        //for (int i = 0; i < waterPool.maxCount ; i++)
-        //{
-        //    PoolContent obj = waterPool.Launch(transform.position);
-        //    obj.transform.parent = transform.parent;
-        //    Water water = obj.GetComponent<Water>();
-        //    water.waterGenerator = this;
-        //    waters.Add(water);
-            
-        //    yield return new WaitForSeconds(0.03f);
-        //}
     }
 
     public void RemoveWater(Water _water)

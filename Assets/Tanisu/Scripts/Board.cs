@@ -12,7 +12,8 @@ public class Board : MonoBehaviour
     [SerializeField] string frontLayer, backLayer;
     float time;
     Rigidbody2D rgbd2d;
-    BoxCollider2D bc2d;
+    //BoxCollider2D bc2d;
+    PolygonCollider2D pc2d;
     bool isWater;
     Tween tween;
     SpriteRenderer sp;
@@ -20,7 +21,8 @@ public class Board : MonoBehaviour
     void Start()
     {
         rgbd2d = GetComponent<Rigidbody2D>();
-        bc2d = GetComponent<BoxCollider2D>();
+        pc2d = GetComponent<PolygonCollider2D>();
+        //bc2d = GetComponent<BoxCollider2D>();
         sp = GetComponent<SpriteRenderer>();
     }
 
@@ -146,7 +148,7 @@ public class Board : MonoBehaviour
         surfer.SetSortingLayerName(frontLayer);
         rgbd2d.bodyType = RigidbodyType2D.Kinematic;
         rgbd2d.simulated = false;
-        bc2d.enabled = false;
+        pc2d.enabled = false;
     }
 
     public void OnPhysics()
@@ -157,7 +159,7 @@ public class Board : MonoBehaviour
         rgbd2d.angularVelocity = 0f;
         rgbd2d.bodyType = RigidbodyType2D.Dynamic;
         rgbd2d.simulated = true;
-        bc2d.enabled = true;
+        pc2d.enabled = true;
     }
 
     public void SetStartPos(Vector2 _startPos)
