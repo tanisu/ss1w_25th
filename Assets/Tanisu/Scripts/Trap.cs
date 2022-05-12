@@ -100,7 +100,7 @@ public class Trap : MonoBehaviour
         {
             pc2d.enabled = true;
         }
-        tween = transform.DOLocalRotate(new Vector3(0,0,deg),1f).SetLoops(-1, LoopType.Yoyo);
+        tween = transform.DOLocalRotate(new Vector3(0,0,deg),2f).SetLoops(-1, LoopType.Yoyo);
     }
 
     private void _moveTrap()

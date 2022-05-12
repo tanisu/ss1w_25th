@@ -30,4 +30,10 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
+
+    public void ToEnding()
+    {
+        SoundManager.I.FadeOutBGM();
+        fade.FadeIn(1f, () => SceneManager.LoadScene("momo_Clear"));
+    }
 }

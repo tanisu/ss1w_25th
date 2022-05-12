@@ -61,10 +61,7 @@ public class GameManager : MonoBehaviour
         SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
 
         yield return new WaitForSeconds(1f);
-        
         cups[currentCup].showWaterGenerator();
-
-
         
     }
 
@@ -82,6 +79,10 @@ public class GameManager : MonoBehaviour
 
         //    isPause = false;
         //}
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    SceneController.I.ToEnding();
+        //}
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -93,6 +94,7 @@ public class GameManager : MonoBehaviour
         }
         if ( (Input.GetKeyDown(KeyCode.Space) && gameState == GAMESTATE.PLAY) || (gameState == GAMESTATE.PLAY && cupClear))
         {
+            
             StartCoroutine(_moveNext());
         }
 
@@ -134,19 +136,27 @@ public class GameManager : MonoBehaviour
         SoundManager.I.StopBGM();
         player.switchRgbd();
         yield return new WaitForSeconds(2f);
+
+        if(currentCup < cups.Length - 1)
+        {
+            currentCup++;
+            player.SetPlayerPos();
+
+            stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
+                cups[currentCup].ChangeColor();
+                QuadRenderer.gameObject.SetActive(false);
+                QuadRenderer.gameObject.SetActive(true);
+                cups[currentCup].showWaterGenerator();
+                player.switchRgbd();
+                SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
+                gameState = GAMESTATE.PLAY;
+            });
+        }
+        else
+        {
+            SceneController.I.ToEnding();
+        }
         
-        currentCup++;
-        player.SetPlayerPos();
-        
-        stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
-            cups[currentCup].ChangeColor();
-            QuadRenderer.gameObject.SetActive(false);
-            QuadRenderer.gameObject.SetActive(true);
-            cups[currentCup].showWaterGenerator();
-            player.switchRgbd();
-            SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
-            gameState = GAMESTATE.PLAY;
-        });
     }
     
 

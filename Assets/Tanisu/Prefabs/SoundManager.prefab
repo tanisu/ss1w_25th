@@ -49,29 +49,38 @@ MonoBehaviour:
   bgmAudioSource: {fileID: 6017473344076774825}
   seAudioSource: {fileID: 6017473344076774826}
   bGMSoundDatas:
-  - bgm: 1
-    audioClip: {fileID: 8300000, guid: f96fe5fe9762b53498a71ff41a3ffb30, type: 3}
+  - bgm: 0
+    audioClip: {fileID: 8300000, guid: 4219dd4145f59db4eac02de54aaf2850, type: 3}
     volume: 1
   - bgm: 2
-    audioClip: {fileID: 8300000, guid: 9321622ba3c50d6428bb96bc77302dd7, type: 3}
-    volume: 1
-  - bgm: 3
-    audioClip: {fileID: 8300000, guid: 37641f08ce3cc36488fab5c737a6d35b, type: 3}
-    volume: 1
-  - bgm: 4
-    audioClip: {fileID: 8300000, guid: 1729aaa4e1b6a8b4c84dfbde30d79cca, type: 3}
-    volume: 1
-  - bgm: 6
-    audioClip: {fileID: 8300000, guid: e728cf84d1ed83543ae7acd8ba7a4541, type: 3}
-    volume: 1
-  - bgm: 5
-    audioClip: {fileID: 8300000, guid: 25f11dce486d5a141bf0034acaa64ab1, type: 3}
+    audioClip: {fileID: 8300000, guid: 5891a3fddc680b449a89925e19fb7e08, type: 3}
     volume: 1
   - bgm: 7
-    audioClip: {fileID: 8300000, guid: 12ce726936a99ef49b71c8e9351d65cf, type: 3}
+    audioClip: {fileID: 8300000, guid: a45966d057cec0f4191ab03766031e71, type: 3}
     volume: 1
-  - bgm: 0
-    audioClip: {fileID: 8300000, guid: 4637406478c832a4bb72fae235d5561b, type: 3}
+  - bgm: 5
+    audioClip: {fileID: 8300000, guid: d9062e5f9aef372449c58d0011648c11, type: 3}
+    volume: 1
+  - bgm: 9
+    audioClip: {fileID: 8300000, guid: 2b1563248e67a0441bc6bf0ab82fd280, type: 3}
+    volume: 1
+  - bgm: 1
+    audioClip: {fileID: 8300000, guid: f2c8ca52156e2cf46bb62453fefa503b, type: 3}
+    volume: 1
+  - bgm: 6
+    audioClip: {fileID: 8300000, guid: 1d284c81c4beceb4a8ef03aebd72de6d, type: 3}
+    volume: 1
+  - bgm: 3
+    audioClip: {fileID: 8300000, guid: 6c1b9540fd0a6ac4ebce403a903c14b4, type: 3}
+    volume: 1
+  - bgm: 10
+    audioClip: {fileID: 8300000, guid: 0525025d40d2a0342a4a1392193b92f4, type: 3}
+    volume: 1
+  - bgm: 8
+    audioClip: {fileID: 8300000, guid: 6a7fea6b6514f7c46ad896d964f9169f, type: 3}
+    volume: 1
+  - bgm: 4
+    audioClip: {fileID: 8300000, guid: a167c9a23b37d8243859373d92b78067, type: 3}
     volume: 1
   SESoundDatas:
   - se: 0

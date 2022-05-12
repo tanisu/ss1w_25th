@@ -92,8 +92,9 @@ public class Cup : MonoBehaviour
         
         foreach (PoolContent water in _waters)
         {
-            water.GetComponent<Water>().waterGenerator.RemoveWater(water.GetComponent<Water>());
             water.HideFromStage();
+            water.GetComponent<Water>().waterGenerator.RemoveWater(water.GetComponent<Water>());
+            
         }
         foreach (Trap trap in traps)
         {

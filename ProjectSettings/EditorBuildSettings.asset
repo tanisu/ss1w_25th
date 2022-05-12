@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tanisu/Scene/TanisuScene.unity
     guid: 883395f6a1bbbc342ad3e802379d7c27
+  - enabled: 1
+    path: Assets/Slimomo/momo_Clear.unity
+    guid: 09ff61d96f4504c168f986fba1ea494d
   m_configObjects: {}
