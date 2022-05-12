@@ -50,8 +50,24 @@ public class Cup : MonoBehaviour
 
     public void StopWaters()
     {
-        PoolContent[] waters = GetComponentsInChildren<PoolContent>();      
-        StartCoroutine(_collectWaters(waters));
+        PoolContent[] waters = GetComponentsInChildren<PoolContent>();
+        foreach (PoolContent water in waters)
+        {
+            water.GetComponent<Water>().StopMove();
+        }
+        
+        //StartCoroutine(_collectWaters(waters));
+    }
+
+    public void ResetCup()
+    {
+        waterGenerator.GetComponent<WaterGenerator>().RemoveAllWaters();
+        StartCoroutine(_resetTrap());
+        StartCoroutine(_resetAll());
+        if (GameManager.I.gameState == GameManager.GAMESTATE.REPLAY)
+        {
+            StartCoroutine(_restart());
+        }
     }
 
     public void ChangeColor()
@@ -79,8 +95,36 @@ public class Cup : MonoBehaviour
         waterGenerator.GetComponent<WaterGenerator>().ReStart();
     }
 
-    
+    public void ResetAll()
+    {
+        BroadcastMessage("HideFromStage", SendMessageOptions.DontRequireReceiver);
+    }
 
+    IEnumerator _resetAll()
+    {
+        yield return new WaitForSeconds(2f);
+        ResetAll();
+    }
+
+    IEnumerator _resetTrap()
+    {
+        yield return new WaitForSeconds(2f);
+        foreach (Trap trap in traps)
+        {
+            trap.ResetTrap();
+        }
+        currentTrap = 0;
+        time = 0;
+    }
+    IEnumerator _restart()
+    {
+        yield return new WaitForSeconds(3.75f);
+        Restart();
+    }
+
+
+
+    /*
     IEnumerator _collectWaters(PoolContent[] _waters)
     {
         
@@ -109,5 +153,5 @@ public class Cup : MonoBehaviour
             Restart();
         }
         
-    }
+    }*/
 }

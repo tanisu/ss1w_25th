@@ -84,4 +84,9 @@ public class WaterGenerator : MonoBehaviour
         waters.Remove(_water);
     }
 
+    public void RemoveAllWaters()
+    {
+        waters.Clear();
+    }
+
 }

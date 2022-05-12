@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float stageX = 6f;
     [SerializeField] public float cupChangeTime;
     [SerializeField] MeshRenderer QuadRenderer;
+    [SerializeField] ObjectPool[] objectPools;
 
     int currentCup = 0;
     Cup[] cups;
@@ -69,17 +70,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //if( !isPause)
-        //{
 
-        //    isPause = true;
-        //}
-
-        //if(isPause)
-        //{
-
-        //    isPause = false;
-        //}
         if (Input.GetKeyDown(KeyCode.E))
         {
             SceneController.I.ToEnding();
@@ -104,8 +95,7 @@ public class GameManager : MonoBehaviour
             SoundManager.I.PlaySE(SESoundData.SE.OBORERU);
             gameState = GAMESTATE.REPLAY;
             gameOver = false;
-            cups[currentCup].StopWaters();
-            cups[currentCup].hideWaterGenerator();
+            _currentCupReset();
             player.SetRetry();
         }
 
@@ -121,19 +111,40 @@ public class GameManager : MonoBehaviour
         gameOver = true;
     }
 
+    private void _currentCupReset()
+    {
+        cups[currentCup].StopWaters();
+        cups[currentCup].ResetCup();
+        cups[currentCup].hideWaterGenerator();
+        
+    }
+
+    private void _clearEffect()
+    {
+        SoundManager.I.PlaySE(SESoundData.SE.CLEAR);
+        SoundManager.I.PlaySE(SESoundData.SE.CHEERS1);
+        Instantiate(clearEffect, new Vector3(1.5f, 3f), Quaternion.identity, transform.parent);
+        Instantiate(clearEffect, new Vector3(-1.5f, 3f), Quaternion.identity, transform.parent);
+    }
+
+    private void _initNextCup()
+    {
+        cups[currentCup].ChangeColor();
+        QuadRenderer.gameObject.SetActive(false);
+        QuadRenderer.gameObject.SetActive(true);
+        cups[currentCup].showWaterGenerator();
+    }
+       
 
     private IEnumerator _moveNext()
     {
 
         gameState = GAMESTATE.CLEAR;
-        SoundManager.I.PlaySE(SESoundData.SE.CLEAR);
-        SoundManager.I.PlaySE(SESoundData.SE.CHEERS1);
-        Instantiate(clearEffect,new Vector3(1.5f,3f),Quaternion.identity,transform.parent);
-        Instantiate(clearEffect, new Vector3(-1.5f, 3f), Quaternion.identity, transform.parent);
+        _clearEffect();
 
         cupClear = false;
-        cups[currentCup].StopWaters();
-        cups[currentCup].hideWaterGenerator();
+        _currentCupReset();
+
         SoundManager.I.StopBGM();
         player.switchRgbd();
         yield return new WaitForSeconds(2f);
@@ -142,12 +153,8 @@ public class GameManager : MonoBehaviour
         {
             currentCup++;
             player.SetPlayerPos();
-
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
-                cups[currentCup].ChangeColor();
-                QuadRenderer.gameObject.SetActive(false);
-                QuadRenderer.gameObject.SetActive(true);
-                cups[currentCup].showWaterGenerator();
+                _initNextCup();
                 player.switchRgbd();
                 SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
                 gameState = GAMESTATE.PLAY;

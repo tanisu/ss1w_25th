@@ -30,12 +30,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _ColorMask: 15
-    - _Range: 1
+    - _Range: 0
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
     m_Colors:
-    - _Color: {r: 0.21938412, g: 0.5173711, b: 0.5471698, a: 1}
+    - _Color: {r: 0.21960784, g: 0.5176471, b: 0.54901963, a: 0}
   m_BuildTextureStacks: []
