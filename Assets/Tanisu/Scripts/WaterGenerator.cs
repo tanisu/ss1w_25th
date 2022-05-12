@@ -6,6 +6,7 @@ public class WaterGenerator : MonoBehaviour
 {
     [SerializeField] ObjectPool waterPool;
     [SerializeField] float waveInterval,force;
+    [SerializeField] float launcInterval;
     [SerializeField] int waveSoundTime = 1;
 
     float interval;
@@ -60,16 +61,32 @@ public class WaterGenerator : MonoBehaviour
     {
         
         yield return new WaitForSeconds(0.001f);
-        for (int i = 0; i < waterPool.maxCount ; i++)
+
+        while (true)
         {
             PoolContent obj = waterPool.Launch(transform.position);
-            obj.transform.parent = transform.parent;
-            Water water = obj.GetComponent<Water>();
-            water.waterGenerator = this;
-            waters.Add(water);
+            if(obj != null)
+            {
+                obj.transform.parent = transform.parent;
+                Water water = obj.GetComponent<Water>();
+                water.waterGenerator = this;
+                waters.Add(water);
+
+            }
             
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(launcInterval);
         }
+
+        //for (int i = 0; i < waterPool.maxCount ; i++)
+        //{
+        //    PoolContent obj = waterPool.Launch(transform.position);
+        //    obj.transform.parent = transform.parent;
+        //    Water water = obj.GetComponent<Water>();
+        //    water.waterGenerator = this;
+        //    waters.Add(water);
+            
+        //    yield return new WaitForSeconds(0.03f);
+        //}
     }
 
     public void RemoveWater(Water _water)

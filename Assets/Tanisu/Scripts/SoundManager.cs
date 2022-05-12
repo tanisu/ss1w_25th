@@ -114,12 +114,15 @@ public class BGMSoundData
     {
         TITLE,
         REGGAETON,
-        CALYPSO,
-        CHINA,
-        DARK,
         REGGAETON1,
+        CALYPSO,
+        RAMEN,
+        VOLCANO,
         JAPANESE,
-        ONSEN
+        ONSEN,
+        GUITAR1,
+        GUITAR2,
+        STEELPAN
 
     }
 
