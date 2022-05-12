@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float stageX = 6f;
     [SerializeField] public float cupChangeTime;
     [SerializeField] MeshRenderer QuadRenderer;
+
     int currentCup = 0;
     Cup[] cups;
     bool cupClear,gameOver;
@@ -79,10 +80,10 @@ public class GameManager : MonoBehaviour
 
         //    isPause = false;
         //}
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    SceneController.I.ToEnding();
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SceneController.I.ToEnding();
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

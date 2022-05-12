@@ -11,6 +11,8 @@ public class Trap : MonoBehaviour
     Vector3 startPos;
     Rigidbody2D rgbd2d = null;
     PolygonCollider2D pc2d = null;
+    Animator animator;
+    
     Tween tween;
     enum TRAPTYPE
     {
@@ -18,7 +20,8 @@ public class Trap : MonoBehaviour
         MOVE,
         ROTA,
         SIZE,
-        SEQ
+        SEQ,
+        ANIM
     }
 
     [SerializeField] TRAPTYPE trapType;
@@ -33,6 +36,11 @@ public class Trap : MonoBehaviour
         if (GetComponent<PolygonCollider2D>())
         {
             pc2d = GetComponent<PolygonCollider2D>();
+        }
+        if (GetComponent<Animator>())
+        {
+            animator = GetComponent<Animator>();
+            
         }
     }
         
@@ -55,9 +63,32 @@ public class Trap : MonoBehaviour
             case TRAPTYPE.SEQ:
                 _seqTrap();
                 break;
+            case TRAPTYPE.ANIM:
+                _animTrap();
+                break;
+            
         }
+    }
 
+    private void Update()
+    {
+        if(transform.position.y < -10)
+        {
+            if (rgbd2d)
+            {
+                rgbd2d.velocity = Vector3.zero;
+                rgbd2d.angularVelocity = 0f;
+                rgbd2d.bodyType = RigidbodyType2D.Kinematic;
+            }
+        }
+    }
 
+    private void _animTrap()
+    {
+        animator.SetBool("trap", true);
+        
+        //anim.enabled = true;
+        
     }
 
     private void _seqTrap()
@@ -131,6 +162,12 @@ public class Trap : MonoBehaviour
         if (pc2d)
         {
             pc2d.enabled = false;
+        }
+        if (animator)
+        {
+
+            animator.SetBool("trap", false);
+            
         }
 
         tween.Kill();
