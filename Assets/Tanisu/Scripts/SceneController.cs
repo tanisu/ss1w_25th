@@ -28,7 +28,8 @@ public class SceneController : MonoBehaviour
 
     public void ToTitle()
     {
-        SceneManager.LoadScene("Title");
+        SoundManager.I.FadeOutBGM();
+        fade.FadeIn(1f,()=> SceneManager.LoadScene("Title"));
     }
 
     public void ToEnding()

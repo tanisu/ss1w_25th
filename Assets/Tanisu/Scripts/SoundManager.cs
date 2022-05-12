@@ -20,7 +20,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager I { get; private set; }
 
 
-    bool isPlayBGM;
+    public bool isPlayBGM;
 
 
     private void Awake()
@@ -40,7 +40,7 @@ public class SoundManager : MonoBehaviour
     {
         if (!isPlayBGM)
         {
-            PlayBGM(BGMSoundData.BGM.TITLE);
+            
             isPlayBGM = true;
         }
     }
