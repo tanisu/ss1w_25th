@@ -48,19 +48,26 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        fade.FadeOut(1f);
+        cups = stage.GetComponentsInChildren<Cup>();
+        for (int i = 0; i < cups.Length; i++)
+        {
+            if(currentCup < i)
+            {
+                cups[i].gameObject.SetActive(false);
+            }
+        }
+        gameState = GAMESTATE.WAIT;
+        cups[currentCup].ChangeColor();
+        player.ToStartPos();
+        SoundManager.I.FadeInBGM();
+        SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
         StartCoroutine(_start());
 
 
     }
     IEnumerator _start()
     {
-        fade.FadeOut(1f);
-        cups = stage.GetComponentsInChildren<Cup>();
-        gameState = GAMESTATE.WAIT;
-        cups[currentCup].ChangeColor();
-        player.ToStartPos();
-        SoundManager.I.FadeInBGM();
-        SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
 
         yield return new WaitForSeconds(1f);
         cups[currentCup].showWaterGenerator();
@@ -82,6 +89,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
+
             SceneController.I.ToTitle();
         }
         if ( (Input.GetKeyDown(KeyCode.Space) && gameState == GAMESTATE.PLAY) || (gameState == GAMESTATE.PLAY && cupClear))
@@ -152,8 +160,10 @@ public class GameManager : MonoBehaviour
         if(currentCup < cups.Length - 1)
         {
             currentCup++;
+            cups[currentCup].gameObject.SetActive(true);
             player.SetPlayerPos();
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
+                cups[currentCup - 1].gameObject.SetActive(false);
                 _initNextCup();
                 player.switchRgbd();
                 SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);

@@ -3780,7 +3780,6 @@ MonoBehaviour:
   waterGenerator: {fileID: 1315878738}
   traps:
   - {fileID: 1315878741}
-  - {fileID: 318891076}
   color: {r: 0.6, g: 0.8000001, b: 0.5254902, a: 0.654902}
   strokeColor: {r: 0.7137255, g: 0.9294118, b: 0.6313726, a: 0.8666667}
   sibukiColor: {r: 0.7137255, g: 0.9647059, b: 0.6313726, a: 0.9490196}
@@ -4384,7 +4383,6 @@ GameObject:
   - component: {fileID: 902276628}
   - component: {fileID: 902276629}
   - component: {fileID: 902276630}
-  - component: {fileID: 902276631}
   - component: {fileID: 902276632}
   m_Layer: 7
   m_Name: Tree
@@ -4561,27 +4559,6 @@ PolygonCollider2D:
       - {x: -0.28750002, y: -2.3208334}
       - {x: -0.24583335, y: -2.2708335}
       - {x: -0.2541667, y: -2.0958335}
---- !u!50 &902276631
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902276627}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &902276632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5834,7 +5811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 104226521592346009, guid: bb2777d4bdd4156419e1c7842bec4a4f, type: 3}
-  maxCount: 700
+  maxCount: 300
 --- !u!4 &1161176996
 Transform:
   m_ObjectHideFlags: 0
@@ -6951,7 +6928,7 @@ MonoBehaviour:
   waterPool: {fileID: 1161176995}
   waveInterval: 1.5
   force: 75
-  launcInterval: 0.03
+  launcInterval: 0.1
   waveSoundTime: 2
 --- !u!114 &1315878741
 MonoBehaviour:
