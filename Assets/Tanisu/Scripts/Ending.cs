@@ -8,6 +8,8 @@ public class Ending : MonoBehaviour
     void Start()
     {
         fade.FadeOut(1f);
+        SoundManager.I.FadeInBGM();
+        SoundManager.I.PlayBGM(BGMSoundData.BGM.ENDING);
     }
 
 
