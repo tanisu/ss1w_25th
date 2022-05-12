@@ -122,7 +122,8 @@ public class BGMSoundData
         ONSEN,
         GUITAR1,
         GUITAR2,
-        STEELPAN
+        STEELPAN,
+        ENDING
 
     }
 
