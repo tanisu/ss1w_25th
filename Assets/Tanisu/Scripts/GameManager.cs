@@ -50,13 +50,13 @@ public class GameManager : MonoBehaviour
     {
         fade.FadeOut(1f);
         cups = stage.GetComponentsInChildren<Cup>();
-        for (int i = 0; i < cups.Length; i++)
-        {
-            if(currentCup < i)
-            {
-                cups[i].gameObject.SetActive(false);
-            }
-        }
+        //for (int i = 0; i < cups.Length; i++)
+        //{
+        //    if(currentCup < i)
+        //    {
+        //        cups[i].gameObject.SetActive(false);
+        //    }
+        //}
         gameState = GAMESTATE.WAIT;
         cups[currentCup].ChangeColor();
         player.ToStartPos();
@@ -78,21 +78,21 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SceneController.I.ToEnding();
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    SceneController.I.ToEnding();
+        //}
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             GameOver();
         }
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
+        //if (Input.GetKeyDown(KeyCode.Backspace))
+        //{
 
-            SceneController.I.ToTitle();
-        }
-        if ( (Input.GetKeyDown(KeyCode.Space) && gameState == GAMESTATE.PLAY) || (gameState == GAMESTATE.PLAY && cupClear))
+        //    SceneController.I.ToTitle();
+        //}
+        if (gameState == GAMESTATE.PLAY && cupClear)
         {
             
             StartCoroutine(_moveNext());
@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
         if(currentCup < cups.Length - 1)
         {
             currentCup++;
-            cups[currentCup].gameObject.SetActive(true);
+            //cups[currentCup].gameObject.SetActive(true);
             player.SetPlayerPos();
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
                 cups[currentCup - 1].gameObject.SetActive(false);
