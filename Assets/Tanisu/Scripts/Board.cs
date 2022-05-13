@@ -134,7 +134,7 @@ public class Board : MonoBehaviour
     {
         if (collision.CompareTag("ClearLine"))
         {
-            if(collision.transform.position.y < transform.position.y)
+            if(collision.transform.position.y < transform.position.y && GameManager.I.gameState == GameManager.GAMESTATE.PLAY)
             {
                 GameManager.I.CupClear();
                 collision.gameObject.SetActive(false);

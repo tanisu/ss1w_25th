@@ -1774,7 +1774,7 @@ PolygonCollider2D:
       - {x: -1.8458334, y: -0.95000005}
       - {x: -1.8791667, y: -0.9583334}
       - {x: -2.03084, y: 2.8333335}
-      - {x: -1.9208335, y: 2.8750002}
+      - {x: -2.0225224, y: 2.8326302}
       - {x: -2.0708334, y: 2.8750002}
       - {x: -2.0708334, y: 2.8666668}
       - {x: -2.4541519, y: 2.8666668}
@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 2.1
+  waveInterval: 1.9
   force: 115
   launcInterval: 0.03
   waveSoundTime: 2
@@ -3046,7 +3046,7 @@ MonoBehaviour:
   strokeColor: {r: 0.43529412, g: 0.68235296, b: 0.972549, a: 0.972549}
   sibukiColor: {r: 0.06666667, g: 0.9019608, b: 0.81367064, a: 0.7058824}
   sibuki: {fileID: 5506308439204197074, guid: 065d220c0a556a94db3ac309264cc69d, type: 3}
-  trapStartTime: 3
+  trapStartTime: 0
 --- !u!1 &501773551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6207,8 +6207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 1
-  force: 70
+  waveInterval: 1.8
+  force: 62
   launcInterval: 0.05
   waveSoundTime: 2
 --- !u!1 &1161176994
@@ -7491,7 +7491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPool: {fileID: 1161176995}
   waveInterval: 1.5
-  force: 75
+  force: 78
   launcInterval: 0.1
   waveSoundTime: 2
 --- !u!114 &1315878741
@@ -9886,11 +9886,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11486218, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11486218, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
       propertyPath: cutoutRange
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11486218, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
       propertyPath: maskTexture
@@ -12414,5 +12414,13 @@ PrefabInstance:
       propertyPath: namiR
       value: 
       objectReference: {fileID: 117573543365524253, guid: be765d057217abd4fbb18928ece6e63b, type: 3}
+    - target: {fileID: 7901310223192240083, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}
+      propertyPath: roteLimit
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901310223192240083, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}
+      propertyPath: timeLimit
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 724ab3fde0c97fd4e81c49f297017673, type: 3}

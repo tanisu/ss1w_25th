@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+ 
         /*
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
 
         //    SceneController.I.ToTitle();
         //}
-        if (gameState == GAMESTATE.PLAY && cupClear)
+        if ( (Input.GetKeyDown(KeyCode.Space) && gameState == GAMESTATE.PLAY) || (gameState == GAMESTATE.PLAY && cupClear) )
         {
             
             StartCoroutine(_moveNext());
