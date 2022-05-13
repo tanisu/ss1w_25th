@@ -85,6 +85,10 @@ public class Trap : MonoBehaviour
 
     private void _animTrap()
     {
+        if (pc2d)
+        {
+            pc2d.enabled = true;
+        }
         animator.SetBool("trap", true);
         
         //anim.enabled = true;
