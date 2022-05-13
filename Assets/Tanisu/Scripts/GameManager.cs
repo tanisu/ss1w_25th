@@ -96,11 +96,16 @@ public class GameManager : MonoBehaviour
         //}
         if (gameState == GAMESTATE.PLAY && cupClear)
         {
-            
+
             StartCoroutine(_moveNext());
         }
 
-        if(gameState == GAMESTATE.PLAY && !cupClear && gameOver)
+        //if ( (Input.GetKeyDown(KeyCode.Space) &&  gameState == GAMESTATE.PLAY) || gameState == GAMESTATE.PLAY && cupClear)
+        //{
+        //    StartCoroutine(_moveNext());
+        //}
+
+        if (gameState == GAMESTATE.PLAY && !cupClear && gameOver)
         {
             SoundManager.I.PlaySE(SESoundData.SE.OBORERU);
             gameState = GAMESTATE.REPLAY;
