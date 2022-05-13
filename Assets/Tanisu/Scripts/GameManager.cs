@@ -78,10 +78,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    SceneController.I.ToEnding();
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SceneController.I.ToEnding();
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
