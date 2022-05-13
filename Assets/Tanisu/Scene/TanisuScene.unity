@@ -4915,7 +4915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePos: {x: 0, y: 0, z: 0}
-  deg: -90
+  deg: -75
   loopX: 0
   loopY: 0
   size: 0
@@ -5462,7 +5462,6 @@ GameObject:
   - component: {fileID: 983499557}
   - component: {fileID: 983499558}
   - component: {fileID: 983499561}
-  - component: {fileID: 983499560}
   - component: {fileID: 983499559}
   - component: {fileID: 983499562}
   m_Layer: 7
@@ -5558,27 +5557,6 @@ MonoBehaviour:
   size: 0
   time: 0
   trapType: 5
---- !u!50 &983499560
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983499556}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!60 &983499561
 PolygonCollider2D:
   m_ObjectHideFlags: 0
