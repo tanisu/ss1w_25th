@@ -35,19 +35,12 @@ public class Board : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             tween = transform.DORotate(new Vector3(0, 0, roteMax), 0.5f);
-            //if (isWater)
-            //{
-            //    Instantiate(namiL,transform.position,Quaternion.identity);
-            //}
 
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             tween = transform.DORotate(new Vector3(0, 0, -roteMax), 0.5f);
-            //if (isWater)
-            //{
-            //    Instantiate(namiR, transform.position, Quaternion.identity);
-            //}
+
 
         }
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
@@ -80,7 +73,16 @@ public class Board : MonoBehaviour
         }
     }
 
+    public void PushButton(int dir)
+    {
+        tween = transform.DORotate(new Vector3(0, 0, roteMax * dir), 0.5f);
+    }
 
+    public void ReleaseButton()
+    {
+        tween.Kill();
+        transform.DORotate(new Vector3(0, 0, 0), 0.3f);
+    }
 
     float _updateTimer()
     {
