@@ -6,7 +6,7 @@ using DG.Tweening;
 public class Board : MonoBehaviour
 {
 
-    [SerializeField] float timeLimit,roteLimit,roteMax,beforePosX;
+    [SerializeField] float timeLimit,roteLimit,roteMax,beforePosX,thrust;
     [SerializeField] Surfer surfer;
     [SerializeField] GameObject namiL, namiR;
     [SerializeField] string frontLayer, backLayer;
@@ -17,6 +17,14 @@ public class Board : MonoBehaviour
     bool isWater;
     Tween tween;
     SpriteRenderer sp;
+    private enum DIRECTION
+    {
+        NONE,
+        LEFT,
+        RIGHT
+    }
+
+    DIRECTION direction;
 
     void Start()
     {
@@ -46,8 +54,6 @@ public class Board : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             tween.Kill();
-
-            
         }
 
 
@@ -76,6 +82,8 @@ public class Board : MonoBehaviour
     public void PushButton(int dir)
     {
         tween = transform.DORotate(new Vector3(0, 0, roteMax * dir), 0.5f);
+        direction = dir < 0 ? DIRECTION.LEFT : DIRECTION.RIGHT ;
+        transform.Translate(new Vector3(dir, 0) * thrust * Time.deltaTime);
     }
 
     public void ReleaseButton()
@@ -94,16 +102,25 @@ public class Board : MonoBehaviour
     private void FixedUpdate()
     {
         if (!isWater) return;
-        if (Input.GetKey(KeyCode.A))
-        {
-            rgbd2d.AddForce(new Vector2(1f, 0));
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    rgbd2d.AddForce(new Vector2(1f, 0));
 
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            rgbd2d.AddForce(new Vector2(-1f, 0));
+        //}
+        //if (Input.GetKey(KeyCode.D))
+        //{
+        //    rgbd2d.AddForce(new Vector2(-1f, 0));
 
-        }
+        //}
+        //switch (direction)
+        //{
+        //    case DIRECTION.LEFT:
+        //        rgbd2d.AddForce(new Vector2(thrust, 0));
+        //        break;
+        //    case DIRECTION.RIGHT:
+        //        rgbd2d.AddForce(new Vector2(-thrust, 0));
+        //        break;
+        //}
 
     }
 
