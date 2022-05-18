@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public float cupChangeTime;
     [SerializeField] MeshRenderer QuadRenderer;
     [SerializeField] ObjectPool[] objectPools;
+    [SerializeField] Timer timer;
 
     int currentCup = 0;
     Cup[] cups;
@@ -70,7 +71,8 @@ public class GameManager : MonoBehaviour
         SoundManager.I.FadeInBGM();
         SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
         StartCoroutine(_start());
-
+        timer.InitTimer();
+        
 
     }
     IEnumerator _start()
@@ -84,33 +86,35 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
- 
-        /*
+
+        /* For debug
         if (Input.GetKeyDown(KeyCode.E))
         {
             SceneController.I.ToEnding();
         }
         */
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            GameOver();
-        }
         //if (Input.GetKeyDown(KeyCode.Backspace))
         //{
 
         //    SceneController.I.ToTitle();
         //}
+        //if ( (Input.GetKeyDown(KeyCode.Space) &&  gameState == GAMESTATE.PLAY) || gameState == GAMESTATE.PLAY && cupClear)
+        //{
+        //    StartCoroutine(_moveNext());
+        //}
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameOver();
+        }
+
         if (gameState == GAMESTATE.PLAY && cupClear)
         {
 
             StartCoroutine(_moveNext());
         }
 
-        //if ( (Input.GetKeyDown(KeyCode.Space) &&  gameState == GAMESTATE.PLAY) || gameState == GAMESTATE.PLAY && cupClear)
-        //{
-        //    StartCoroutine(_moveNext());
-        //}
+
 
         if (gameState == GAMESTATE.PLAY && !cupClear && gameOver)
         {
@@ -119,6 +123,11 @@ public class GameManager : MonoBehaviour
             gameOver = false;
             _currentCupReset();
             player.SetRetry();
+            timer.TimerStop();
+        }
+        if(gameState == GAMESTATE.PLAY)
+        {
+            timer.TimerUpdate();
         }
 
     }
@@ -160,7 +169,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator _moveNext()
     {
-
+        timer.TimerStop();
         gameState = GAMESTATE.CLEAR;
         _clearEffect();
 
@@ -170,13 +179,14 @@ public class GameManager : MonoBehaviour
         SoundManager.I.StopBGM();
         player.switchRgbd();
         yield return new WaitForSeconds(2f);
-
-        if(currentCup < cups.Length - 1)
+        timer.TimerReset();
+        if (currentCup < cups.Length - 1)
         {
             currentCup++;
             //cups[currentCup].gameObject.SetActive(true);
             player.SetPlayerPos();
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
+                
                 cups[currentCup - 1].gameObject.SetActive(false);
                 _initNextCup();
                 player.switchRgbd();
