@@ -7,7 +7,7 @@ using DG.Tweening;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Fade fade;
-    [SerializeField] GameObject stage,clearEffect;
+    [SerializeField] GameObject stage,clearEffect,swipe,buttons;
     [SerializeField] Player player;
     [SerializeField] float stageX = 6f;
     [SerializeField] public float cupChangeTime;
@@ -37,18 +37,25 @@ public class GameManager : MonoBehaviour
         if (I == null)
         {
             I = this;
-            //DontDestroyOnLoad(gameObject);
+
         }
-        /*else
-        {
-            Destroy(gameObject);
-        }*/
+ 
     }
 
 
     void Start()
     {
         fade.FadeOut(1f);
+        if(Config.I.controller == Config.CONTROLLER.SWIPE)
+        {
+            swipe.SetActive(true);
+            buttons.SetActive(false);
+        }
+        else
+        {
+            swipe.SetActive(false);
+            buttons.SetActive(true);
+        }
         cups = stage.GetComponentsInChildren<Cup>();
         //for (int i = 0; i < cups.Length; i++)
         //{
