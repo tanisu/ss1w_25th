@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         cups[currentCup].showWaterGenerator();
+        Debug.Log(timer.GetHiScoreTime(currentCup));
         
     }
 
@@ -124,6 +125,7 @@ public class GameManager : MonoBehaviour
             _currentCupReset();
             player.SetRetry();
             timer.TimerStop();
+            timer.TimerReset();
         }
         if(gameState == GAMESTATE.PLAY)
         {
@@ -170,6 +172,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator _moveNext()
     {
         timer.TimerStop();
+        timer.ScoreTime(currentCup);
         gameState = GAMESTATE.CLEAR;
         _clearEffect();
 
@@ -185,6 +188,7 @@ public class GameManager : MonoBehaviour
             currentCup++;
             //cups[currentCup].gameObject.SetActive(true);
             player.SetPlayerPos();
+            timer.GetHiScoreTime(currentCup);
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
                 
                 cups[currentCup - 1].gameObject.SetActive(false);

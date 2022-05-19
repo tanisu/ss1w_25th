@@ -48,9 +48,30 @@ public class Timer : MonoBehaviour
         }
     }
 
+    public void ScoreTime(int _current)
+    {
+        
+        float currentScore = (float)totalTimeSpan.TotalMilliseconds;
+        float beforeScore = PlayerPrefs.GetFloat(_current.ToString());
+        if(beforeScore == 0 || currentScore < beforeScore)
+        {
+            PlayerPrefs.SetFloat(_current.ToString(), currentScore);
+            
+        }
+    }
+
+    public float GetHiScoreTime(int _current)
+    {
+        float currentScore = PlayerPrefs.GetFloat(_current.ToString());
+        Debug.Log(new TimeSpan((long)currentScore));
+        return currentScore;
+    }
+
     public void TimerTMP()
     {
         showTimeSpan = totalTimeSpan + timeSpan;
+
+        
         timeText.SetText(
             "{0:00}:{1:00}:{2:000}",
             showTimeSpan.Minutes,
