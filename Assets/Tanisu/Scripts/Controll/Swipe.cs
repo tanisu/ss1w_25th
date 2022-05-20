@@ -19,6 +19,7 @@ public class Swipe : MonoBehaviour
 
     void _swipeWithMouse()
     {
+        if (GameManager.I.gameState != GameManager.GAMESTATE.PLAY) return;
         if (Input.GetMouseButtonDown(0))
         {
             firstPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);

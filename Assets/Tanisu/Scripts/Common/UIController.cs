@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject slidePanel;
     [SerializeField] Slider BGMSlider;
 
+    GameManager.GAMESTATE beforState;
     bool isPlaing;
     void Start()
     {
@@ -32,6 +33,8 @@ public class UIController : MonoBehaviour
         if (isPlaing)
         {
             Time.timeScale = 0;
+            beforState = GameManager.I.gameState;
+            GameManager.I.gameState = GameManager.GAMESTATE.WAIT;
         }
 
         slidePanel.SetActive(true);
@@ -41,7 +44,9 @@ public class UIController : MonoBehaviour
     {
         if (isPlaing)
         {
-            Time.timeScale = 1;   
+            Time.timeScale = 1;
+            GameManager.I.gameState = beforState;
+
         }
         slidePanel.SetActive(false);
     }
