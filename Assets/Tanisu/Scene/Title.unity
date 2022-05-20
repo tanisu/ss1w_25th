@@ -245,10 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9a37d0445a1ac449ea21aeac0f1a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundButton: {fileID: 951155759}
-  closeButton: {fileID: 1108472704}
-  slidePanel: {fileID: 539768427}
-  BGMSlider: {fileID: 1960539605}
+  soundButton: {fileID: 3307399467050868637}
+  closeButton: {fileID: 1383054607}
+  slidePanel: {fileID: 1471645655}
+  BGMSlider: {fileID: 280149500}
 --- !u!1 &89664550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,17 +1923,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7699013812174132807, guid: 5e5d66c365b60e644ae36d539718931d, type: 3}
   m_PrefabInstance: {fileID: 7699013812045113961}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &951155759 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7699013812174132806, guid: 5e5d66c365b60e644ae36d539718931d, type: 3}
-  m_PrefabInstance: {fileID: 7699013812045113961}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &972418238
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,6 +4921,10 @@ PrefabInstance:
     - target: {fileID: 7699013812174132804, guid: 5e5d66c365b60e644ae36d539718931d, type: 3}
       propertyPath: m_Name
       value: SoundButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699013812174132804, guid: 5e5d66c365b60e644ae36d539718931d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7699013812174132807, guid: 5e5d66c365b60e644ae36d539718931d, type: 3}
       propertyPath: m_Pivot.x
