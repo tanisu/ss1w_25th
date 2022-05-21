@@ -6,18 +6,11 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    TextMeshProUGUI timeText;
+    [SerializeField]TextMeshProUGUI timeText,recordTimeText;
     DateTime dateTime = new DateTime();
     TimeSpan timeSpan, totalTimeSpan, showTimeSpan;
     bool timerIsActive = false;
-    void Start()
-    {
-        timeText = GetComponent<TextMeshProUGUI>();
-        
-    }
-
-
-    //private void Update() => TimerUpdate();
+    
     
     public void InitTimer()
     {
@@ -29,14 +22,14 @@ public class Timer : MonoBehaviour
     public void TimerReset()
     {
         InitTimer();
-        TimerTMP();
+        _timerTMP();
     }
 
     public void TimerUpdate()
     {
         if (!timerIsActive) return;
         timeSpan = DateTime.Now - dateTime;
-        TimerTMP();
+        _timerTMP();
     }
 
     public void TimerStop()
@@ -51,32 +44,56 @@ public class Timer : MonoBehaviour
     public void ScoreTime(int _current)
     {
         
-        float currentScore = (float)totalTimeSpan.TotalMilliseconds;
-        float beforeScore = PlayerPrefs.GetFloat(_current.ToString());
-        if(beforeScore == 0 || currentScore < beforeScore)
+        string currentScore = totalTimeSpan.ToString();
+        string beforeScore = PlayerPrefs.GetString(_current.ToString());        
+        if(beforeScore == "" || TimeSpan.Parse(currentScore) < TimeSpan.Parse(beforeScore))
         {
-            PlayerPrefs.SetFloat(_current.ToString(), currentScore);
-            
+            PlayerPrefs.SetString(_current.ToString(), currentScore);
         }
+
     }
 
-    public float GetHiScoreTime(int _current)
+    public void GetRecordTime(int _current)
     {
-        float currentScore = PlayerPrefs.GetFloat(_current.ToString());
-        Debug.Log(new TimeSpan((long)currentScore));
-        return currentScore;
+        string recordTime = PlayerPrefs.GetString(_current.ToString());
+        _recordTMP(recordTime);
+ 
     }
 
-    public void TimerTMP()
+    private void _recordTMP(string _recordTime)
+    {
+        if (_recordTime == "")
+        {
+            _resetTMP(recordTimeText);
+            return;
+        }
+        TimeSpan recordTimeSpan = TimeSpan.Parse(_recordTime);
+        _renderTMP(recordTimeText, recordTimeSpan);
+
+    }
+    
+
+    private void _timerTMP()
     {
         showTimeSpan = totalTimeSpan + timeSpan;
+        _renderTMP(timeText, showTimeSpan);
 
-        
-        timeText.SetText(
-            "{0:00}:{1:00}:{2:000}",
-            showTimeSpan.Minutes,
-            showTimeSpan.Seconds,
-            showTimeSpan.Milliseconds
-            );
     }
+    private void _renderTMP(TextMeshProUGUI _tmp,TimeSpan _timeSpan)
+    {
+        _tmp.SetText(
+            "{0:00}:{1:00}:{2:000}",
+            _timeSpan.Minutes,
+            _timeSpan.Seconds,
+            _timeSpan.Milliseconds
+        );
+    }
+
+    private void _resetTMP(TextMeshProUGUI _tmp)
+    {
+        _tmp.text = "00:00:000";
+    }
+    
+
+
 }

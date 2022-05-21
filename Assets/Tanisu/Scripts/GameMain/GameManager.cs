@@ -80,7 +80,8 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         cups[currentCup].showWaterGenerator();
-        Debug.Log(timer.GetHiScoreTime(currentCup));
+        timer.GetRecordTime(currentCup);
+        //Debug.Log(timer.GetHiScoreTime(currentCup));
         
     }
 
@@ -99,10 +100,10 @@ public class GameManager : MonoBehaviour
 
         //    SceneController.I.ToTitle();
         //}
-        //if ( (Input.GetKeyDown(KeyCode.Space) &&  gameState == GAMESTATE.PLAY) || gameState == GAMESTATE.PLAY && cupClear)
-        //{
-        //    StartCoroutine(_moveNext());
-        //}
+        if ((Input.GetKeyDown(KeyCode.Space) && gameState == GAMESTATE.PLAY))
+        {
+            StartCoroutine(_moveNext());
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -125,13 +126,18 @@ public class GameManager : MonoBehaviour
             _currentCupReset();
             player.SetRetry();
             timer.TimerStop();
-            timer.TimerReset();
+            
         }
         if(gameState == GAMESTATE.PLAY)
         {
             timer.TimerUpdate();
         }
 
+    }
+
+    public void TimerReset()
+    {
+        timer.TimerReset();
     }
 
     public void CupClear()
@@ -178,6 +184,7 @@ public class GameManager : MonoBehaviour
 
         cupClear = false;
         _currentCupReset();
+        //timer.TimerReset();
 
         SoundManager.I.StopBGM();
         player.switchRgbd();
@@ -188,9 +195,9 @@ public class GameManager : MonoBehaviour
             currentCup++;
             //cups[currentCup].gameObject.SetActive(true);
             player.SetPlayerPos();
-            timer.GetHiScoreTime(currentCup);
+            timer.GetRecordTime(currentCup);
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
-                
+                timer.TimerReset();
                 cups[currentCup - 1].gameObject.SetActive(false);
                 _initNextCup();
                 player.switchRgbd();

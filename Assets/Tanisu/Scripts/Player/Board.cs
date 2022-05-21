@@ -30,7 +30,7 @@ public class Board : MonoBehaviour
     {
         rgbd2d = GetComponent<Rigidbody2D>();
         pc2d = GetComponent<PolygonCollider2D>();
-        //bc2d = GetComponent<BoxCollider2D>();
+        
         sp = GetComponent<SpriteRenderer>();
     }
 

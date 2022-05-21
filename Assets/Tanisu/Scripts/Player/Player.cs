@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
         board.transform.DOMove(startPos, 1f).OnComplete(()=> { 
             switchRgbd();
             GameManager.I.gameState = GameManager.GAMESTATE.PLAY;
+            GameManager.I.TimerReset();
         });
     }
 
