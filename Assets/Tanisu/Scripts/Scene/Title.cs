@@ -13,6 +13,10 @@ public class Title : MonoBehaviour
     {
 
         SoundManager.I.PlayBGM(BGMSoundData.BGM.TITLE);
+        foreach(string stage in Config.stages)
+        {
+            Debug.Log(stage);
+        }
     }
 
     

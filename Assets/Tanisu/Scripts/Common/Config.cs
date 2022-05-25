@@ -6,6 +6,8 @@ using UnityEngine;
 public class Config : MonoBehaviour
 {
     public static Config I;
+    public static string[] stages;
+    
     public enum CONTROLLER
     {
         SWIPE,
@@ -25,11 +27,12 @@ public class Config : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        stages = new string[] { "Beach","Soda","Nabe","Garden","ColorBall","Volcano","Beaker","Pool","Ramen","Onsen" };
     }
 
     public void SwitchController(int _controller)
     {
         controller = (CONTROLLER)Enum.ToObject(typeof(CONTROLLER), _controller);
-        Debug.Log(controller);
+        
     }
 }
