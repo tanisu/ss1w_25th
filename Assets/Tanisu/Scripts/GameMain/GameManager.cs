@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] ObjectPool[] objectPools;
     [SerializeField] Timer timer;
 
-    int currentCup = 0;
+    public int currentCup = 0;
     Cup[] cups;
     bool cupClear,gameOver;
     public enum GAMESTATE
@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
             buttons.SetActive(true);
         }
         cups = stage.GetComponentsInChildren<Cup>();
+        stage.transform.position =  new Vector3(-stageX * currentCup,0) ;
         //for (int i = 0; i < cups.Length; i++)
         //{
         //    if(currentCup < i)
@@ -66,7 +67,7 @@ public class GameManager : MonoBehaviour
         //    }
         //}
         gameState = GAMESTATE.WAIT;
-        cups[currentCup].ChangeColor();
+        
         player.ToStartPos();
         SoundManager.I.FadeInBGM();
         SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
@@ -79,9 +80,10 @@ public class GameManager : MonoBehaviour
     {
 
         yield return new WaitForSeconds(1f);
+        cups[currentCup].ChangeColor();
         cups[currentCup].showWaterGenerator();
         timer.GetRecordTime(currentCup);
-        //Debug.Log(timer.GetHiScoreTime(currentCup));
+        
         
     }
 
@@ -184,7 +186,7 @@ public class GameManager : MonoBehaviour
 
         cupClear = false;
         _currentCupReset();
-        //timer.TimerReset();
+        
 
         SoundManager.I.StopBGM();
         player.switchRgbd();
@@ -194,6 +196,7 @@ public class GameManager : MonoBehaviour
         {
             currentCup++;
             //cups[currentCup].gameObject.SetActive(true);
+            _checkMaxCup();
             player.SetPlayerPos();
             timer.GetRecordTime(currentCup);
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
@@ -210,6 +213,15 @@ public class GameManager : MonoBehaviour
             SceneController.I.ToEnding();
         }
         
+    }
+
+    private void _checkMaxCup()
+    {
+        int currentMax = PlayerPrefs.GetInt("maxCup");
+        if(currentMax < currentCup)
+        {
+            PlayerPrefs.SetInt("maxCup", currentCup);
+        }
     }
     
 

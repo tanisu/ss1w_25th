@@ -8,6 +8,7 @@ TagManager:
   - Board
   - ClearLine
   - Surfer
+  - GameManager
   layers:
   - Default
   - TransparentFX
