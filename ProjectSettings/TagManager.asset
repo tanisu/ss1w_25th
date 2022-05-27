@@ -9,6 +9,7 @@ TagManager:
   - ClearLine
   - Surfer
   - GameManager
+  - PlayerSelector
   layers:
   - Default
   - TransparentFX

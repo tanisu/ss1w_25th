@@ -7,7 +7,8 @@ public class Config : MonoBehaviour
 {
     public static Config I;
     public static string[] stages;
-    
+    [SerializeField] PlayerData[] playerDatas;
+    public PlayerData selectedPlayerData;
     public enum CONTROLLER
     {
         SWIPE,
@@ -28,11 +29,26 @@ public class Config : MonoBehaviour
             Destroy(gameObject);
         }
         stages = new string[] { "Beach","Soda","Nabe","Garden","ColorBall","Volcano","Beaker","Pool","Ramen","Onsen" };
+        
     }
 
     public void SwitchController(int _controller)
     {
         controller = (CONTROLLER)Enum.ToObject(typeof(CONTROLLER), _controller);
+        
+    }
+
+    public void SelectPlayer(string _playerName)
+    {
+        foreach(PlayerData p in playerDatas)
+        {
+            
+            if(_playerName == p.name)
+            {
+                selectedPlayerData = p;
+                break;
+            }
+        }
         
     }
 }

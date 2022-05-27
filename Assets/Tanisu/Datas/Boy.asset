@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6736067fb9a0d764e89a5eec9d5bca93, type: 3}
+  m_Name: Boy
+  m_EditorClassIdentifier: 
+  bord: {fileID: 1147433820, guid: 1e788d6e78c4b4f05b998e859006cd7e, type: 3}
+  player: {fileID: 1576774501, guid: 1e788d6e78c4b4f05b998e859006cd7e, type: 3}
+  fall: {fileID: -2908461, guid: c07b468eda0e340239cda7c3383d47fc, type: 3}
+  setImage: {fileID: -1565014150, guid: 0230d99c482ef4638845dfc4168a7e47, type: 3}
