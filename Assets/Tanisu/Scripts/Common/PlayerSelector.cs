@@ -89,7 +89,7 @@ public class PlayerSelector : MonoBehaviour
     
     public void ChangePlayerSprite()
     {
-        board.sprite = Config.I.selectedPlayerData.bord;
-        player.sprite = Config.I.selectedPlayerData.player;
+        board.sprite = Config.I.selectedPlayerData.board;
+        player.sprite = Config.I.selectedPlayerData.surfer;
     }
 }

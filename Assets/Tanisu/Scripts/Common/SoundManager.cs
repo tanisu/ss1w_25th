@@ -123,6 +123,14 @@ public class BGMSoundData
         GUITAR1,
         GUITAR2,
         STEELPAN,
+        APPLE,
+        CLOCK,
+        JAZZ,
+        MALLET,
+        RYTHM,
+        SPACE,
+        STOMACH,
+        UKIYOE,
         ENDING
 
     }

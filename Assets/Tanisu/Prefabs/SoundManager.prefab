@@ -82,8 +82,32 @@ MonoBehaviour:
   - bgm: 4
     audioClip: {fileID: 8300000, guid: a167c9a23b37d8243859373d92b78067, type: 3}
     volume: 1
-  - bgm: 11
+  - bgm: 19
     audioClip: {fileID: 8300000, guid: cb660d3211e448c4984628a2e88eb05a, type: 3}
+    volume: 1
+  - bgm: 11
+    audioClip: {fileID: 8300000, guid: e00e941aeba598e4187433c246109b19, type: 3}
+    volume: 1
+  - bgm: 12
+    audioClip: {fileID: 8300000, guid: 3cfb57cdc5ad2b1499b4546521ea5bac, type: 3}
+    volume: 1
+  - bgm: 13
+    audioClip: {fileID: 8300000, guid: 29b85dafe3ad5cf4da2332d9b6bfaf2c, type: 3}
+    volume: 1
+  - bgm: 14
+    audioClip: {fileID: 8300000, guid: f444093eecb221f4ba5887cf7738c1fd, type: 3}
+    volume: 1
+  - bgm: 15
+    audioClip: {fileID: 8300000, guid: 2f32b777da290fa429335f27d9caf711, type: 3}
+    volume: 1
+  - bgm: 16
+    audioClip: {fileID: 8300000, guid: d7c7628b6cc9b9f449cb63cd00d41d4b, type: 3}
+    volume: 1
+  - bgm: 17
+    audioClip: {fileID: 8300000, guid: e0702d2e2374cf74896ff359fffe4e5a, type: 3}
+    volume: 1
+  - bgm: 18
+    audioClip: {fileID: 8300000, guid: 9be8ebaf93c3faa40b4ea571cc84c5a8, type: 3}
     volume: 1
   SESoundDatas:
   - se: 0
@@ -117,6 +141,7 @@ MonoBehaviour:
   bgmVolume: 1
   seVolume: 1
   isSibuki: 0
+  isPlayBGM: 0
 --- !u!82 &6017473344076774825
 AudioSource:
   m_ObjectHideFlags: 0

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 553584323, guid: 1e788d6e78c4b4f05b998e859006cd7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -302,6 +302,7 @@ MonoBehaviour:
   roteLimit: 0.75
   roteMax: 65
   beforePosX: -4.5
+  thrust: 0
   surfer: {fileID: 6579904783060787519}
   namiL: {fileID: 117573543365524253, guid: be765d057217abd4fbb18928ece6e63b, type: 3}
   namiR: {fileID: 117573543365524253, guid: be765d057217abd4fbb18928ece6e63b, type: 3}
