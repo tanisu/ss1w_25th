@@ -10,7 +10,14 @@ public class Player : MonoBehaviour
     [SerializeField] Vector2 startPos;
     bool ready;
 
-    
+    private void Start()
+    {
+        board.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.board;
+        surfer.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.surfer;
+        surfer.SetConfigSprites();
+
+    }
+
     public void switchRgbd()
     {
         if (!ready)

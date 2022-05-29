@@ -40,5 +40,10 @@ public class Surfer : MonoBehaviour
         sp.sortingLayerName = _layerName;
     }
 
+    public void SetConfigSprites()
+    {
+        onBoard = Config.I.selectedPlayerData.surfer;
+        fall = Config.I.selectedPlayerData.fall;
+    }
 
 }
