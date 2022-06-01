@@ -29,7 +29,23 @@ public class Config : MonoBehaviour
             Destroy(gameObject);
         }
         stages = new string[] { "Beach","Soda","Nabe","Garden","ColorBall","Volcano","Beaker","Pool","Ramen","Onsen" };
-        
+
+        if(PlayerPrefs.GetString("SelectedPlayer") != null)
+        {
+            //Debug.Log(PlayerPrefs.GetString("SelectedPlayer"));
+            foreach(PlayerData p in playerDatas)
+            {
+                if(PlayerPrefs.GetString("SelectedPlayer") == p.name)
+                {
+                    selectedPlayerData = p;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            selectedPlayerData = playerDatas[0];
+        }
     }
 
     public void SwitchController(int _controller)
@@ -46,6 +62,7 @@ public class Config : MonoBehaviour
             if(_playerName == p.name)
             {
                 selectedPlayerData = p;
+                PlayerPrefs.SetString("SelectedPlayer",p.name);
                 break;
             }
         }

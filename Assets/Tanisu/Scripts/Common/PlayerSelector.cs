@@ -12,7 +12,6 @@ public class PlayerSelector : MonoBehaviour
     [SerializeField] Transform playerImages;
     [SerializeField] GameObject locked;
     [SerializeField] float effectTime;
-    [SerializeField] SpriteRenderer board, player;
     List<SelectablePlayer> selectablePlayer;
     List<Image> images;
     int currentPlayer = 0;
@@ -31,8 +30,9 @@ public class PlayerSelector : MonoBehaviour
         increment.onClick.AddListener(() => _incrementPlayer());
         decrement.onClick.AddListener(() => _decrementPlayer());
         _interactableArrowButton();
-
         
+
+
     }
 
     void _incrementPlayer()
@@ -80,16 +80,12 @@ public class PlayerSelector : MonoBehaviour
         }
         else
         {
+            Config.I.SelectPlayer(selectablePlayer[currentPlayer].gameObject.name);
+            Title.I.ChangePlayerSprite();
             locked.SetActive(false);
         }
         images[currentPlayer].DOFade(1f, effectTime).OnComplete(() => images[currentPlayer].raycastTarget = true);
         playerImages.transform.DOLocalMoveX(playerImages.localPosition.x + (slideRange * _x )  , effectTime)
             .OnComplete(()=>isMoving = false);
-    }
-    
-    public void ChangePlayerSprite()
-    {
-        board.sprite = Config.I.selectedPlayerData.board;
-        player.sprite = Config.I.selectedPlayerData.surfer;
     }
 }
