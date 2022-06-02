@@ -40,6 +40,7 @@ public class PlayerSelector : MonoBehaviour
         
         if (currentPlayer >= images.Count - 1 || isMoving) return;
         _slidePlayerView( 1 );
+        
         _interactableArrowButton();
     }
 
@@ -73,7 +74,7 @@ public class PlayerSelector : MonoBehaviour
         images[currentPlayer].raycastTarget = false;
         images[currentPlayer].DOFade(0f, effectTime);
         currentPlayer += _x;
-        
+        SoundManager.I.PlaySE(SESoundData.SE.TAP_CURSOR);
         if (selectablePlayer[currentPlayer].IsLocked())
         {
             locked.SetActive(true);

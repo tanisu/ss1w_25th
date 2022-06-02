@@ -36,7 +36,7 @@ public class UIController : MonoBehaviour
             beforState = GameManager.I.gameState;
             GameManager.I.gameState = GameManager.GAMESTATE.WAIT;
         }
-
+        SoundManager.I.PlaySE(SESoundData.SE.MENU_IN);
         slidePanel.SetActive(true);
     }
 
@@ -48,6 +48,7 @@ public class UIController : MonoBehaviour
             GameManager.I.gameState = beforState;
 
         }
+        SoundManager.I.PlaySE(SESoundData.SE.MENU_OUT);
         slidePanel.SetActive(false);
     }
 

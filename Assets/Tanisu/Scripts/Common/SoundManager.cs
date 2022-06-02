@@ -154,7 +154,12 @@ public class SESoundData
         CLEAR,
         SHIBUKI,
         CHEERS1,
-        CHEERS2
+        CHEERS2,
+        MENU_IN,
+        MENU_OUT,
+        RETRY,
+        TAP_CURSOR
+
     }
 
     public SE se;

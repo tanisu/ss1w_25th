@@ -7286,6 +7286,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6017473344076774824, guid: e3ac45bf4c9b7ee4a9410a655b0656f2, type: 3}
+      propertyPath: bGMSoundDatas.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6017473344076774827, guid: e3ac45bf4c9b7ee4a9410a655b0656f2, type: 3}
       propertyPath: m_Name
       value: SoundManager

@@ -23,6 +23,7 @@ public class SceneController : MonoBehaviour
 
     public void StartGame()
     {
+        SoundManager.I.PlaySE(SESoundData.SE.START);
         SoundManager.I.FadeOutBGM();
         fade.FadeIn(1f, () => {
             SceneManager.sceneLoaded += _gameSceneLoaded;

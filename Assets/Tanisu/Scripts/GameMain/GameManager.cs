@@ -149,6 +149,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        SoundManager.I.PlaySE(SESoundData.SE.RETRY);
         gameOver = true;
     }
 
