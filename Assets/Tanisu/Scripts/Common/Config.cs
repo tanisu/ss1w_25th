@@ -28,7 +28,8 @@ public class Config : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        stages = new string[] { "Beach","Soda","Nabe","Garden","ColorBall","Volcano","Beaker","Pool","Ramen","Onsen" };
+        stages = new string[] { "Beach","Soda","Nabe","Garden","ColorBall","Volcano",
+            "Beaker","Pool","Ramen","Onsen","Good Button","Calculator" };
 
         if(PlayerPrefs.GetString("SelectedPlayer") != null)
         {
