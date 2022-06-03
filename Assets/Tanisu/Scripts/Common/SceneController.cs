@@ -52,4 +52,9 @@ public class SceneController : MonoBehaviour
         SoundManager.I.FadeOutBGM();
         fade.FadeIn(1f, () => SceneManager.LoadScene("momo_Clear"));
     }
+
+    public string GetCurrentScene()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 }

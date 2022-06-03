@@ -43,6 +43,14 @@ public class Player : MonoBehaviour
         StartCoroutine(_setStartPos());
     }
 
+    public void ChangeSprite()
+    {
+        board.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.board;
+        surfer.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.surfer;
+        gameObject.SetActive(false);
+        gameObject.SetActive(true);
+    }
+
     IEnumerator _setStartPos()
     {
         yield return new WaitForSeconds(2.5f);

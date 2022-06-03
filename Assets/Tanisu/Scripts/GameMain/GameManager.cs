@@ -147,6 +147,11 @@ public class GameManager : MonoBehaviour
         cupClear = true;
     }
 
+    public void ChangePlayerSprite()
+    {
+        player.ChangeSprite();
+    }
+
     public void GameOver()
     {
         SoundManager.I.PlaySE(SESoundData.SE.RETRY);
