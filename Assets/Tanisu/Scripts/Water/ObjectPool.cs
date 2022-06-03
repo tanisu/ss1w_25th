@@ -7,15 +7,18 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] PoolContent content = default;
     public int maxCount = 300;
     Queue<PoolContent> objQueue;
+    List<SpriteRenderer> sps;
 
     private void Awake()
     {
+        sps = new List<SpriteRenderer>(maxCount);
         objQueue = new Queue<PoolContent>(maxCount);
         for (int i = 0; i < maxCount; i++)
         {
             PoolContent tmpObj = Instantiate(content);
             tmpObj.transform.parent = transform;
             tmpObj.transform.localPosition = new Vector3(100, 100, 0);
+            sps.Add(tmpObj.GetComponent<SpriteRenderer>());
             objQueue.Enqueue(tmpObj);
         }
     }
@@ -38,5 +41,15 @@ public class ObjectPool : MonoBehaviour
     public void ResetAll()
     {
         BroadcastMessage("HideFromStage", SendMessageOptions.DontRequireReceiver);
+    }
+
+    public void ChangePoolContentSp(SpriteRenderer _poolContentSp)
+    {
+        foreach(SpriteRenderer sp in sps)
+        {
+            sp.sprite = _poolContentSp.sprite;
+            sp.color = Color.white;
+            //sp.transform.localScale = Vector3.one;
+        }
     }
 }

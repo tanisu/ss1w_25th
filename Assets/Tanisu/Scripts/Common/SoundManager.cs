@@ -132,7 +132,8 @@ public class BGMSoundData
         STOMACH,
         UKIYOE,
         ENDING,
-        CALCULATOR
+        CALCULATOR,
+        IKURA
 
     }
 

@@ -8,6 +8,7 @@ public class WaterGenerator : MonoBehaviour
     [SerializeField] float waveInterval,force;
     [SerializeField] float launcInterval;
     [SerializeField] int waveSoundTime = 1;
+    [SerializeField] SpriteRenderer contentSp;
 
     float interval;
     int vec = 1;
@@ -20,6 +21,10 @@ public class WaterGenerator : MonoBehaviour
         waters = new List<Water>();
         coroutine = StartCoroutine(_launchWater());
         interval = waveInterval;
+        if(contentSp != null)
+        {
+            waterPool.ChangePoolContentSp(contentSp);
+        }
     }
 
     
@@ -64,6 +69,7 @@ public class WaterGenerator : MonoBehaviour
 
         while (true)
         {
+            
             PoolContent obj = waterPool.Launch(transform.position);
             if(obj != null)
             {
