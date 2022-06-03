@@ -967,6 +967,7 @@ MonoBehaviour:
   force: 120
   launcInterval: 0.03
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!114 &65970173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1601,6 +1602,7 @@ MonoBehaviour:
   force: 100
   launcInterval: 0.063
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &124123428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4822,6 +4824,7 @@ MonoBehaviour:
   force: 75
   launcInterval: 0.08
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &371449561
 GameObject:
   m_ObjectHideFlags: 0
@@ -5367,6 +5370,7 @@ MonoBehaviour:
   force: 115
   launcInterval: 0.03
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &475527211
 GameObject:
   m_ObjectHideFlags: 0
@@ -7974,7 +7978,7 @@ MonoBehaviour:
   - {fileID: 113519063}
   color: {r: 0.6, g: 0.7176471, b: 0.85098046, a: 0.85882354}
   strokeColor: {r: 0.8588236, g: 0.9215687, b: 0.9803922, a: 0.8666667}
-  sibukiColor: {r: 0.6663225, g: 0.9228053, b: 0.9622642, a: 0.972549}
+  sibukiColor: {r: 0.922121, g: 0.9607843, b: 0.6666667, a: 0.972549}
   sibuki: {fileID: 5506308439204197074, guid: 065d220c0a556a94db3ac309264cc69d, type: 3}
   trapStartTime: 2.2
 --- !u!1 &694806923
@@ -9409,6 +9413,7 @@ MonoBehaviour:
   force: 75
   launcInterval: 0.043
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &836021001
 GameObject:
   m_ObjectHideFlags: 0
@@ -11613,6 +11618,7 @@ MonoBehaviour:
   force: 75
   launcInterval: 0.043
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &1007873270
 GameObject:
   m_ObjectHideFlags: 0
@@ -12916,6 +12922,7 @@ MonoBehaviour:
   force: 62
   launcInterval: 0.05
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &1147495420
 GameObject:
   m_ObjectHideFlags: 0
@@ -13501,8 +13508,9 @@ MonoBehaviour:
   waterPool: {fileID: 1161176995}
   waveInterval: 1.55
   force: 95
-  launcInterval: 0.04
+  launcInterval: 0.1
   waveSoundTime: 2
+  contentSp: {fileID: 4774326592053917239, guid: 9da259a44361fd04da00ff70d93d57dc, type: 3}
 --- !u!1 &1211317768
 GameObject:
   m_ObjectHideFlags: 0
@@ -13775,6 +13783,7 @@ MonoBehaviour:
   force: 115
   launcInterval: 0.03
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &1223577394
 GameObject:
   m_ObjectHideFlags: 0
@@ -15399,6 +15408,7 @@ MonoBehaviour:
   force: 78
   launcInterval: 0.1
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!114 &1315878741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16433,6 +16443,7 @@ MonoBehaviour:
   force: 105
   launcInterval: 0.03
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &1438528560
 GameObject:
   m_ObjectHideFlags: 0
@@ -17500,6 +17511,7 @@ MonoBehaviour:
   force: 100
   launcInterval: 0.04
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1001 &1540192307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17935,6 +17947,7 @@ MonoBehaviour:
   force: 95
   launcInterval: 0.04
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &1573253229
 GameObject:
   m_ObjectHideFlags: 0
@@ -23556,6 +23569,7 @@ MonoBehaviour:
   force: 90
   launcInterval: 0.03
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &2045143838
 GameObject:
   m_ObjectHideFlags: 0
@@ -23605,6 +23619,7 @@ MonoBehaviour:
   force: 95
   launcInterval: 0.04
   waveSoundTime: 2
+  contentSp: {fileID: 0}
 --- !u!1 &2078088048
 GameObject:
   m_ObjectHideFlags: 0
