@@ -27,6 +27,7 @@ public class PlayerSelector : MonoBehaviour
             selectablePlayer[i].transform.localPosition = new Vector3(i * -slideRange, selectablePlayer[i].transform.localPosition.y);
             images.Add(selectablePlayer[i].GetComponent<Image>());
         }
+        
         increment.onClick.AddListener(() => _incrementPlayer());
         decrement.onClick.AddListener(() => _decrementPlayer());
         _interactableArrowButton();
@@ -72,7 +73,7 @@ public class PlayerSelector : MonoBehaviour
     {
         isMoving = true;
         images[currentPlayer].raycastTarget = false;
-        images[currentPlayer].DOFade(0f, effectTime);
+        images[currentPlayer].DOFade(0f, effectTime).SetUpdate(true);
         currentPlayer += _x;
         SoundManager.I.PlaySE(SESoundData.SE.TAP_CURSOR);
         if (selectablePlayer[currentPlayer].IsLocked())
@@ -82,11 +83,22 @@ public class PlayerSelector : MonoBehaviour
         else
         {
             Config.I.SelectPlayer(selectablePlayer[currentPlayer].gameObject.name);
-            Title.I.ChangePlayerSprite();
+            if(SceneController.I.GetCurrentScene() == "Title")
+            {
+                Title.I.ChangePlayerSprite();
+            }
+            else
+            {
+                Debug.Log(selectablePlayer[currentPlayer].gameObject.name);
+                GameManager.I.ChangePlayerSprite();
+            }
+            
             locked.SetActive(false);
         }
-        images[currentPlayer].DOFade(1f, effectTime).OnComplete(() => images[currentPlayer].raycastTarget = true);
+        
+        images[currentPlayer].DOFade(1f, effectTime).OnComplete(() => images[currentPlayer].raycastTarget = true).SetUpdate(true); ;
         playerImages.transform.DOLocalMoveX(playerImages.localPosition.x + (slideRange * _x )  , effectTime)
-            .OnComplete(()=>isMoving = false);
+            .OnComplete(()=>isMoving = false).SetUpdate(true); ;
+        
     }
 }
