@@ -32,6 +32,7 @@ public class Cup : MonoBehaviour
 
             if(_updateTimer() >= 1 && currentTrap <traps.Length)
             {
+                Debug.Log("timer");
                 traps[currentTrap].TrapActivation();
                 currentTrap++;
                 time = 0;

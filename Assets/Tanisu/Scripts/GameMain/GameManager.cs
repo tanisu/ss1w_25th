@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
         stage.transform.position =  new Vector3(-stageX * currentCup,0) ;
         //for (int i = 0; i < cups.Length; i++)
         //{
-        //    if(currentCup < i)
+        //    if (currentCup > i)
         //    {
         //        cups[i].gameObject.SetActive(false);
         //    }
