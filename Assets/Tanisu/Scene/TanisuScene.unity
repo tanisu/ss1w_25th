@@ -1375,8 +1375,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117227688}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4499998, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2496,7 +2496,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 5
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 65970170}
+  waterGenerators:
+  - {fileID: 65970170}
   traps:
   - {fileID: 65970173}
   color: {r: 0.82745105, g: 0.34901962, b: 0.3019608, a: 0.8862745}
@@ -3998,7 +3999,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 21
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 572902758}
+  waterGenerators:
+  - {fileID: 572902758}
   traps:
   - {fileID: 1561984138}
   color: {r: 0.9058824, g: 0.5058824, b: 0.31764707, a: 0.8666667}
@@ -5801,7 +5803,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 3
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 1136764061}
+  waterGenerators:
+  - {fileID: 1136764061}
   traps: []
   color: {r: 0, g: 0.22352941, b: 1, a: 0.654902}
   strokeColor: {r: 0.43529412, g: 0.68235296, b: 0.972549, a: 0.972549}
@@ -6672,7 +6675,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 7
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 1006122177}
+  waterGenerators:
+  - {fileID: 1006122177}
   traps:
   - {fileID: 1646886724}
   - {fileID: 1791353327}
@@ -7095,7 +7099,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 22
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 441640146}
+  waterGenerators:
+  - {fileID: 441640146}
   traps:
   - {fileID: 683955756}
   color: {r: 0.9058824, g: 0.5058824, b: 0.31764707, a: 0.8666667}
@@ -7409,7 +7414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619182066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.18, y: 2.98, z: 0}
+  m_LocalPosition: {x: -0.8, y: 2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8426,7 +8431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 11
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 1209572716}
+  waterGenerators:
+  - {fileID: 685799204}
   traps:
   - {fileID: 113519063}
   color: {r: 0.6, g: 0.7176471, b: 0.85098046, a: 0.85882354}
@@ -8679,7 +8685,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 2
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 1315878738}
+  waterGenerators:
+  - {fileID: 1315878738}
   traps:
   - {fileID: 1315878741}
   color: {r: 0.6, g: 0.8000001, b: 0.5254902, a: 0.654902}
@@ -9063,7 +9070,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743969356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -14121,7 +14128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 8
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 370626782}
+  waterGenerators:
+  - {fileID: 370626782}
   traps:
   - {fileID: 914822174}
   - {fileID: 733461174}
@@ -15155,7 +15163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 25
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 1561324871}
+  waterGenerators:
+  - {fileID: 1561324871}
   traps:
   - {fileID: 1486886795}
   - {fileID: 59250604}
@@ -15218,7 +15227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 9
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 1219745828}
+  waterGenerators:
+  - {fileID: 1219745828}
   traps:
   - {fileID: 264346894}
   color: {r: 0.9058824, g: 0.75294125, b: 0.76470596, a: 0.88235295}
@@ -16051,7 +16061,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 23
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 832807842}
+  waterGenerators:
+  - {fileID: 832807842}
   traps:
   - {fileID: 1121961807}
   color: {r: 0.6, g: 0.7176471, b: 0.85098046, a: 0.85882354}
@@ -16946,7 +16957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 20
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 1539681480}
+  waterGenerators:
+  - {fileID: 1539681480}
   traps:
   - {fileID: 1023675461}
   - {fileID: 1550987290}
@@ -17534,7 +17546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 10
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 117227688}
+  waterGenerators:
+  - {fileID: 117227688}
   traps:
   - {fileID: 983499559}
   color: {r: 0.9811321, g: 0.6257031, b: 0.596084, a: 0.84313726}
@@ -17920,7 +17933,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 4
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 1429974171}
+  waterGenerators:
+  - {fileID: 1429974171}
   traps:
   - {fileID: 1246761190}
   - {fileID: 1527648237}
@@ -20259,7 +20273,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 426757231
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 531579910, guid: 01fa46d40b61d448d856ea6414ed6b94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22521,7 +22535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 1
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 460719792}
+  waterGenerators:
+  - {fileID: 460719792}
   traps:
   - {fileID: 922180528}
   color: {r: 0.6, g: 0.9176471, b: 0.92549026, a: 0.83137256}
@@ -24248,7 +24263,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965022605}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -24276,12 +24291,13 @@ PolygonCollider2D:
       - {x: 0.3642857, y: -0.057142857}
       - {x: 0.34285715, y: 0}
       - {x: 0.5285714, y: 0.2857143}
-      - {x: 0.65, y: 0.39285713}
-      - {x: 0.75714284, y: 0.47857144}
-      - {x: 0.7714286, y: 0.5}
-      - {x: 0.7714286, y: 0.5714286}
-      - {x: 0.76428574, y: 0.60714287}
-      - {x: 0.7071429, y: 0.64285713}
+      - {x: 0.57418287, y: 0.39285713}
+      - {x: 0.5946749, y: 0.45690924}
+      - {x: 0.4140014, y: 0.31587103}
+      - {x: 0.5764658, y: 0.5108311}
+      - {x: 0.5439773, y: 0.54976636}
+      - {x: 0.5260007, y: 0.617974}
+      - {x: 0.57716984, y: 0.6211949}
       - {x: 0.6142857, y: 0.6357143}
       - {x: 0.46428573, y: 0.6571429}
       - {x: 0.37857142, y: 0.5857143}
@@ -24470,7 +24486,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 13
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 2045143838}
+  waterGenerators:
+  - {fileID: 2045143838}
   traps:
   - {fileID: 1858865642}
   - {fileID: 635332344}
@@ -24877,7 +24894,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 6
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 2041200162}
+  waterGenerators:
+  - {fileID: 2041200162}
   traps:
   - {fileID: 902276632}
   color: {r: 0.50195795, g: 0.7449082, b: 0.9433962, a: 0.8666667}
@@ -25061,6 +25079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030011930}
   - component: {fileID: 2030011932}
+  - component: {fileID: 2030011933}
   m_Layer: 7
   m_Name: CupFrame
   m_TagString: Untagged
@@ -25138,6 +25157,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &2030011933
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030011929}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.364286, y: 4.7785716}
+    newSize: {x: 5.775, y: 5.675}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.5892857, y: 2.182143}
+      - {x: 1.5678571, y: 2.1607144}
+      - {x: 1.6556681, y: -1.8572832}
+      - {x: -1.6114856, y: -1.8163134}
+      - {x: -1.6506156, y: 2.1475723}
+      - {x: -1.9321429, y: 2.182143}
+      - {x: -2.1178572, y: 2.0892856}
+      - {x: -2.1178572, y: -2.2392857}
+      - {x: -2.1107142, y: -2.2535715}
+      - {x: 2.0892856, y: -2.2535715}
+      - {x: 2.0892856, y: 2.1535714}
+      - {x: 1.8821429, y: 2.182143}
 --- !u!1 &2036601765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4190934249053465335, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
@@ -25300,10 +25356,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMTitle: 24
   metaBallRenderer: {fileID: 2100000, guid: a6c1952fe3e0e444db3d04a480776f72, type: 2}
-  waterGenerator: {fileID: 2121690235}
+  waterGenerators:
+  - {fileID: 2121690235}
+  - {fileID: 619182066}
   traps: []
-  color: {r: 0.02632604, g: 0.78544664, b: 0.8207547, a: 1}
-  strokeColor: {r: 0.32095048, g: 0.6886792, b: 0.6434203, a: 1}
+  color: {r: 0.02632604, g: 0.78544664, b: 0.8207547, a: 0.8627451}
+  strokeColor: {r: 0.32095048, g: 0.6886792, b: 0.6434203, a: 0.9019608}
   sibukiColor: {r: 0.03720181, g: 0.5775446, b: 0.8962264, a: 1}
   sibuki: {fileID: 5506308439204197074, guid: 065d220c0a556a94db3ac309264cc69d, type: 3}
   trapStartTime: 1.5
@@ -25946,7 +26004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121690235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.88, y: 2.98, z: 0}
+  m_LocalPosition: {x: 0.8, y: 2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
