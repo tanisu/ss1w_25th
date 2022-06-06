@@ -30,7 +30,7 @@ public class Config : MonoBehaviour
         }
         stages = new string[] { "Beach","Soda","Nabe","Garden","ColorBall","Volcano",
             "Beaker","Pool","Ramen","Onsen","Good Button","Calculator","Feet","Surf","Apple","Ikura",
-            "DogFood"
+            "DogFood","Merlion"
         };
 
         if(PlayerPrefs.GetString("SelectedPlayer") != null)
