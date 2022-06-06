@@ -6,7 +6,7 @@ public class Cup : MonoBehaviour
 {
     public BGMSoundData.BGM BGMTitle;
     public Material metaBallRenderer;
-    [SerializeField] GameObject waterGenerator;
+    [SerializeField] GameObject[] waterGenerators;
     [SerializeField] Trap[] traps;
     [SerializeField] Color color, strokeColor,sibukiColor;
     [SerializeField] ParticleSystem sibuki;
@@ -61,7 +61,11 @@ public class Cup : MonoBehaviour
 
     public void ResetCup()
     {
-        waterGenerator.GetComponent<WaterGenerator>().RemoveAllWaters();
+        foreach(GameObject waterGenerator in waterGenerators)
+        {
+            waterGenerator.GetComponent<WaterGenerator>().RemoveAllWaters();
+        }
+        
         StartCoroutine(_resetTrap());
         StartCoroutine(_resetAll());
         if (GameManager.I.gameState == GameManager.GAMESTATE.REPLAY)
@@ -80,19 +84,31 @@ public class Cup : MonoBehaviour
     public void hideWaterGenerator()
     {
         isCurrentCup = false;
-        waterGenerator.SetActive(false);
+        foreach(GameObject waterGenerator in waterGenerators)
+        {
+            waterGenerator.SetActive(false);
+        }
+        
     }
 
     public void showWaterGenerator()
     {
         isCurrentCup = true;
-        waterGenerator.SetActive(true);
+        foreach(GameObject waterGenerator in waterGenerators)
+        {
+            waterGenerator.SetActive(true);
+        }
+        
     }
 
     public void Restart()
     {
         showWaterGenerator();
-        waterGenerator.GetComponent<WaterGenerator>().ReStart();
+        foreach(GameObject waterGenerator in waterGenerators)
+        {
+            waterGenerator.GetComponent<WaterGenerator>().ReStart();
+        }
+        
     }
 
     public void ResetAll()
@@ -124,34 +140,4 @@ public class Cup : MonoBehaviour
 
 
 
-    /*
-    IEnumerator _collectWaters(PoolContent[] _waters)
-    {
-        
-        foreach (PoolContent water in _waters)
-        {
-            water.GetComponent<Water>().StopMove();
-        }
-        yield return new WaitForSeconds(2f);
-        
-        foreach (PoolContent water in _waters)
-        {
-            water.HideFromStage();
-            water.GetComponent<Water>().waterGenerator.RemoveWater(water.GetComponent<Water>());
-            
-        }
-        foreach (Trap trap in traps)
-        {
-            trap.ResetTrap();
-        }
-        currentTrap = 0;
-        time = 0;
-        if (GameManager.I.gameState == GameManager.GAMESTATE.REPLAY)
-        {
-
-            yield return new WaitForSeconds(2f);
-            Restart();
-        }
-        
-    }*/
 }
