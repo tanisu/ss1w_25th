@@ -29,7 +29,9 @@ public class Config : MonoBehaviour
             Destroy(gameObject);
         }
         stages = new string[] { "Beach","Soda","Nabe","Garden","ColorBall","Volcano",
-            "Beaker","Pool","Ramen","Onsen","Good Button","Calculator","Feet","Surf","Apple","Ikura" };
+            "Beaker","Pool","Ramen","Onsen","Good Button","Calculator","Feet","Surf","Apple","Ikura",
+            "DogFood"
+        };
 
         if(PlayerPrefs.GetString("SelectedPlayer") != null)
         {

@@ -133,7 +133,13 @@ public class BGMSoundData
         UKIYOE,
         ENDING,
         CALCULATOR,
-        IKURA
+        IKURA,
+        DOGFOOD,
+        GOOD,
+        MERLION,
+        MOJI,
+        TOILET,
+        ANT
 
     }
 
