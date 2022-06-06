@@ -8,7 +8,7 @@ public class ObjectPool : MonoBehaviour
     public int maxCount = 300;
     Queue<PoolContent> objQueue;
     List<SpriteRenderer> sps;
-
+    Vector3 poolContentScale = new Vector3(0.7f, 0.7f, 1);
     private void Awake()
     {
         sps = new List<SpriteRenderer>(maxCount);
@@ -49,7 +49,7 @@ public class ObjectPool : MonoBehaviour
         {
             sp.sprite = _poolContentSp.sprite;
             sp.color = Color.white;
-            //sp.transform.localScale = Vector3.one;
+            sp.transform.localScale = poolContentScale;
         }
     }
 }
