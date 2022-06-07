@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96a106fe518cf4c7691f5c720b8fc0d6
+guid: ec494292a1c7b4e06a84c45efea8ab67
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 140
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tokei_0
+      name: Slider_Ant_0
       rect:
         serializedVersion: 2
-        x: 1168
-        y: 1176
-        width: 609
-        height: 743
+        x: 972
+        y: 1809
+        width: 493
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e93323e22f0444b2b83af638a23a9a9
-      internalID: -1393019296
+      spriteID: 1d847d53d34544b96ad3035f930d80bf
+      internalID: -1415578249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_1
+      name: Slider_Ant_1
       rect:
         serializedVersion: 2
-        x: 1816
-        y: 1615
-        width: 175
-        height: 174
+        x: 244
+        y: 1639
+        width: 160
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04c1a55918df14fc7a446d3796911226
-      internalID: -990757237
+      spriteID: a36f60525dc344fbb815884efab31a52
+      internalID: 975248799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_2
+      name: Slider_Ant_2
       rect:
         serializedVersion: 2
-        x: 1853
-        y: 1272
-        width: 100
-        height: 327
+        x: 562
+        y: 1705
+        width: 128
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e121214e46e684e2c8af894e38b31676
-      internalID: -727592707
+      spriteID: 843a04ff8eec74ea3b4f806e90acb198
+      internalID: -393121314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_3
+      name: Slider_Ant_3
       rect:
         serializedVersion: 2
-        x: 1129
-        y: 189
-        width: 687
-        height: 766
+        x: 1081
+        y: 1006
+        width: 548
+        height: 573
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c2d37725bfb409aa9c4826ce36c9ba
-      internalID: -1475960508
+      spriteID: bb17f7a506af14f3b8eb38a86733b046
+      internalID: 707246670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_4
+      name: Slider_Ant_4
       rect:
         serializedVersion: 2
-        x: 102
-        y: 1117
-        width: 590
-        height: 547
+        x: 1570
+        y: 1631
+        width: 257
+        height: 83
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,41 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad85609d3f7f0403896410059fa7c137
-      internalID: -340183416
+      spriteID: 5b2f813d2e4cb4a79a35c639e75b8cc2
+      internalID: -2086014216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_5
+      name: Slider_Ant_5
       rect:
         serializedVersion: 2
-        x: 787
-        y: 1380
-        width: 75
-        height: 570
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef75e6c1ffda24c9b867151c22040260
-      internalID: -427789868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tokei_6
-      rect:
-        serializedVersion: 2
-        x: 955
-        y: 1271
-        width: 75
-        height: 75
+        x: 576
+        y: 1568
+        width: 128
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8845caf2e7080474fa053c3371bc6e6b
-      internalID: 817488618
+      spriteID: e4b54a36cdc9a4c0e94c7944316284ea
+      internalID: -300318305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_7
+      name: Slider_Ant_6
       rect:
         serializedVersion: 2
-        x: 903
-        y: 1089
-        width: 67
-        height: 67
+        x: 433
+        y: 1442
+        width: 99
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +280,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a44d3ebe45c624a3f933ce5c329195a0
-      internalID: 1679437742
+      spriteID: e08bc3bcb2b004614827d5e643b8b0d9
+      internalID: -2128825235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_8
+      name: Slider_Ant_7
       rect:
         serializedVersion: 2
-        x: 999
-        y: 920
-        width: 61
-        height: 63
+        x: 251
+        y: 1260
+        width: 200
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +301,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad5231085a00b4e80bdfde91d8833e9b
-      internalID: 171931954
+      spriteID: f89e5aa8c9eca4fb6bb65c3ff509cc7d
+      internalID: 1201903486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_9
+      name: Slider_Ant_8
       rect:
         serializedVersion: 2
-        x: 114
-        y: 196
-        width: 658
-        height: 571
+        x: 230
+        y: 427
+        width: 508
+        height: 596
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +322,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73cacce0714484f50b57a4172f9a05c6
-      internalID: 1180361886
+      spriteID: 7f17ed1a0807c41d1a4201ffbb0422f1
+      internalID: 1702146797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tokei_10
+      name: Slider_Ant_9
       rect:
         serializedVersion: 2
-        x: 903
-        y: 420
-        width: 143
-        height: 221
+        x: 1102
+        y: 201
+        width: 527
+        height: 578
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,8 +343,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d6f846b39d6f4030a3cc6cc824fb7e0
-      internalID: -1026453684
+      spriteID: 756ab31b774a042e685c5d80d0f3e4be
+      internalID: -21584017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slider_Ant_10
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 288
+        width: 534
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558688ca44ead48ebba8ef2ac2a04123
+      internalID: -751621234
       vertices: []
       indices: 
       edges: []
@@ -381,17 +381,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tokei_7: 1679437742
-      Tokei_2: -727592707
-      Tokei_6: 817488618
-      Tokei_5: -427789868
-      Tokei_10: -1026453684
-      Tokei_1: -990757237
-      Tokei_3: -1475960508
-      Tokei_0: -1393019296
-      Tokei_4: -340183416
-      Tokei_8: 171931954
-      Tokei_9: 1180361886
+      Slider_Ant_1: 975248799
+      Slider_Ant_0: -1415578249
+      Slider_Ant_10: -751621234
+      Slider_Ant_5: -300318305
+      Slider_Ant_6: -2128825235
+      Slider_Ant_4: -2086014216
+      Slider_Ant_3: 707246670
+      Slider_Ant_7: 1201903486
+      Slider_Ant_2: -393121314
+      Slider_Ant_8: 1702146797
+      Slider_Ant_9: -21584017
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
