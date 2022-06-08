@@ -11,6 +11,7 @@ public class Cup : MonoBehaviour
     [SerializeField] Color color, strokeColor,sibukiColor;
     [SerializeField] ParticleSystem sibuki;
     [SerializeField] float trapStartTime;
+    [SerializeField] StartTrigger st;
     float time;
     int currentTrap = 0;
     ParticleSystem.MainModule main;
@@ -29,6 +30,7 @@ public class Cup : MonoBehaviour
     {
         if (isCurrentCup && GameManager.I.gameState == GameManager.GAMESTATE.PLAY)
         {
+    
 
             if(_updateTimer() >= 1 && currentTrap <traps.Length)
             {
@@ -73,6 +75,10 @@ public class Cup : MonoBehaviour
         {
             StartCoroutine(_restart());
         }
+        if(st != null)
+        {
+            st.OffCollider();
+        }
     }
 
     public void ChangeColor()
@@ -97,7 +103,9 @@ public class Cup : MonoBehaviour
         isCurrentCup = true;
         foreach(GameObject waterGenerator in waterGenerators)
         {
-            waterGenerator.SetActive(true);
+
+                waterGenerator.SetActive(true);
+            
         }
         
     }

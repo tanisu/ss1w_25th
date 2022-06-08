@@ -11,6 +11,7 @@ TagManager:
   - GameManager
   - PlayerSelector
   - BlackHole
+  - Trigger
   layers:
   - Default
   - TransparentFX
