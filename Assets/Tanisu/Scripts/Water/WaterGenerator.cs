@@ -9,6 +9,7 @@ public class WaterGenerator : MonoBehaviour
     [SerializeField] float launcInterval;
     [SerializeField] int waveSoundTime = 1;
     [SerializeField] SpriteRenderer contentSp;
+    public bool isStaticForce;
 
     float interval;
     int vec = 1;
@@ -69,12 +70,14 @@ public class WaterGenerator : MonoBehaviour
 
         while (true)
         {
-            
-            PoolContent obj = waterPool.Launch(transform.position);
-            if(obj != null)
+            PoolContent obj = waterPool.Launch(transform.position,isStaticForce);
+
+
+            if (obj != null)
             {
                 obj.transform.parent = transform.parent;
                 Water water = obj.GetComponent<Water>();
+                
                 water.waterGenerator = this;
                 waters.Add(water);
 

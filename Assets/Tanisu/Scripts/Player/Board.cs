@@ -130,6 +130,11 @@ public class Board : MonoBehaviour
         {
             isWater = true;
         }
+        if (collision.gameObject.CompareTag("ClearGround"))
+        {
+            GameManager.I.CupClear();
+            collision.gameObject.SetActive(false);
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)

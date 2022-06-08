@@ -12,6 +12,7 @@ TagManager:
   - PlayerSelector
   - BlackHole
   - Trigger
+  - ClearGround
   layers:
   - Default
   - TransparentFX

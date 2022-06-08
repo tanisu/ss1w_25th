@@ -101,10 +101,15 @@ public class Cup : MonoBehaviour
     public void showWaterGenerator()
     {
         isCurrentCup = true;
-        foreach(GameObject waterGenerator in waterGenerators)
+        if (st != null) return;
+        foreach (GameObject waterGenerator in waterGenerators)
         {
-
-                waterGenerator.SetActive(true);
+            
+            
+            
+            waterGenerator.SetActive(true);
+            
+                
             
         }
         
@@ -113,6 +118,7 @@ public class Cup : MonoBehaviour
     public void Restart()
     {
         showWaterGenerator();
+        if (st != null) return;
         foreach(GameObject waterGenerator in waterGenerators)
         {
             waterGenerator.GetComponent<WaterGenerator>().ReStart();

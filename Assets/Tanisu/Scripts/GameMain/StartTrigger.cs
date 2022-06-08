@@ -5,20 +5,28 @@ using UnityEngine;
 public class StartTrigger : MonoBehaviour
 {
     [SerializeField] PolygonCollider2D plcd2d;
-    public bool isStart;
+    [SerializeField] GameObject waterGenerateor;
+    public bool reStart;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Board"))
         {
             plcd2d.enabled = true;
-            isStart = true;
+            
+            waterGenerateor.SetActive(true);
+            if (reStart)
+            {
+                waterGenerateor.GetComponent<WaterGenerator>().ReStart();
+            }
+            reStart = false;
         }
     }
 
     public void OffCollider()
     {
+        waterGenerateor.SetActive(false);
         plcd2d.enabled = false;
-        isStart = false;
+        reStart = true;
     }
 }
