@@ -30,12 +30,16 @@ public class ObjectPool : MonoBehaviour
         objQueue.Enqueue(_obj);
     }
 
-    public PoolContent Launch(Vector3 _pos)
+    public PoolContent Launch(Vector3 _pos,bool isSlow = false)
     {
         if (objQueue.Count <= 0) return null;
         PoolContent tmpObj = objQueue.Dequeue();
         tmpObj.gameObject.SetActive(true);
-        tmpObj.ShowInStage(_pos);
+        
+        
+        tmpObj.ShowInStage(_pos,isSlow);
+        
+        
         return tmpObj;
     }
     public void ResetAll()

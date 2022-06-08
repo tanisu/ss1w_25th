@@ -34,11 +34,22 @@ public class Water : MonoBehaviour
         rgbd2d.angularVelocity = 0f;
     }
 
-    public void EntryStage()
+    public void EntryStage(bool isSlow = false)
     {
         rgbd2d.velocity = Vector3.zero;
         rgbd2d.angularVelocity = 0f;
-        int x = Random.Range(-1, 2);
+        float x = 0;
+        if (isSlow)
+        {
+            x = 0.5f;
+            force = 30;
+        }
+        else
+        {
+            x = Random.Range(-1, 2);
+        }
+         
+        
         rgbd2d.AddForce(new Vector2(x * force, x));
     }
 

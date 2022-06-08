@@ -24,10 +24,10 @@ public class PoolContent : MonoBehaviour
         }
     }
 
-    public void ShowInStage(Vector3 _pos)
+    public void ShowInStage(Vector3 _pos,bool isSlow = false)
     {
         transform.position = _pos;
-        water.EntryStage();
+        water.EntryStage(isSlow);
 
     }
 
