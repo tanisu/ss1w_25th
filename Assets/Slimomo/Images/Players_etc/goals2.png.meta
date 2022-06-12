@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 140
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -148,7 +148,7 @@ TextureImporter:
         width: 126
         height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,7 +169,7 @@ TextureImporter:
         width: 129
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,7 +190,7 @@ TextureImporter:
         width: 228
         height: 135
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,7 +211,7 @@ TextureImporter:
         width: 578
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -219,6 +219,132 @@ TextureImporter:
       bones: []
       spriteID: 58c8788d3ce6440c289067b7bc0d1a70
       internalID: 1734531571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 512
+        width: 114
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebee80d0e6414647addc6bd3fe182f7
+      internalID: -126279393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_5
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 565
+        width: 99
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103d2ac72367948dcbfffce40dd957aa
+      internalID: 2014533395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 253
+        width: 88
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10633a0a8a69429880621a2e8d67174
+      internalID: -1442335651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_7
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 325
+        width: 116
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c2298ca679249c7a98f9f25f5406c5
+      internalID: -419087182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_8
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 24
+        width: 191
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b3e9ec6552e4c25b9503536860f28a
+      internalID: -812962166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_9
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 19
+        width: 141
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20de1c0a0b86a4ccfba85bcdda5911d4
+      internalID: 1895439444
       vertices: []
       indices: 
       edges: []
@@ -234,9 +360,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      goals2_8: -812962166
+      goals2_7: -419087182
       goals2_1: 156184694
+      goals2_4: -126279393
+      goals2_5: 2014533395
+      goals2_6: -1442335651
       goals2_0: 1527307368
       goals2_2: -464914745
+      goals2_9: 1895439444
       goals2_3: 1734531571
   spritePackingTag: 
   pSDRemoveMatte: 0
