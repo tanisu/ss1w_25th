@@ -115,6 +115,10 @@ public class Cup : MonoBehaviour
         
     }
 
+    public bool GetCurrentCup()
+    {
+        return isCurrentCup;
+    }
     public void Restart()
     {
         showWaterGenerator();

@@ -59,13 +59,14 @@ public class GameManager : MonoBehaviour
         }
         cups = stage.GetComponentsInChildren<Cup>();
         stage.transform.position =  new Vector3(-stageX * currentCup,0) ;
-        //for (int i = 0; i < cups.Length; i++)
-        //{
-        //    if (currentCup > i)
-        //    {
-        //        cups[i].gameObject.SetActive(false);
-        //    }
-        //}
+        for (int i = 0; i < cups.Length; i++)
+        {
+            if(currentCup != i)
+            {
+                cups[i].gameObject.SetActive(false);
+            }
+
+        }
         gameState = GAMESTATE.WAIT;
         
         player.ToStartPos();
@@ -201,7 +202,7 @@ public class GameManager : MonoBehaviour
         if (currentCup < cups.Length - 1)
         {
             currentCup++;
-            //cups[currentCup].gameObject.SetActive(true);
+            cups[currentCup].gameObject.SetActive(true);
             _checkMaxCup();
             player.SetPlayerPos();
             timer.GetRecordTime(currentCup);
