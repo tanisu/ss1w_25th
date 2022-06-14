@@ -30,6 +30,7 @@ public class UIController : MonoBehaviour
 
     private void _viewPanel()
     {
+        
         if (isPlaing)
         {
             Time.timeScale = 0;
@@ -42,6 +43,14 @@ public class UIController : MonoBehaviour
 
     private void _closePanel()
     {
+        if (SceneController.I.GetCurrentScnene() == "TanisuScene")
+        {
+            if(GameManager.I.currentCup != SceneController.I.selectStageNum)
+            {
+                SceneController.I.StartGame();
+            }
+        }
+        
         if (isPlaing)
         {
             Time.timeScale = 1;
@@ -50,6 +59,7 @@ public class UIController : MonoBehaviour
         }
         SoundManager.I.PlaySE(SESoundData.SE.MENU_OUT);
         slidePanel.SetActive(false);
+
     }
 
     

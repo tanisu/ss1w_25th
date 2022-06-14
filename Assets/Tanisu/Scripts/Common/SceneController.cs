@@ -19,7 +19,10 @@ public class SceneController : MonoBehaviour
     }
 
 
-
+    public string GetCurrentScnene()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 
     public void StartGame()
     {
