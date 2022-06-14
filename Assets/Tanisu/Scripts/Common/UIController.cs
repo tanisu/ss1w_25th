@@ -43,18 +43,19 @@ public class UIController : MonoBehaviour
 
     private void _closePanel()
     {
-        if (SceneController.I.GetCurrentScnene() == "TanisuScene")
-        {
-            if(GameManager.I.currentCup != SceneController.I.selectStageNum)
-            {
-                SceneController.I.StartGame();
-            }
-        }
+ 
         
         if (isPlaing)
         {
+            if (GameManager.I.currentCup != SceneController.I.selectStageNum)
+            {
+                SceneController.I.StartGame();
+            }else
+            {
+                
+                GameManager.I.gameState = beforState;
+            }
             Time.timeScale = 1;
-            GameManager.I.gameState = beforState;
 
         }
         SoundManager.I.PlaySE(SESoundData.SE.MENU_OUT);

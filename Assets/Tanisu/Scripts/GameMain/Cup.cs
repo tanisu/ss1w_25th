@@ -56,6 +56,7 @@ public class Cup : MonoBehaviour
         PoolContent[] waters = GetComponentsInChildren<PoolContent>();
         foreach (PoolContent water in waters)
         {
+            
             water.GetComponent<Water>().StopMove();
         }
         
