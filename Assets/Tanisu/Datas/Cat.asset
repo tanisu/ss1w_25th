@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6736067fb9a0d764e89a5eec9d5bca93, type: 3}
-  m_Name: Ninja
+  m_Name: Cat
   m_EditorClassIdentifier: 
-  board: {fileID: 1824118130, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
-  surfer: {fileID: -777027027, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
-  fall: {fileID: 1895439444, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
+  board: {fileID: -804120670, guid: 1e788d6e78c4b4f05b998e859006cd7e, type: 3}
+  surfer: {fileID: -1596222475, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
+  fall: {fileID: 2014533395, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
   setImage: {fileID: 0}

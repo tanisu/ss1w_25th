@@ -232,7 +232,7 @@ TextureImporter:
         width: 114
         height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -253,7 +253,7 @@ TextureImporter:
         width: 99
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -274,7 +274,7 @@ TextureImporter:
         width: 88
         height: 181
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -295,7 +295,7 @@ TextureImporter:
         width: 116
         height: 191
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -316,7 +316,7 @@ TextureImporter:
         width: 191
         height: 190
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -337,7 +337,7 @@ TextureImporter:
         width: 141
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -345,6 +345,195 @@ TextureImporter:
       bones: []
       spriteID: 20de1c0a0b86a4ccfba85bcdda5911d4
       internalID: 1895439444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_10
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 946
+        width: 164
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f454b6a58c3c44d0baccb9cad15fc281
+      internalID: -1426746231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_11
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 821
+        width: 183
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806b271eebd384b0486e60b90ee28116
+      internalID: 1824118130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_12
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 685
+        width: 291
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e35243c11c34ce884e43b558c8a382
+      internalID: -677775933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_13
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 513
+        width: 95
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375548a6f04bb4f658f89f2bdbc459f9
+      internalID: 1542748388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_14
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 536
+        width: 84
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cc757a81cc64850ae7237efc9abf5d
+      internalID: -1596222475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_15
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 294
+        width: 102
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174659804f53b4fbebf10d2a10430ac2
+      internalID: -126056690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_16
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 292
+        width: 118
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ce8eb53903f4b789168ae656cfdcdf
+      internalID: -1307951708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 33
+        width: 192
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a4ca6d4bc4246a19aced54890921d1
+      internalID: 235466932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goals2_18
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 40
+        width: 145
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32316361b35134122bec3d14bc5e1a3f
+      internalID: -777027027
       vertices: []
       indices: 
       edges: []
@@ -360,15 +549,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      goals2_11: 1824118130
       goals2_8: -812962166
       goals2_7: -419087182
       goals2_1: 156184694
+      goals2_13: 1542748388
+      goals2_14: -1596222475
       goals2_4: -126279393
+      goals2_10: -1426746231
+      goals2_12: -677775933
+      goals2_16: -1307951708
+      goals2_18: -777027027
       goals2_5: 2014533395
       goals2_6: -1442335651
+      goals2_17: 235466932
       goals2_0: 1527307368
       goals2_2: -464914745
       goals2_9: 1895439444
+      goals2_15: -126056690
       goals2_3: 1734531571
   spritePackingTag: 
   pSDRemoveMatte: 0
