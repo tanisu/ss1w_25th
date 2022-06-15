@@ -38,8 +38,18 @@ public class UIController : MonoBehaviour
             GameManager.I.gameState = GameManager.GAMESTATE.WAIT;
         }
         SoundManager.I.PlaySE(SESoundData.SE.MENU_IN);
-        slidePanel.SetActive(true);
+
+        StartCoroutine(showPanelCO());
     }
+
+    //パネルの表示に時間差(ボタン音の後に）
+    IEnumerator showPanelCO()
+    {
+        yield return new WaitForSeconds(0.35f);
+        slidePanel.SetActive(true);
+
+    }
+
 
     private void _closePanel()
     {
