@@ -89,7 +89,7 @@ public class PlayerSelector : MonoBehaviour
             }
             else
             {
-                Debug.Log(selectablePlayer[currentPlayer].gameObject.name);
+                
                 GameManager.I.ChangePlayerSprite();
             }
             
