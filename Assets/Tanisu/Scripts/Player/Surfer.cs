@@ -48,6 +48,12 @@ public class Surfer : MonoBehaviour
         sp.sortingLayerName = _layerName;
     }
 
+    public void SetSprites(PlayerData _data)
+    {
+        fall = _data.fall;
+        onBoard = _data.surfer;
+    }
+
     public void SetConfigSprites()
     {
         onBoard = Config.I.selectedPlayerData.surfer;
@@ -58,14 +64,14 @@ public class Surfer : MonoBehaviour
     {
         if (collision.CompareTag("BlackHole"))
         {
-            
+            GameManager.I.GameOver();
             rgbd2d.bodyType = RigidbodyType2D.Static;
             transform.DOScale(0f, 0.5f);
             transform.DOMove(collision.transform.position, 0.5f).OnComplete(() =>
             {
                 //_resetSurfer();
                 isTween = true;
-                GameManager.I.GameOver();
+                
             });
         }
     }

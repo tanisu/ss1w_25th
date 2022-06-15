@@ -47,5 +47,10 @@ MonoBehaviour:
   playerDatas:
   - {fileID: 11400000, guid: 9edba624a4332e74bae9257210fcaefc, type: 2}
   - {fileID: 11400000, guid: 6a1c0c2f0f258414f8e7613363689ce1, type: 2}
+  - {fileID: 11400000, guid: 7452cf16635e0e540a33e7cd13fd29fc, type: 2}
+  - {fileID: 11400000, guid: 8fef09732f9854ce38e5b6cca4d9506e, type: 2}
+  - {fileID: 11400000, guid: 63a09b38eabbe44ba9a2030adda2bbe1, type: 2}
+  - {fileID: 11400000, guid: 651a8d376430ba54cb548a7afb65ae59, type: 2}
+  - {fileID: 11400000, guid: ff23da06ffc3d4aa6965ad82b34a7457, type: 2}
   selectedPlayerData: {fileID: 11400000, guid: 9edba624a4332e74bae9257210fcaefc, type: 2}
   controller: 0

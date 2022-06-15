@@ -1564,7 +1564,7 @@ GameObject:
   - component: {fileID: 4190934249220488860}
   - component: {fileID: 4190934249220488859}
   m_Layer: 5
-  m_Name: Sample1
+  m_Name: Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1549275800, guid: 21983f9f107d44f2fab6a53613bfe2bd, type: 3}
+  m_Sprite: {fileID: -1596222475, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 1
+  isLocked: 0
 --- !u!1 &4190934249293011564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1699,7 @@ GameObject:
   - component: {fileID: 4190934249293011567}
   - component: {fileID: 4190934249293011566}
   m_Layer: 5
-  m_Name: Sample1_01
+  m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1753,7 +1753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1549275800, guid: 21983f9f107d44f2fab6a53613bfe2bd, type: 3}
+  m_Sprite: {fileID: 1542748388, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 1
+  isLocked: 0
 --- !u!1 &4190934249321111338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1834,7 @@ GameObject:
   - component: {fileID: 4190934249321111341}
   - component: {fileID: 4190934249321111340}
   m_Layer: 5
-  m_Name: Sample1_03
+  m_Name: Ninja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1888,7 +1888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1549275800, guid: 21983f9f107d44f2fab6a53613bfe2bd, type: 3}
+  m_Sprite: {fileID: -777027027, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1954,7 +1954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 1
+  isLocked: 0
 --- !u!1 &4190934249324657435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,7 +2746,7 @@ GameObject:
   - component: {fileID: 4190934249696097429}
   - component: {fileID: 4190934249696097428}
   m_Layer: 5
-  m_Name: Sample1_02
+  m_Name: Sumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2800,7 +2800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1549275800, guid: 21983f9f107d44f2fab6a53613bfe2bd, type: 3}
+  m_Sprite: {fileID: 235466932, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2866,7 +2866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 1
+  isLocked: 0
 --- !u!1 &4190934249746053612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,7 +3092,7 @@ GameObject:
   - component: {fileID: 4190934249792360103}
   - component: {fileID: 4190934249792360102}
   m_Layer: 5
-  m_Name: Sample1_04
+  m_Name: Kizoku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3146,7 +3146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1549275800, guid: 21983f9f107d44f2fab6a53613bfe2bd, type: 3}
+  m_Sprite: {fileID: -1307951708, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3212,7 +3212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 1
+  isLocked: 0
 --- !u!1 &4190934249814491398
 GameObject:
   m_ObjectHideFlags: 0

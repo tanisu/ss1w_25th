@@ -47,6 +47,7 @@ public class Player : MonoBehaviour
     {
         board.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.board;
         surfer.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.surfer;
+        surfer.SetSprites(Config.I.selectedPlayerData);
         gameObject.SetActive(false);
         gameObject.SetActive(true);
     }
