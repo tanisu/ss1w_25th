@@ -12,8 +12,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        board.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.board;
-        surfer.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.surfer;
+        board.SetConfigSprites();
         surfer.SetConfigSprites();
 
     }
@@ -45,9 +44,8 @@ public class Player : MonoBehaviour
 
     public void ChangeSprite()
     {
-        board.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.board;
-        surfer.GetComponent<SpriteRenderer>().sprite = Config.I.selectedPlayerData.surfer;
-        surfer.SetSprites(Config.I.selectedPlayerData);
+        board.SetConfigSprites();
+        surfer.SetConfigSprites();
         gameObject.SetActive(false);
         gameObject.SetActive(true);
     }
