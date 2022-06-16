@@ -26,7 +26,7 @@ public class Board : MonoBehaviour
 
     DIRECTION direction;
 
-    void Start()
+    void Awake()
     {
         rgbd2d = GetComponent<Rigidbody2D>();
         pc2d = GetComponent<PolygonCollider2D>();
@@ -197,5 +197,11 @@ public class Board : MonoBehaviour
     {
         transform.position = new Vector3(beforePosX, _startPos.y);
         transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void SetConfigSprites()
+    {
+        sp.sprite = Config.I.selectedPlayerData.board;
+        transform.localScale = new Vector3(Config.I.selectedPlayerData.spriteScale * -1, Config.I.selectedPlayerData.spriteScale, 1f);
     }
 }

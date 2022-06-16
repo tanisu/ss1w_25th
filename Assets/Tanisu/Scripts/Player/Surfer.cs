@@ -11,7 +11,7 @@ public class Surfer : MonoBehaviour
     SpriteRenderer sp;
     Vector3 defaultScale;
     bool isTween;
-    void Start()
+    void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
         rgbd2d = GetComponent<Rigidbody2D>();
@@ -48,14 +48,10 @@ public class Surfer : MonoBehaviour
         sp.sortingLayerName = _layerName;
     }
 
-    public void SetSprites(PlayerData _data)
-    {
-        fall = _data.fall;
-        onBoard = _data.surfer;
-    }
 
     public void SetConfigSprites()
     {
+        sp.sprite = Config.I.selectedPlayerData.surfer;
         onBoard = Config.I.selectedPlayerData.surfer;
         fall = Config.I.selectedPlayerData.fall;
     }
