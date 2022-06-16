@@ -257,10 +257,10 @@ TextureImporter:
       name: New_Players_6
       rect:
         serializedVersion: 2
-        x: 115
-        y: 1253
-        width: 415
-        height: 105
+        x: 212
+        y: 1246
+        width: 355
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: New_Players_7
       rect:
         serializedVersion: 2
-        x: 733
-        y: 1309
-        width: 385
-        height: 104
+        x: 701
+        y: 1278
+        width: 322
+        height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +299,10 @@ TextureImporter:
       name: New_Players_8
       rect:
         serializedVersion: 2
-        x: 740
-        y: 1090
-        width: 385
-        height: 105
+        x: 705
+        y: 1117
+        width: 313
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +341,10 @@ TextureImporter:
       name: New_Players_10
       rect:
         serializedVersion: 2
-        x: 128
-        y: 920
-        width: 415
-        height: 104
+        x: 229
+        y: 986
+        width: 346
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,6 +463,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: New_Players_16
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 208
+        width: 336
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47999173083d741c9b90d24ae9e86f8d
+      internalID: 719027671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -486,6 +507,7 @@ TextureImporter:
       New_Players_5: 962356548
       New_Players_11: -336479362
       New_Players_1: -1887852008
+      New_Players_16: 719027671
       New_Players_15: -543128105
       New_Players_8: -788936513
       New_Players_14: 553584323
