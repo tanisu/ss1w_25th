@@ -16,3 +16,4 @@ MonoBehaviour:
   surfer: {fileID: -777027027, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
   fall: {fileID: 1895439444, guid: 579b79b84239b4b7184f0cf733c9855a, type: 3}
   setImage: {fileID: 0}
+  spriteScale: 1
