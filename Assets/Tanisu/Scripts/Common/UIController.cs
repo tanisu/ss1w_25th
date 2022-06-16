@@ -31,12 +31,7 @@ public class UIController : MonoBehaviour
     private void _viewPanel()
     {
         
-        if (isPlaing)
-        {
-            Time.timeScale = 0;
-            beforState = GameManager.I.gameState;
-            GameManager.I.gameState = GameManager.GAMESTATE.WAIT;
-        }
+
         SoundManager.I.PlaySE(SESoundData.SE.MENU_IN);
 
         StartCoroutine(showPanelCO());
@@ -46,6 +41,12 @@ public class UIController : MonoBehaviour
     IEnumerator showPanelCO()
     {
         yield return new WaitForSeconds(0.35f);
+        if (isPlaing)
+        {
+            Time.timeScale = 0;
+            beforState = GameManager.I.gameState;
+            GameManager.I.gameState = GameManager.GAMESTATE.WAIT;
+        }
         slidePanel.SetActive(true);
 
     }
