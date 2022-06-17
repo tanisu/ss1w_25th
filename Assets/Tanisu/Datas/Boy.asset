@@ -17,3 +17,4 @@ MonoBehaviour:
   fall: {fileID: -2908461, guid: c07b468eda0e340239cda7c3383d47fc, type: 3}
   setImage: {fileID: -1565014150, guid: 0230d99c482ef4638845dfc4168a7e47, type: 3}
   spriteScale: 1
+  yPos: 0.38

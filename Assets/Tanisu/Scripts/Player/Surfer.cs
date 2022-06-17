@@ -54,6 +54,7 @@ public class Surfer : MonoBehaviour
         sp.sprite = Config.I.selectedPlayerData.surfer;
         onBoard = Config.I.selectedPlayerData.surfer;
         fall = Config.I.selectedPlayerData.fall;
+        transform.localPosition = new Vector3(0, Config.I.selectedPlayerData.yPos, 0);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

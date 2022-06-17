@@ -6,5 +6,5 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     public Sprite board, surfer, fall,setImage;
-    public float spriteScale;
+    public float spriteScale,yPos;
 }

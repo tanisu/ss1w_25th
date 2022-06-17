@@ -52,5 +52,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63a09b38eabbe44ba9a2030adda2bbe1, type: 2}
   - {fileID: 11400000, guid: 651a8d376430ba54cb548a7afb65ae59, type: 2}
   - {fileID: 11400000, guid: ff23da06ffc3d4aa6965ad82b34a7457, type: 2}
+  - {fileID: 11400000, guid: 728884753017b454eb0b2a700e44e998, type: 2}
   selectedPlayerData: {fileID: 11400000, guid: 9edba624a4332e74bae9257210fcaefc, type: 2}
   controller: 0
