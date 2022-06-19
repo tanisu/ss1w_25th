@@ -103,6 +103,14 @@ public class Water : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Tongue") && collision.gameObject.GetComponent<Tongue>().eating)
+        {
+            GetComponent<PoolContent>().HideFromStage();
+        }
+    }
+
     private void _resetWater()
     {
         rgbd2d.bodyType = RigidbodyType2D.Dynamic;
