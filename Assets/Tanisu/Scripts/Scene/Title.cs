@@ -28,5 +28,7 @@ public class Title : MonoBehaviour
 
         board.sprite = Config.I.selectedPlayerData.board;
         player.sprite = Config.I.selectedPlayerData.surfer;
+        board.transform.localScale = new Vector3(Config.I.selectedPlayerData.spriteScale, Config.I.selectedPlayerData.spriteScale);
+        player.transform.localPosition = new Vector3(0, Config.I.selectedPlayerData.yPos);
     }
 }

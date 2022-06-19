@@ -13,6 +13,7 @@ TagManager:
   - BlackHole
   - Trigger
   - ClearGround
+  - Tongue
   layers:
   - Default
   - TransparentFX
