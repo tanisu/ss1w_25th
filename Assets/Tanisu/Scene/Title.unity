@@ -1692,6 +1692,58 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1091240774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091240775}
+  - component: {fileID: 1091240776}
+  m_Layer: 0
+  m_Name: Ad_Unlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1091240775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091240774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1872291340}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091240776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091240774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Japanese
+    Text: "\u5E83\u544A\u3092\u898B\u3066\u30A2\u30F3\u30ED\u30C3\u30AF"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Watch Ad to unlock
+    Object: {fileID: 0}
 --- !u!1 &1108472702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,6 +2958,7 @@ Transform:
   - {fileID: 880585347}
   - {fileID: 486324130}
   - {fileID: 598015573}
+  - {fileID: 1091240775}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3539,18 +3592,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 31411941}
     m_Modifications:
-    - target: {fileID: 180565873097118457, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -49.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2676926155610690375, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -49.899998
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934248197480219, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4190934249053465335, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_Name
       value: OptionPanel
@@ -3643,10 +3684,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4190934249324657435, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4190934249529189322, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.744
@@ -3667,66 +3704,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4190934249746053612, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249814491398, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249814491399, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7059690064913965151, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7059690064913965151, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1872291339}
-    - target: {fileID: 7059690064913965151, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCurrentLanguage
-      objectReference: {fileID: 0}
-    - target: {fileID: 7059690064913965151, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Lean.Localization.LeanLocalization, LeanLocalization
-      objectReference: {fileID: 0}
-    - target: {fileID: 7059690064913965151, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Japanese
-      objectReference: {fileID: 0}
-    - target: {fileID: 7059690064913965151, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906930524751225544, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8906930524751225544, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1872291339}
-    - target: {fileID: 8906930524751225544, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCurrentLanguage
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906930524751225544, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Lean.Localization.LeanLocalization, LeanLocalization
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906930524751225544, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: English
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906930524751225544, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
 --- !u!1001 &4799855608796524578
