@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] Fade fade;
+    
     public static SceneController I { get; private set; }
     public int selectStageNum;
 
@@ -28,10 +28,9 @@ public class SceneController : MonoBehaviour
     {
         SoundManager.I.PlaySE(SESoundData.SE.START);
         SoundManager.I.FadeOutBGM();
-        fade.FadeIn(1f, () => {
-            SceneManager.sceneLoaded += _gameSceneLoaded;
-            SceneManager.LoadScene("TanisuScene"); 
-        });
+        SceneManager.sceneLoaded += _gameSceneLoaded;
+        SceneManager.LoadScene("TanisuScene");
+        
         
     }
 
@@ -47,13 +46,14 @@ public class SceneController : MonoBehaviour
     public void ToTitle()
     {
         SoundManager.I.FadeOutBGM();
-        fade.FadeIn(1f,()=> SceneManager.LoadScene("Title"));
+        SceneManager.LoadScene("Title");
+        
     }
 
     public void ToEnding()
     {
         SoundManager.I.FadeOutBGM();
-        fade.FadeIn(1f, () => SceneManager.LoadScene("momo_Clear"));
+        SceneManager.LoadScene("momo_Clear");
     }
 
     public string GetCurrentScene()
