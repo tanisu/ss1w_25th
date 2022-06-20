@@ -12671,7 +12671,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.98823535, g: 0.9686275, b: 0.9568628, a: 1}
+  m_BackGroundColor: {r: 0, g: 0.031303883, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -13007,6 +13007,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d76a5bad2b85994d9a4c6bfb67da422, type: 3}
+--- !u!1001 &824103826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5812243
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.41819614
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 101.0149
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799855608790828886, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
+      propertyPath: m_Name
+      value: AdMobBanner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
 --- !u!1 &831078222
 GameObject:
   m_ObjectHideFlags: 0
