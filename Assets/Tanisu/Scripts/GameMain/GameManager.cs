@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Fade fade;
+    
     [SerializeField] GameObject stage,clearEffect,swipe,buttons;
     [SerializeField] Player player;
     [SerializeField] float stageX = 6f;
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        fade.FadeOut(1f);
+        
         if(Config.I.controller == Config.CONTROLLER.SWIPE)
         {
             swipe.SetActive(true);
