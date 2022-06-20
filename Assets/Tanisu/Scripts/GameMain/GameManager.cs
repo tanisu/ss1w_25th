@@ -133,6 +133,7 @@ public class GameManager : MonoBehaviour
         }
         if(gameState == GAMESTATE.PLAY)
         {
+            
             timer.TimerUpdate();
         }
 
@@ -203,6 +204,7 @@ public class GameManager : MonoBehaviour
         {
             currentCup++;
             cups[currentCup].gameObject.SetActive(true);
+            
             _checkMaxCup();
             player.SetPlayerPos();
             timer.GetRecordTime(currentCup);

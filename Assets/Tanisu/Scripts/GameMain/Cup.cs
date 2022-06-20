@@ -19,6 +19,7 @@ public class Cup : MonoBehaviour
 
     private void Start()
     {
+        
         main = sibuki.main;
         foreach (Trap trap in traps)
         {
