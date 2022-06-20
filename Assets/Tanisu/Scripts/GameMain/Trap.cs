@@ -108,13 +108,13 @@ public class Trap : MonoBehaviour
             .Append(transform.DOLocalMoveX(movePos.x,1f)).AppendCallback(()=> {
                 if (loopX != 0)
                 {
-                    tween = transform.DOLocalMoveX(loopX, 1f).SetLoops(-1, LoopType.Yoyo);
+                    tween = transform.DOLocalMoveX(loopX, 1f).SetLoops(-1, LoopType.Yoyo).SetLink(gameObject);
                 }
                 if(loopY != 0)
                 {
-                    tween = transform.DOLocalMoveY(loopY, 1f);
+                    tween = transform.DOLocalMoveY(loopY, 1f).SetLink(gameObject);
                 }
-            });
+            }).SetLink(gameObject);
     }
 
     private void _sizeTrap()
@@ -127,7 +127,7 @@ public class Trap : MonoBehaviour
         {
             pc2d.enabled = true;
         }
-        tween = transform.DOScale(new Vector3(size, size), time);
+        tween = transform.DOScale(new Vector3(size, size), time).SetLink(gameObject);
     }
 
     private void _rotaTrap()
@@ -136,7 +136,7 @@ public class Trap : MonoBehaviour
         {
             pc2d.enabled = true;
         }
-        tween = transform.DOLocalRotate(new Vector3(0,0,deg),2f).SetLoops(-1, LoopType.Yoyo);
+        tween = transform.DOLocalRotate(new Vector3(0,0,deg),2f).SetLoops(-1, LoopType.Yoyo).SetLink(gameObject);
     }
 
     private void _moveTrap()

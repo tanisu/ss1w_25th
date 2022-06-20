@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
             switchRgbd();
             GameManager.I.gameState = GameManager.GAMESTATE.PLAY;
             GameManager.I.TimerReset();
-        });
+        }).SetLink(board.gameObject);
     }
 
     public void ToStartPos()
@@ -68,6 +68,6 @@ public class Player : MonoBehaviour
         board.transform.DOMove(startPos, 1f).OnComplete(() => {
             //switchRgbd();
             GameManager.I.gameState = GameManager.GAMESTATE.PLAY;
-        });
+        }).SetLink(board.gameObject);
     }
 }

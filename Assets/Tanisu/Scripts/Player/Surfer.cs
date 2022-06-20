@@ -63,13 +63,13 @@ public class Surfer : MonoBehaviour
         {
             GameManager.I.GameOver();
             rgbd2d.bodyType = RigidbodyType2D.Static;
-            transform.DOScale(0f, 0.5f);
+            transform.DOScale(0f, 0.5f).SetLink(gameObject);
             transform.DOMove(collision.transform.position, 0.5f).OnComplete(() =>
             {
                 //_resetSurfer();
                 isTween = true;
                 
-            });
+            }).SetLink(gameObject);
         }
     }
 

@@ -99,7 +99,7 @@ public class Water : MonoBehaviour
             tween = seq.Append(transform.DOScale(0f, 0.5f))
                         .Append(transform.DOMove(collision.transform.position, 0.5f).OnComplete(() => {
                             _resetWater();
-                        }));
+                        })).SetLink(gameObject);
         }
     }
 

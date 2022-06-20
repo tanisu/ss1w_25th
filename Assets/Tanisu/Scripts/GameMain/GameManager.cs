@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
                 player.switchRgbd();
                 SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
                 gameState = GAMESTATE.PLAY;
-            });
+            }).SetLink(stage.gameObject);
         }
         else
         {

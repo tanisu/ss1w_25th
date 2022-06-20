@@ -42,12 +42,12 @@ public class Board : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            tween = transform.DORotate(new Vector3(0, 0, roteMax), 0.5f);
+            tween = transform.DORotate(new Vector3(0, 0, roteMax), 0.5f).SetLink(gameObject);
 
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            tween = transform.DORotate(new Vector3(0, 0, -roteMax), 0.5f);
+            tween = transform.DORotate(new Vector3(0, 0, -roteMax), 0.5f).SetLink(gameObject);
 
 
         }
@@ -81,7 +81,7 @@ public class Board : MonoBehaviour
 
     public void PushButton(int dir)
     {
-        tween = transform.DORotate(new Vector3(0, 0, roteMax * dir), 0.5f);
+        tween = transform.DORotate(new Vector3(0, 0, roteMax * dir), 0.5f).SetLink(gameObject);
         direction = dir < 0 ? DIRECTION.LEFT : DIRECTION.RIGHT ;
         transform.Translate(new Vector3(dir, 0) * thrust * Time.deltaTime);
     }
@@ -189,8 +189,8 @@ public class Board : MonoBehaviour
     public void SetStartPos(Vector2 _startPos)
     {
         
-        transform.DOLocalMove(_startPos, GameManager.I.cupChangeTime);
-        transform.DORotate(Vector3.zero, GameManager.I.cupChangeTime);
+        transform.DOLocalMove(_startPos, GameManager.I.cupChangeTime).SetLink(gameObject);
+        transform.DORotate(Vector3.zero, GameManager.I.cupChangeTime).SetLink(gameObject);
     }
 
     public void SetBeforePos(Vector2 _startPos)

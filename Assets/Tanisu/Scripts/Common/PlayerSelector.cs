@@ -96,9 +96,9 @@ public class PlayerSelector : MonoBehaviour
             locked.SetActive(false);
         }
         
-        images[currentPlayer].DOFade(1f, effectTime).OnComplete(() => images[currentPlayer].raycastTarget = true).SetUpdate(true); ;
+        images[currentPlayer].DOFade(1f, effectTime).SetLink(images[currentPlayer].gameObject).OnComplete(() => images[currentPlayer].raycastTarget = true).SetUpdate(true); ;
         playerImages.transform.DOLocalMoveX(playerImages.localPosition.x + (slideRange * _x )  , effectTime)
-            .OnComplete(()=>isMoving = false).SetUpdate(true); ;
+            .OnComplete(()=>isMoving = false).SetUpdate(true).SetLink(playerImages.gameObject); ;
         
     }
 }
