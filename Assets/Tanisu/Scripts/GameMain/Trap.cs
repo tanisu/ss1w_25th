@@ -8,6 +8,7 @@ public class Trap : MonoBehaviour
     
     [SerializeField] Vector3 movePos;
     [SerializeField] float deg,loopX,loopY,size,time;
+    [SerializeField] bool isStartPc2d;
     Vector3 startPos;
     Rigidbody2D rgbd2d = null;
     PolygonCollider2D pc2d = null;
@@ -163,7 +164,7 @@ public class Trap : MonoBehaviour
             rgbd2d.angularVelocity = 0f;
             rgbd2d.bodyType = RigidbodyType2D.Kinematic;
         }
-        if (pc2d)
+        if (pc2d && !isStartPc2d)
         {
             pc2d.enabled = false;
         }
