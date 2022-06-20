@@ -60,8 +60,10 @@ public class UIController : MonoBehaviour
         {
             if (GameManager.I.currentCup != SceneController.I.selectStageNum)
             {
-                SceneController.I.StartGame();
-            }else
+                //SceneController.I.StartGame();
+                StartCoroutine(_reLoad());
+            }
+            else
             {
                 
                 GameManager.I.gameState = beforState;
@@ -72,6 +74,12 @@ public class UIController : MonoBehaviour
         SoundManager.I.PlaySE(SESoundData.SE.MENU_OUT);
         slidePanel.SetActive(false);
 
+    }
+
+    IEnumerator _reLoad()
+    {
+        yield return new WaitForSeconds(0.3f);
+        SceneController.I.StartGame();
     }
 
     
