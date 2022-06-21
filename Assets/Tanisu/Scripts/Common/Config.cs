@@ -2,23 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using Lean.Localization;
 
 public class Config : MonoBehaviour
 {
     public static Config I;
-    public static string[] stages;
+    public string[] stages,stagesJP;
     [SerializeField] PlayerData[] playerDatas;
     public PlayerData selectedPlayerData;
+    [SerializeField] GameObject leanObj;
+    LeanLocalization lean;
     public enum CONTROLLER
     {
         SWIPE,
         BUTTON
     }
 
-    public CONTROLLER controller;
+    public enum LANG
+    {
+        JP,
+        EN
+    }
 
+    public CONTROLLER controller;
+    public LANG lang;
     private void Awake()
     {
+        
         if (I == null)
         {
             I = this;
@@ -28,11 +38,7 @@ public class Config : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        stages = new string[] { "Beach","Soda","Nabe","Garden","ColorBall","Volcano",
-            "Beaker","Pool","Ramen","Onsen","Good Button","Calculator","Feet","Surf","Apple","Ikura",
-            "DogFood","Merlion","Ukiyoe","Clock","Toilet","Ant","WaterSlider","Ibukuro",
-            "Space"
-        };
+        
 
         if(PlayerPrefs.GetString("SelectedPlayer") != null)
         {
@@ -49,6 +55,20 @@ public class Config : MonoBehaviour
         else
         {
             selectedPlayerData = playerDatas[0];
+        }
+    }
+
+    private void Start()
+    {
+        lean = leanObj.GetComponent<LeanLocalization>();
+        switch (lean.CurrentLanguage)
+        {
+            case "Japanese":
+                lang = LANG.JP;
+                break;
+            case "English":
+                lang = LANG.EN;
+                break;
         }
     }
 
