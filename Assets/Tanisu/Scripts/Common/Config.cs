@@ -11,6 +11,7 @@ public class Config : MonoBehaviour
     [SerializeField] PlayerData[] playerDatas;
     public PlayerData selectedPlayerData;
     [SerializeField] GameObject leanObj;
+    [SerializeField] StageSelector stageSelector;
     LeanLocalization lean;
     public enum CONTROLLER
     {
@@ -42,7 +43,7 @@ public class Config : MonoBehaviour
 
         if(PlayerPrefs.GetString("SelectedPlayer") != null)
         {
-            //Debug.Log(PlayerPrefs.GetString("SelectedPlayer"));
+            
             foreach(PlayerData p in playerDatas)
             {
                 if(PlayerPrefs.GetString("SelectedPlayer") == p.name)
@@ -91,5 +92,19 @@ public class Config : MonoBehaviour
             }
         }
         
+    }
+
+    public void SwitchLang(string _lang)
+    {
+        switch (_lang)
+        {
+            case "Japanese":
+                lang = LANG.JP;
+                break;
+            case "English":
+                lang = LANG.EN;
+                break;
+        }
+        stageSelector.ChangeLangView();
     }
 }
