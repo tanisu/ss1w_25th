@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField] Button  soundButton,closeButton;
+    [SerializeField] Button  soundButton,closeButton,batuButton,titleButton;
     [SerializeField] GameObject slidePanel;
     [SerializeField] Slider BGMSlider;
 
@@ -18,6 +18,8 @@ public class UIController : MonoBehaviour
         
         soundButton.onClick.AddListener(_viewPanel);
         closeButton.onClick.AddListener(_closePanel);
+        titleButton.onClick.AddListener(_toTitle);
+        batuButton.onClick.AddListener(_closePanel2);
         BGMSlider.value = SoundManager.I.bgmVolume;
         BGMSlider.onValueChanged.AddListener((value) => {
             SoundManager.I.bgmVolume = value;
@@ -27,6 +29,11 @@ public class UIController : MonoBehaviour
         });
     }
 
+    private void _toTitle()
+    {
+        StartCoroutine(_title());
+        
+    }
 
     private void _viewPanel()
     {
@@ -76,11 +83,22 @@ public class UIController : MonoBehaviour
 
     }
 
+    IEnumerator _title()
+    {
+        Time.timeScale = 1;
+        yield return new WaitForSeconds(0.3f);
+        SceneController.I.ToTitle();
+    }
+
     IEnumerator _reLoad()
     {
         yield return new WaitForSeconds(0.3f);
         SceneController.I.StartGame();
     }
 
-    
+    private void _closePanel2()
+    {
+        slidePanel.SetActive(false);
+    }
+
 }

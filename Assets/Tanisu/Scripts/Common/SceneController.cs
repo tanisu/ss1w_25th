@@ -45,9 +45,11 @@ public class SceneController : MonoBehaviour
 
     public void ToTitle()
     {
+
+        Time.timeScale = 1;
         SoundManager.I.FadeOutBGM();
         SceneManager.LoadScene("Title");
-        
+
     }
 
     public void ToEnding()

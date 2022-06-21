@@ -3280,6 +3280,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &186498494 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6156732147268894397, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+  m_PrefabInstance: {fileID: 223851639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &193503438
 GameObject:
   m_ObjectHideFlags: 0
@@ -27205,6 +27216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundButton: {fileID: 1789169391}
   closeButton: {fileID: 83760529}
+  batuButton: {fileID: 186498494}
+  titleButton: {fileID: 1967308002}
   slidePanel: {fileID: 2036601765}
   BGMSlider: {fileID: 2066836009}
 --- !u!114 &1506481211
@@ -35564,6 +35577,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1967308002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3395696683394296753, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+  m_PrefabInstance: {fileID: 223851639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976316241
 GameObject:
   m_ObjectHideFlags: 0

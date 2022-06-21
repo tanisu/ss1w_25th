@@ -246,6 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundButton: {fileID: 3307399467050868637}
   closeButton: {fileID: 1375080730}
+  batuButton: {fileID: 4190934249734286626}
+  titleButton: {fileID: 4190934249734286625}
   slidePanel: {fileID: 1471645655}
   BGMSlider: {fileID: 280149500}
 --- !u!1 &247967800
@@ -3063,6 +3065,28 @@ PrefabInstance:
       objectReference: {fileID: 1872291339}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+--- !u!114 &4190934249734286625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3395696683394296753, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+  m_PrefabInstance: {fileID: 4190934249734286624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4190934249734286626 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6156732147268894397, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+  m_PrefabInstance: {fileID: 4190934249734286624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4591650098379484679
 PrefabInstance:
   m_ObjectHideFlags: 0
