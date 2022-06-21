@@ -10,8 +10,8 @@ public class Config : MonoBehaviour
     public string[] stages,stagesJP;
     [SerializeField] PlayerData[] playerDatas;
     public PlayerData selectedPlayerData;
-    [SerializeField] GameObject leanObj;
-    [SerializeField] StageSelector stageSelector;
+    public GameObject leanObj;
+    public StageSelector stageSelector;
     LeanLocalization lean;
     public enum CONTROLLER
     {

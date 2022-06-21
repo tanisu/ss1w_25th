@@ -27,10 +27,12 @@ public class LangBtn : MonoBehaviour
         jpBtn.onClick.AddListener(() => {
             enImg.color = nomalColor;
             jpImg.color = selectedColor;
+            Config.I.SwitchLang("Japanese");
         });
         enBtn.onClick.AddListener(() => {
             enImg.color = selectedColor;
             jpImg.color = nomalColor;
+            Config.I.SwitchLang("English");
         });
     }
 

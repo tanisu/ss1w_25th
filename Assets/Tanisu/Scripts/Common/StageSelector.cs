@@ -14,6 +14,7 @@ public class StageSelector : MonoBehaviour
     string[] stagesText;
     void Start()
     {
+        Config.I.stageSelector = this;
         increment.onClick.AddListener(() => _incrementStage());
         decrement.onClick.AddListener(() => _decrementStage());
         maxStageNum = PlayerPrefs.GetInt("maxCup");
