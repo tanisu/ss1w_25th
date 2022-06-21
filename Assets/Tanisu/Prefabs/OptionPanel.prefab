@@ -178,7 +178,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.63879496, g: 0.9339623, b: 0.9168142, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -882,6 +882,7 @@ GameObject:
   - component: {fileID: 4190934248481464804}
   - component: {fileID: 4190934248481464806}
   - component: {fileID: 4190934248481464805}
+  - component: {fileID: 2573999329029892417}
   m_Layer: 5
   m_Name: La_Panel
   m_TagString: Untagged
@@ -949,6 +950,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2573999329029892417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4190934248481464803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2522421e6a25be478704308ae18a03c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedColor: {r: 0.5058824, g: 0.7411765, b: 0.7254902, a: 1}
+  nomalColor: {r: 0.7921569, g: 0.7921569, b: 0.7921569, a: 1}
+  jpBtn: {fileID: 7059690064913965151}
+  enBtn: {fileID: 8906930524751225544}
 --- !u!1 &4190934248780240957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,7 +3886,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.6392157, g: 0.93333334, b: 0.91764706, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

@@ -11,23 +11,21 @@ public class StageSelector : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI stageText;
     int currentStageNum,maxStageNum;
-    
+    string[] stagesText;
     void Start()
     {
         increment.onClick.AddListener(() => _incrementStage());
         decrement.onClick.AddListener(() => _decrementStage());
         maxStageNum = PlayerPrefs.GetInt("maxCup");
         currentStageNum = maxStageNum;
+        ChangeLangView();
         _updateStageText();
-
-
     }
 
     private void _incrementStage()
     {
         if (currentStageNum >= Config.I.stages.Length - 1 || currentStageNum >= maxStageNum) return;
         currentStageNum++;
-        
         _updateStageText();
     }
 
@@ -43,15 +41,26 @@ public class StageSelector : MonoBehaviour
     {
         SoundManager.I.PlaySE(SESoundData.SE.TAP_CURSOR);
         SceneController.I.selectStageNum = currentStageNum;
-        if(Config.I.lang == Config.LANG.JP)
+        UpdateStageText();
+
+    }
+
+    public void ChangeLangView()
+    {
+        if (Config.I.lang == Config.LANG.JP)
         {
-            stageText.text = $"{currentStageNum + 1}\n{Config.I.stagesJP[currentStageNum]}";
+            stagesText = Config.I.stagesJP;
         }
         else
         {
-            stageText.text = $"{currentStageNum + 1}\n{Config.I.stages[currentStageNum]}";
+            stagesText = Config.I.stages;
         }
-        
+        UpdateStageText();
+    }
+
+    public void UpdateStageText()
+    {
+        stageText.text = $"{currentStageNum + 1}\n{stagesText[currentStageNum]}";
     }
     
 
