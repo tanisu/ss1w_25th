@@ -2231,8 +2231,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: StageName
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 103533c349d4e4ba1a73aa233b0d75a9, type: 2}
-  m_sharedMaterial: {fileID: -3206567108800268803, guid: 103533c349d4e4ba1a73aa233b0d75a9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2d884f87e63244b6eaafe3e81a2151c3, type: 2}
+  m_sharedMaterial: {fileID: -8638379816650305482, guid: 2d884f87e63244b6eaafe3e81a2151c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
+  m_fontSize: 18
   m_fontSizeBase: 28.04
   m_fontWeight: 400
   m_enableAutoSizing: 1
