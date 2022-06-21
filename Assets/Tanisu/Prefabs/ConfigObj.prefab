@@ -44,6 +44,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc80d0a3716928e42aac108c210a88a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages:
+  - Beach
+  - Soda
+  - Nabe
+  - Garden
+  - ColorBall
+  - Volcano
+  - Beaker
+  - Pool
+  - Ramen
+  - Onsen
+  - Good Button
+  - Calculator
+  - Feet
+  - Surf
+  - Apple
+  - Ikura
+  - DogFood
+  - Merlion
+  - Ukiyoe
+  - Clock
+  - Toilet
+  - Ant
+  - WaterSlider
+  - Ibukuro
+  - Space
+  stagesJP:
+  - "\u30D3\u30FC\u30C1"
+  - "\u30BD\u30FC\u30C0"
+  - "\u934B"
+  - "\u65E5\u672C\u5EAD\u5712"
+  - "\u30AB\u30E9\u30FC\u30DC\u30FC\u30EB"
+  - "\u706B\u5C71"
+  - "\u30D3\u30FC\u30AB\u30FC"
+  - "\u30D3\u30CB\u30FC\u30EB\u30D7\u30FC\u30EB"
+  - "\u30E9\u30FC\u30E1\u30F3"
+  - "\u6E29\u6CC9"
+  - "\u3044\u3044\u306D\u30DC\u30BF\u30F3"
+  - "\u96FB\u5353"
+  - "\u8DB3\u306E\u88CF"
+  - "\u30B5\u30FC\u30D5"
+  - "\u308A\u3093\u3054"
+  - "\u3044\u304F\u3089\u4E3C"
+  - "\u30C9\u30C3\u30B0\u30D5\u30FC\u30C9"
+  - "\u30DE\u30FC\u30E9\u30A4\u30AA\u30F3"
+  - "\u6D6E\u4E16\u7D75"
+  - "\u6642\u8A08"
+  - "\u30C8\u30A4\u30EC"
+  - "\u30A2\u30EA\u306E\u5DE3"
+  - "\u30A6\u30A9\u30FC\u30BF\u30FC\u30B9\u30E9\u30A4\u30C0\u30FC"
+  - "\u80C3\u888B"
+  - "\u5B87\u5B99"
   playerDatas:
   - {fileID: 11400000, guid: 9edba624a4332e74bae9257210fcaefc, type: 2}
   - {fileID: 11400000, guid: 6a1c0c2f0f258414f8e7613363689ce1, type: 2}

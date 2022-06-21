@@ -25,7 +25,7 @@ public class StageSelector : MonoBehaviour
 
     private void _incrementStage()
     {
-        if (currentStageNum >= Config.stages.Length - 1 || currentStageNum >= maxStageNum) return;
+        if (currentStageNum >= Config.I.stages.Length - 1 || currentStageNum >= maxStageNum) return;
         currentStageNum++;
         
         _updateStageText();
@@ -43,7 +43,15 @@ public class StageSelector : MonoBehaviour
     {
         SoundManager.I.PlaySE(SESoundData.SE.TAP_CURSOR);
         SceneController.I.selectStageNum = currentStageNum;
-        stageText.text = $"{currentStageNum + 1}\n{Config.stages[currentStageNum]}";
+        if(Config.I.lang == Config.LANG.JP)
+        {
+            stageText.text = $"{currentStageNum + 1}\n{Config.I.stagesJP[currentStageNum]}";
+        }
+        else
+        {
+            stageText.text = $"{currentStageNum + 1}\n{Config.I.stages[currentStageNum]}";
+        }
+        
     }
     
 
