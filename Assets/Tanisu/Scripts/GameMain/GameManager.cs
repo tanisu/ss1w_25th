@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] MeshRenderer QuadRenderer;
     [SerializeField] ObjectPool[] objectPools;
     [SerializeField] Timer timer;
-
+    [SerializeField] int interstitialCount;
+    [SerializeField] AdMobInterstitial interstitial;
+    int clearCount = 0;
     public int currentCup = 0;
     Cup[] cups;
     bool cupClear,gameOver;
@@ -198,6 +200,9 @@ public class GameManager : MonoBehaviour
 
         SoundManager.I.StopBGM();
         player.switchRgbd();
+
+
+
         yield return new WaitForSeconds(2f);
         timer.TimerReset();
         if (currentCup < cups.Length - 1)
@@ -208,6 +213,9 @@ public class GameManager : MonoBehaviour
             _checkMaxCup();
             player.SetPlayerPos();
             timer.GetRecordTime(currentCup);
+
+            _showAd();
+
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
                 timer.TimerReset();
                 cups[currentCup - 1].gameObject.SetActive(false);
@@ -222,6 +230,16 @@ public class GameManager : MonoBehaviour
             SceneController.I.ToEnding();
         }
         
+    }
+
+    private void _showAd()
+    {
+        clearCount++;
+        if (clearCount == interstitialCount)
+        {
+            interstitial.ShowAdMobInterstitial();
+            clearCount = 0;
+        }
     }
 
     private void _checkMaxCup()

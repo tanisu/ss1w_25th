@@ -9220,6 +9220,8 @@ MonoBehaviour:
   - {fileID: 323445837}
   - {fileID: 1161176995}
   timer: {fileID: 302365117}
+  interstitialCount: 2
+  interstitial: {fileID: 2064810909}
   currentCup: 0
   gameState: 0
   beforePause: 0
@@ -13145,15 +13147,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5812243
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.41819614
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 101.0149
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4799855608790828884, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20365,7 +20367,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.7, y: 4.0785713}
+    oldSize: {x: 5.142857, y: 4.0928574}
     newSize: {x: 5.775, y: 5.675}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -28414,7 +28416,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.107143, y: 7.071429}
+    oldSize: {x: 4.3428574, y: 7.0571427}
     newSize: {x: 5.775, y: 5.675}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -29614,7 +29616,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.864286, y: 4.7285714}
+    oldSize: {x: 5.2714286, y: 4.7642856}
     newSize: {x: 5.775, y: 5.675}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -32076,7 +32078,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.7785716, y: 3.7857144}
+    oldSize: {x: 5.107143, y: 3.807143}
     newSize: {x: 4.7785716, y: 3.7857144}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -37240,6 +37242,50 @@ MonoBehaviour:
   sibuki: {fileID: 5506308439204197074, guid: 065d220c0a556a94db3ac309264cc69d, type: 3}
   trapStartTime: 1.5
   st: {fileID: 0}
+--- !u!1 &2064810908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2064810910}
+  - component: {fileID: 2064810909}
+  m_Layer: 0
+  m_Name: AdMobInterstitial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2064810909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064810908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c764d567ccfbbbb47ab2244587ae3ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2064810910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064810908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2066836009 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4190934250009956572, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}

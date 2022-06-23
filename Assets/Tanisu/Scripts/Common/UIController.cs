@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
         soundButton.onClick.AddListener(_viewPanel);
         closeButton.onClick.AddListener(_closePanel);
         titleButton.onClick.AddListener(_toTitle);
-        batuButton.onClick.AddListener(_closePanel2);
+        batuButton.onClick.AddListener(_closePanel);
         BGMSlider.value = SoundManager.I.bgmVolume;
         BGMSlider.onValueChanged.AddListener((value) => {
             SoundManager.I.bgmVolume = value;
@@ -95,10 +95,4 @@ public class UIController : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         SceneController.I.StartGame();
     }
-
-    private void _closePanel2()
-    {
-        slidePanel.SetActive(false);
-    }
-
 }
