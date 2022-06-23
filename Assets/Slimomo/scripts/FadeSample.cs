@@ -13,9 +13,9 @@ public class FadeSample : MonoBehaviour
 
     //シーンがスタートして
     //フェードスタートのアニメーションをよぶ
+    //TODOアプリを開くときは必要ない？
     void Start()
     {
-        anim.SetTrigger("Start");
         StartCoroutine(FadeStartCO());
     }
 
@@ -23,6 +23,9 @@ public class FadeSample : MonoBehaviour
     //フェードパネルを非表示
     IEnumerator FadeStartCO()
     {
+        yield return new WaitForSeconds(0.5f);
+        anim.SetTrigger("Start");
+
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
     }
