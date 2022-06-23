@@ -44,12 +44,12 @@ public class AdMobBanner : MonoBehaviour
 
     public void HandleAdLoaded(object sender ,EventArgs args)
     {
-        Debug.Log("success");
+        //Debug.Log("success");
     }
 
     public void HandleAdFailedToLoad(object sender, AdFailedToLoadEventArgs args) 
     {
-        Debug.Log("Failed : " + args.LoadAdError);
+        //Debug.Log("Failed : " + args.LoadAdError);
     }
 
     #endregion
