@@ -227,10 +227,10 @@ TextureImporter:
       name: Ikura_Ringo_4
       rect:
         serializedVersion: 2
-        x: 111
-        y: 73
-        width: 681
-        height: 662
+        x: 72
+        y: 70
+        width: 738
+        height: 667
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,10 +311,10 @@ TextureImporter:
       name: Ikura_Ringo_8
       rect:
         serializedVersion: 2
-        x: 813
+        x: 812
         y: 123
-        width: 171
-        height: 81
+        width: 172
+        height: 82
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

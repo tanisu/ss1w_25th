@@ -332,10 +332,10 @@ TextureImporter:
       name: Tokei_9
       rect:
         serializedVersion: 2
-        x: 114
-        y: 196
-        width: 658
-        height: 571
+        x: 79
+        y: 194
+        width: 720
+        height: 573
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
