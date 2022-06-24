@@ -72,11 +72,11 @@ TagManager:
   - name: FrontObjects
     uniqueID: 4052469023
     locked: 0
-  - name: UI_Back
-    uniqueID: 1432180419
-    locked: 0
   - name: UI
     uniqueID: 832561267
+    locked: 0
+  - name: UI_Front
+    uniqueID: 1432180419
     locked: 0
   - name: Fade
     uniqueID: 3862700657
