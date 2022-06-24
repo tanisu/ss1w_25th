@@ -5,47 +5,61 @@ using UnityEngine;
 public class FadeSample : MonoBehaviour
 {
     [SerializeField] private Animator anim;
+    string nextScene;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
     }
 
-    //シーンがスタートして
-    //フェードスタートのアニメーションをよぶ
-    //TODOアプリを開くときは必要ない？
+
     void Start()
     {
-        StartCoroutine(FadeStartCO());
+        if (Config.I.startUp || SceneController.I.GetCurrentScene() == "TanisuScene")
+        {
+            StartCoroutine(FadeStartCO());
+        }
+        
     }
 
-    //１秒アニメーション待ったあと
-    //フェードパネルを非表示
+
+
     IEnumerator FadeStartCO()
     {
-        yield return new WaitForSeconds(0.5f);
+        
         anim.SetTrigger("Start");
-
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
     }
 
 
-    //フェードパネルを表示
-    //フェードエンドのアニメーションをよぶ
-    //１秒アニメーションを待ったあと
-    //シーンの切り替え前に入れる
-    public void ShowEndFade()
+
+    public void ShowEndFade(string _next)
     {
+        nextScene = _next;
         gameObject.SetActive(true);
-        anim.SetTrigger("End");
-        StartCoroutine(FadeEndCO());
+        anim.SetTrigger("End");        
     }
 
-    IEnumerator FadeEndCO()
+
+
+    public void SceneChange()
     {
-        yield return new WaitForSeconds(1f);
-        //このあとにシーン移動をさせたいTODO
-        Debug.Log("シーン移動");
+        Config.I.startUp = true;
+        switch (nextScene)
+        {
+            case "TanisuScene":
+                SceneController.I.StartGame();
+                break;
+            case "Title":
+                SceneController.I.ToTitle();
+                break;
+            case "Ending":
+                SceneController.I.ToEnding();
+                break;
+        }
+        
+        
     }
+    
 }

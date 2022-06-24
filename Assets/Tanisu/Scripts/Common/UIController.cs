@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     [SerializeField] Button  soundButton,closeButton,batuButton,titleButton;
     [SerializeField] GameObject slidePanel;
     [SerializeField] Slider BGMSlider;
+    [SerializeField] FadeSample fade;
 
     GameManager.GAMESTATE beforState;
     bool isPlaing;
@@ -31,6 +32,7 @@ public class UIController : MonoBehaviour
 
     private void _toTitle()
     {
+        
         StartCoroutine(_title());
         
     }
@@ -67,7 +69,7 @@ public class UIController : MonoBehaviour
         {
             if (GameManager.I.currentCup != SceneController.I.selectStageNum)
             {
-                //SceneController.I.StartGame();
+                
                 StartCoroutine(_reLoad());
             }
             else
@@ -87,12 +89,12 @@ public class UIController : MonoBehaviour
     {
         Time.timeScale = 1;
         yield return new WaitForSeconds(0.3f);
-        SceneController.I.ToTitle();
+        fade.ShowEndFade("Title");
     }
 
     IEnumerator _reLoad()
     {
         yield return new WaitForSeconds(0.3f);
-        SceneController.I.StartGame();
+        fade.ShowEndFade("TanisuScene");
     }
 }

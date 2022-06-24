@@ -40,7 +40,7 @@ public class HowToTimeLines : MonoBehaviour
     //タイムラインのトラックが終わったら、ゲームオブジェクト非表示してタイムラインを終了
     public void OffTimelineObj()
     {
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
 
     }
 
