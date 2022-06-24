@@ -12,6 +12,9 @@ public class Config : MonoBehaviour
     public PlayerData selectedPlayerData;
     public GameObject leanObj;
     public StageSelector stageSelector;
+    public bool startUp;
+    public int isRepeat;
+
     LeanLocalization lean;
     public enum CONTROLLER
     {
@@ -39,8 +42,9 @@ public class Config : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
 
+        isRepeat = PlayerPrefs.GetInt("Repeat");
+        
         if(PlayerPrefs.GetString("SelectedPlayer") != null)
         {
             

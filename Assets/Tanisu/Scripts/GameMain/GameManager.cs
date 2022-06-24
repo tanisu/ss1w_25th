@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Timer timer;
     [SerializeField] int interstitialCount;
     [SerializeField] AdMobInterstitial interstitial;
+    [SerializeField] FadeSample fade;
     int clearCount = 0;
     public int currentCup = 0;
     Cup[] cups;
@@ -227,7 +228,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            SceneController.I.ToEnding();
+            fade.ShowEndFade("Ending");
+            //SceneController.I.ToEnding();
         }
         
     }
