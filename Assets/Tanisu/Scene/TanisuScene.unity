@@ -263,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 621536965268775626, guid: 841292ba5b32d4f6f8e1f54c3a692f44, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.445
+      value: 3.77
       objectReference: {fileID: 0}
     - target: {fileID: 621536965268775626, guid: 841292ba5b32d4f6f8e1f54c3a692f44, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31331,8 +31331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPool: {fileID: 1161176995}
   waveInterval: 2.5
-  force: 60
-  launcInterval: 0.13
+  force: 45
+  launcInterval: 0.09
   waveSoundTime: 2
   contentSp: {fileID: 4774326592053917239, guid: e676b12596b14ce4592bfa290b06df76, type: 3}
   isStaticForce: 0
