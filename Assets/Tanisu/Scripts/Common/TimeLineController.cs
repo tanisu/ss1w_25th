@@ -8,14 +8,14 @@ public class TimeLineController : MonoBehaviour
 
     private void Start()
     {
-        if (Config.I.isRepeat == 0)
-        {
+        //if (Config.I.isRepeat == 0)
+        //{
 
             timelineObjs[(int)Config.I.controller].SetActive(true);
 
 
-            PlayerPrefs.SetInt("Repeat", 1);
-            Config.I.isRepeat = 1;
-        }
+        //    PlayerPrefs.SetInt("Repeat", 1);
+        //    Config.I.isRepeat = 1;
+        //}
     }
 }
