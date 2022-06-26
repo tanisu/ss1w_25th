@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec494292a1c7b4e06a84c45efea8ab67
+guid: 8e3300e2e97eb422c88e42d85d7f09dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,9 +102,9 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 48
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -140,232 +140,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slider_Ant_0
+      name: Floors2_0
       rect:
         serializedVersion: 2
-        x: 972
-        y: 1809
-        width: 493
-        height: 159
+        x: 46
+        y: 396
+        width: 416
+        height: 68
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d847d53d34544b96ad3035f930d80bf
-      internalID: -1415578249
+      spriteID: ee8d2b7541b634b8c810eeb163345db4
+      internalID: 1523521448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slider_Ant_1
+      name: Floors2_1
       rect:
         serializedVersion: 2
-        x: 244
-        y: 1639
-        width: 160
-        height: 89
+        x: 464
+        y: 415
+        width: 4
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a36f60525dc344fbb815884efab31a52
-      internalID: 975248799
+      spriteID: ff12aaccd12bf4e4abdfb7522e87482c
+      internalID: -48358946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slider_Ant_2
+      name: Floors2_2
       rect:
         serializedVersion: 2
-        x: 562
-        y: 1705
-        width: 128
-        height: 59
+        x: 32
+        y: 272
+        width: 437
+        height: 84
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 843a04ff8eec74ea3b4f806e90acb198
-      internalID: -393121314
+      spriteID: baa0e4ab40e54404a9cd7d2deb86eefb
+      internalID: -1723875953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slider_Ant_3
+      name: Floors2_3
       rect:
         serializedVersion: 2
-        x: 1081
-        y: 1006
-        width: 548
-        height: 573
+        x: 23
+        y: 113
+        width: 453
+        height: 79
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb17f7a506af14f3b8eb38a86733b046
-      internalID: 707246670
+      spriteID: 1431a4fb021604936bc1bf13781f3187
+      internalID: 1578650420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slider_Ant_4
+      name: Floors2_4
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 1631
-        width: 257
-        height: 83
+        x: 16
+        y: 7
+        width: 463
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b2f813d2e4cb4a79a35c639e75b8cc2
-      internalID: -2086014216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slider_Ant_5
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 1568
-        width: 128
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4b54a36cdc9a4c0e94c7944316284ea
-      internalID: -300318305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slider_Ant_6
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 1442
-        width: 99
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e08bc3bcb2b004614827d5e643b8b0d9
-      internalID: -2128825235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slider_Ant_7
-      rect:
-        serializedVersion: 2
-        x: 251
-        y: 1260
-        width: 200
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f89e5aa8c9eca4fb6bb65c3ff509cc7d
-      internalID: 1201903486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slider_Ant_8
-      rect:
-        serializedVersion: 2
-        x: 230
-        y: 427
-        width: 508
-        height: 596
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f17ed1a0807c41d1a4201ffbb0422f1
-      internalID: 1702146797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slider_Ant_9
-      rect:
-        serializedVersion: 2
-        x: 1066
-        y: 197
-        width: 563
-        height: 582
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 756ab31b774a042e685c5d80d0f3e4be
-      internalID: -21584017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slider_Ant_10
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 288
-        width: 534
-        height: 109
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 558688ca44ead48ebba8ef2ac2a04123
-      internalID: -751621234
+      spriteID: ad2dd2925227d45949157d3afbc423c6
+      internalID: 2104633196
       vertices: []
       indices: 
       edges: []
@@ -381,17 +255,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slider_Ant_1: 975248799
-      Slider_Ant_0: -1415578249
-      Slider_Ant_10: -751621234
-      Slider_Ant_5: -300318305
-      Slider_Ant_6: -2128825235
-      Slider_Ant_4: -2086014216
-      Slider_Ant_3: 707246670
-      Slider_Ant_7: 1201903486
-      Slider_Ant_2: -393121314
-      Slider_Ant_8: 1702146797
-      Slider_Ant_9: -21584017
+      Floors2_2: -1723875953
+      Floors2_4: 2104633196
+      Floors2_0: 1523521448
+      Floors2_1: -48358946
+      Floors2_3: 1578650420
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

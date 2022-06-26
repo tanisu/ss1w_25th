@@ -635,7 +635,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9529412, g: 0.9490196, b: 0.9490196, a: 1}
+  m_Color: {r: 0.98823535, g: 0.9686275, b: 0.9568628, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3019,6 +3019,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 31411941}
     m_Modifications:
+    - target: {fileID: 2921948320525394698, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4172814871364098198, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -3130,6 +3134,18 @@ PrefabInstance:
     - target: {fileID: 4190934249053465336, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190934249053465337, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190934249053465337, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_Color.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190934249053465337, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_Color.g
+      value: 0.37254903
       objectReference: {fileID: 0}
     - target: {fileID: 4190934249220488860, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
