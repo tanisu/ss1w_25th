@@ -481,7 +481,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7684548251244566962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1479766700441907539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
+  isLocked: 1
 --- !u!1 &2921948320525394698
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,7 +2360,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4190934249220488857}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4190934249220488859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,7 +2385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
+  isLocked: 1
 --- !u!1 &4190934249293011564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,7 +2507,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4190934249293011568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4190934249293011566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2496,7 +2532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
+  isLocked: 1
 --- !u!1 &4190934249321111338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,7 +2654,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4190934249321111342}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4190934249321111340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,7 +2679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
+  isLocked: 1
 --- !u!1 &4190934249411706271
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,7 +3442,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4190934249696097430}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4190934249696097428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3407,7 +3467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
+  isLocked: 1
 --- !u!1 &4190934249780854918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,7 +3739,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4190934249792360104}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4190934249792360102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3692,7 +3764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b0b094d6beb648b29ed0a0d07e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
+  isLocked: 1
 --- !u!1 &4190934250009956570
 GameObject:
   m_ObjectHideFlags: 0

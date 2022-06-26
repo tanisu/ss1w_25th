@@ -14,6 +14,7 @@ TagManager:
   - Trigger
   - ClearGround
   - Tongue
+  - Admob
   layers:
   - Default
   - TransparentFX
