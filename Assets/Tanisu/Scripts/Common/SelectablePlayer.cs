@@ -7,11 +7,25 @@ public class SelectablePlayer : MonoBehaviour
 {
 
     [SerializeField] bool isLocked;
+    Button btn;
+    AdMobReward reward;
+    private void Start()
+    {
+        btn = GetComponent<Button>();
+        reward = GameObject.FindWithTag("Admob").GetComponent<AdMobReward>() ;
+        btn.onClick.AddListener(() => {
+            reward.ShowAdmobReward(gameObject.name);
+        });
+    }
 
     public bool IsLocked()
     {
         return isLocked;
     }
 
+    public void UnLock()
+    {
+        isLocked = false;
+    }
     
 }

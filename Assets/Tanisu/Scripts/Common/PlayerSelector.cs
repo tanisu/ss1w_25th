@@ -101,4 +101,16 @@ public class PlayerSelector : MonoBehaviour
             .OnComplete(()=>isMoving = false).SetUpdate(true).SetLink(playerImages.gameObject); ;
         
     }
+
+    public void UnLockedPlayer(string _name)
+    {
+        foreach(SelectablePlayer player in selectablePlayer)
+        {
+            if(player.name == _name)
+            {
+                player.UnLock();
+                _slidePlayerView(0);
+            }
+        }
+    }
 }
