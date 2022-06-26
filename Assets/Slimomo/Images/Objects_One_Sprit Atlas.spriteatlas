@@ -88,6 +88,11 @@ SpriteAtlas:
   - {fileID: 1702146797, guid: ec494292a1c7b4e06a84c45efea8ab67, type: 3}
   - {fileID: -751621234, guid: ec494292a1c7b4e06a84c45efea8ab67, type: 3}
   - {fileID: 21300000, guid: 6523bf926843dbb4e979cedb7370c43e, type: 3}
+  - {fileID: 2104633196, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
+  - {fileID: -48358946, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
+  - {fileID: 1523521448, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
+  - {fileID: 1578650420, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
+  - {fileID: -1723875953, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
   - {fileID: 21300000, guid: 02b3a7138fad1604694cf245ab1ca59d, type: 3}
   - {fileID: 21300000, guid: cefa2b23d10c33e4182f330dffd33b92, type: 3}
   - {fileID: 21300000, guid: 29e31833c32435a479338cf97dff5d06, type: 3}
@@ -449,6 +454,11 @@ SpriteAtlas:
   - Slider_Ant_8
   - Slider_Ant_10
   - Free Flat Media Right Icon
+  - Floors2_4
+  - Floors2_1
+  - Floors2_0
+  - Floors2_3
+  - Floors2_2
   - RightArrowC_Simple_Icons_UI
   - Free Flat Menu 11 Icon
   - DownArrowC_Simple_Icons_UI

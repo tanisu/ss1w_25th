@@ -25,7 +25,7 @@ public class StageSelector : MonoBehaviour
 
     private void _incrementStage()
     {
-        if (currentStageNum >= Config.I.stages.Length - 1 || currentStageNum >= maxStageNum) return;
+        if (currentStageNum >= Config.I.stages.Length - 1 /*|| currentStageNum >= maxStageNum*/) return;
         currentStageNum++;
         _updateStageText();
     }
