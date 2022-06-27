@@ -3859,9 +3859,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 1.35
-  force: 95
-  launcInterval: 0.08
+  waveInterval: 1.2
+  force: 85
+  launcInterval: 0.06
   waveSoundTime: 2
   contentSp: {fileID: 0}
   isStaticForce: 0
@@ -8176,9 +8176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 1.55
-  force: 95
-  launcInterval: 0.1
+  waveInterval: 1.35
+  force: 85
+  launcInterval: 0.08
   waveSoundTime: 2
   contentSp: {fileID: 0}
   isStaticForce: 0
@@ -13594,7 +13594,7 @@ MonoBehaviour:
   waterPool: {fileID: 323445837}
   waveInterval: 1.55
   force: 75
-  launcInterval: 0.043
+  launcInterval: 0.036
   waveSoundTime: 2
   contentSp: {fileID: 0}
   isStaticForce: 0
@@ -19460,9 +19460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 1.55
-  force: 75
-  launcInterval: 0.043
+  waveInterval: 1.25
+  force: 70
+  launcInterval: 0.035
   waveSoundTime: 2
   contentSp: {fileID: 0}
   isStaticForce: 0
@@ -21604,9 +21604,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 1.8
+  waveInterval: 1.5
   force: 62
-  launcInterval: 0.05
+  launcInterval: 0.035
   waveSoundTime: 2
   contentSp: {fileID: 0}
   isStaticForce: 0
@@ -26747,9 +26747,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterPool: {fileID: 323445837}
-  waveInterval: 1.55
+  waveInterval: 1.35
   force: 95
-  launcInterval: 0.1
+  launcInterval: 0.075
   waveSoundTime: 2
   contentSp: {fileID: 0}
   isStaticForce: 0
