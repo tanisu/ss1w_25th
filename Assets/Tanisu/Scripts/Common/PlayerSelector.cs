@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +25,11 @@ public class PlayerSelector : MonoBehaviour
         images = new List<Image>();
         for(int i = 0;i < selectablePlayer.Count; i++)
         {
+            
+            if(Array.Exists(Config.I.unlockedPlayers,x => x == selectablePlayer[i].name))
+            {
+                selectablePlayer[i].UnLock();
+            }
             selectablePlayer[i].transform.localPosition = new Vector3(i * -slideRange, selectablePlayer[i].transform.localPosition.y);
             images.Add(selectablePlayer[i].GetComponent<Image>());
         }
@@ -109,6 +115,10 @@ public class PlayerSelector : MonoBehaviour
             if(player.name == _name)
             {
                 player.UnLock();
+                //set playerprefs
+                //
+                Config.I.SetUnlockPlayer(_name);
+
                 _slidePlayerView(0);
             }
         }

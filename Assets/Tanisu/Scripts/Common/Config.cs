@@ -14,6 +14,8 @@ public class Config : MonoBehaviour
     public StageSelector stageSelector;
     public bool startUp;
     public int isRepeat;
+    public string[] unlockedPlayers;
+    
 
     LeanLocalization lean;
     public enum CONTROLLER
@@ -43,6 +45,9 @@ public class Config : MonoBehaviour
             Destroy(gameObject);
         }
 
+
+        unlockedPlayers = PlayerPrefs.GetString("UnlockedPlayer").Split(",");
+        
         isRepeat = PlayerPrefs.GetInt("Repeat");
         
         if(PlayerPrefs.GetString("SelectedPlayer") != null)
@@ -110,5 +115,18 @@ public class Config : MonoBehaviour
                 break;
         }
         stageSelector.ChangeLangView();
+    }
+
+    public void SetUnlockPlayer(string _name)
+    {
+        if(PlayerPrefs.GetString("UnlockedPlayer") == "")
+        {
+            PlayerPrefs.SetString("UnlockedPlayer", _name);
+        }
+        else
+        {
+            PlayerPrefs.SetString("UnlockedPlayer", PlayerPrefs.GetString("UnlockedPlayer") + "," + _name);
+        }
+       // Debug.Log(PlayerPrefs.GetString("UnlockedPlayer"));
     }
 }

@@ -28,8 +28,9 @@ public class AdMobReward : MonoBehaviour
         if (rewardeFlag)
         {
             rewardeFlag = false;
-            Debug.Log("Unlocked");
+            
             playerSelector.UnLockedPlayer(lockedName);
+            CreateAndLoadRewardedAd();
         }
     }
 
@@ -57,24 +58,24 @@ public class AdMobReward : MonoBehaviour
         }
         else
         {
-            Debug.Log("not loaded");
+           // Debug.Log("not loaded");
         }
     }
 
     public void HandleRewardedAdLoaded(object sender,EventArgs args)
     {
-        Debug.Log("reward loaded");
+       // Debug.Log("reward loaded");
 
     }
 
     public void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        Debug.Log("Failed : " + args.LoadAdError);
+       // Debug.Log("Failed : " + args.LoadAdError);
     }
 
     public void HandleRewardedAdClosed(object sender,EventArgs args)
     {
-        Debug.Log("Cancel");
+      //  Debug.Log("Cancel");
     }
 
     public void HandleUserEarnedReward(object sender,Reward args)
