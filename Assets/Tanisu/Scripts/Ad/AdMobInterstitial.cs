@@ -9,7 +9,7 @@ public class AdMobInterstitial : MonoBehaviour
     void Start()
     {
         _requestInterstitial();
-        Debug.Log("load start");
+       // Debug.Log("load start");
     }
 
     public void ShowAdMobInterstitial()
@@ -20,7 +20,7 @@ public class AdMobInterstitial : MonoBehaviour
         }
         else
         {
-            Debug.Log("not ready");
+          //  Debug.Log("not ready");
         }
     }
 
@@ -44,19 +44,19 @@ public class AdMobInterstitial : MonoBehaviour
 
     public void HandleOnAdLoaded(object sender,EventArgs args)
     {
-        Debug.Log("Loaded");
+      //  Debug.Log("Loaded");
     }
 
     public void HandleOnAdFailedToLoad(object sender ,AdFailedToLoadEventArgs args)
     {
-        Debug.Log("Failed : " + args.LoadAdError);
+      //  Debug.Log("Failed : " + args.LoadAdError);
     }
 
     public void HandleOnAdClose(object sender,EventArgs args)
     {
-        Debug.Log("Ad Close");
+     //   Debug.Log("Ad Close");
         interstitial.Destroy();
         _requestInterstitial();
-        Debug.Log("Ad ReLoad");
+     //   Debug.Log("Ad ReLoad");
     }
 }
