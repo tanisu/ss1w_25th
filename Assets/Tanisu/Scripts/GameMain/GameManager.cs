@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public float cupChangeTime;
     [SerializeField] MeshRenderer QuadRenderer;
     [SerializeField] ObjectPool[] objectPools;
-    [SerializeField] Timer timer;
+   // [SerializeField] Timer timer;
     [SerializeField] int interstitialCount;
     [SerializeField] AdMobInterstitial interstitial;
     [SerializeField] FadeSample fade;
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         SoundManager.I.FadeInBGM();
         SoundManager.I.PlayBGM(cups[currentCup].BGMTitle);
         StartCoroutine(_start());
-        timer.InitTimer();
+       // timer.InitTimer();
         
 
     }
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         cups[currentCup].ChangeColor();
         cups[currentCup].showWaterGenerator();
-        timer.GetRecordTime(currentCup);
+      //  timer.GetRecordTime(currentCup);
         
         
     }
@@ -131,20 +131,20 @@ public class GameManager : MonoBehaviour
             gameOver = false;
             _currentCupReset();
             player.SetRetry();
-            timer.TimerStop();
+         //   timer.TimerStop();
             
         }
-        if(gameState == GAMESTATE.PLAY)
+       /* if(gameState == GAMESTATE.PLAY)
         {
             
-            timer.TimerUpdate();
-        }
+           // timer.TimerUpdate();
+        }*/
 
     }
 
     public void TimerReset()
     {
-        timer.TimerReset();
+       // timer.TimerReset();
     }
 
     public void CupClear()
@@ -190,8 +190,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator _moveNext()
     {
-        timer.TimerStop();
-        timer.ScoreTime(currentCup);
+      //  timer.TimerStop();
+      //  timer.ScoreTime(currentCup);
         gameState = GAMESTATE.CLEAR;
         _clearEffect();
 
@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
 
 
         yield return new WaitForSeconds(2f);
-        timer.TimerReset();
+      //  timer.TimerReset();
         if (currentCup < cups.Length - 1)
         {
             currentCup++;
@@ -213,12 +213,12 @@ public class GameManager : MonoBehaviour
             
             _checkMaxCup();
             player.SetPlayerPos();
-            timer.GetRecordTime(currentCup);
+         //   timer.GetRecordTime(currentCup);
 
             _showAd();
 
             stage.transform.DOMoveX(stage.transform.position.x - stageX, cupChangeTime).OnComplete(() => {
-                timer.TimerReset();
+             //   timer.TimerReset();
                 cups[currentCup - 1].gameObject.SetActive(false);
                 _initNextCup();
                 player.switchRgbd();
