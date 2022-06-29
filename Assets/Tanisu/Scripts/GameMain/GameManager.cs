@@ -49,17 +49,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
-        if(Config.I.controller == Config.CONTROLLER.SWIPE)
-        {
-            swipe.SetActive(true);
-            buttons.SetActive(false);
-        }
-        else
-        {
-            swipe.SetActive(false);
-            buttons.SetActive(true);
-        }
+
+        SwitchController();
         cups = stage.GetComponentsInChildren<Cup>();
         stage.transform.position =  new Vector3(-stageX * currentCup,0) ;
         for (int i = 0; i < cups.Length; i++)
@@ -91,6 +82,19 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void SwitchController()
+    {
+        if (Config.I.controller == Config.CONTROLLER.SWIPE)
+        {
+            swipe.SetActive(true);
+            buttons.SetActive(false);
+        }
+        else
+        {
+            swipe.SetActive(false);
+            buttons.SetActive(true);
+        }
+    }
 
     void Update()
     {
