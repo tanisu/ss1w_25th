@@ -17,6 +17,7 @@ public class Title : MonoBehaviour
 
     void Start()
     {
+        SoundManager.I.FadeInBGM();
         SoundManager.I.PlayBGM(BGMSoundData.BGM.TITLE);
         SceneController.I.selectStageNum = PlayerPrefs.GetInt("maxCup");
         ChangePlayerSprite();
