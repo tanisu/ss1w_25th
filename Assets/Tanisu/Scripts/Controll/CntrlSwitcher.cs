@@ -10,8 +10,7 @@ public class CntrlSwitcher : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
+        slider.value = (int)Config.I.controller;
         slider.onValueChanged.AddListener(val => Config.I.SwitchController((int)val));
     }
-
-    
 }

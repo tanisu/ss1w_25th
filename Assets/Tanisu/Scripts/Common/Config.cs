@@ -85,7 +85,10 @@ public class Config : MonoBehaviour
     public void SwitchController(int _controller)
     {
         controller = (CONTROLLER)Enum.ToObject(typeof(CONTROLLER), _controller);
-        
+        if(SceneController.I.GetCurrentScene() == "TanisuScene")
+        {
+            GameManager.I.SwitchController();
+        }
     }
 
     public void SelectPlayer(string _playerName)
