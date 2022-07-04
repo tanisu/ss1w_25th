@@ -277,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247967800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.12, z: 0}
   m_LocalScale: {x: 0.8864748, y: 0.8864748, z: 0.8864748}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1555,17 +1555,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108472702}
   m_CullTransparentMesh: 1
---- !u!114 &1145287922 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8937108236016921257, guid: 72bdadb2dd73c8f4b914501e6fc42509, type: 3}
-  m_PrefabInstance: {fileID: 519919333}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fad1aac26c73c4db538e286d9d2f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1266746107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,7 +3072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: 303}
+  m_AnchoredPosition: {x: 145.6, y: 303}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3307399467050868637
@@ -3168,29 +3157,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 31411941}
     m_Modifications:
-    - target: {fileID: 2921948320525394698, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 4190934248457235294, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.8
       objectReference: {fileID: 0}
-    - target: {fileID: 4172814871364098198, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4172814871364098198, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1145287922}
-    - target: {fileID: 4172814871364098198, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowAdmobReward
-      objectReference: {fileID: 0}
-    - target: {fileID: 4172814871364098198, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AdMobReward, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4172814871364098198, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 4190934248481464804, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4190934249053465335, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_Name
@@ -3284,77 +3257,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4190934249053465337, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249053465337, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_Color.b
-      value: 0.34117648
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249053465337, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_Color.g
-      value: 0.37254903
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249220488860, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249220488860, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1145287922}
-    - target: {fileID: 4190934249220488860, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowAdmobReward
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249220488860, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AdMobReward, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249220488860, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249293011567, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249293011567, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1145287922}
-    - target: {fileID: 4190934249293011567, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowAdmobReward
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249293011567, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AdMobReward, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249293011567, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249321111341, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249321111341, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1145287922}
-    - target: {fileID: 4190934249321111341, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowAdmobReward
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249321111341, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AdMobReward, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249321111341, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 4190934249504632882, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 4190934249529189322, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3376,45 +3281,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4190934249696097429, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+    - target: {fileID: 4190934250184887535, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.7
       objectReference: {fileID: 0}
-    - target: {fileID: 4190934249696097429, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1145287922}
-    - target: {fileID: 4190934249696097429, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowAdmobReward
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249696097429, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AdMobReward, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249696097429, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249792360103, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249792360103, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1145287922}
-    - target: {fileID: 4190934249792360103, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowAdmobReward
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249792360103, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AdMobReward, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190934249792360103, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 6527687896649745080, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.100003
       objectReference: {fileID: 0}
     - target: {fileID: 6527687897876546306, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_AnchorMax.y
