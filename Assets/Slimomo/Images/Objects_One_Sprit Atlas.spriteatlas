@@ -53,6 +53,7 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: c53a8d00e4c3bb34998868ca02b1cd74, type: 3}
+  - {fileID: 21300000, guid: 9dc796a0e893f44d4950ea715aee1f0c, type: 3}
   - {fileID: 21300000, guid: 640b86b0058321e4fab8001b90531991, type: 3}
   - {fileID: 21300000, guid: e8e788d00a023ef4ea9a8e321c8efb2a, type: 3}
   - {fileID: 21300000, guid: a46e79e029da1d346bafdc2c86ce723e, type: 3}
@@ -88,6 +89,7 @@ SpriteAtlas:
   - {fileID: 1702146797, guid: ec494292a1c7b4e06a84c45efea8ab67, type: 3}
   - {fileID: -751621234, guid: ec494292a1c7b4e06a84c45efea8ab67, type: 3}
   - {fileID: 21300000, guid: 6523bf926843dbb4e979cedb7370c43e, type: 3}
+  - {fileID: 21300000, guid: b52466c259bc041c69b811bdf8978bbd, type: 3}
   - {fileID: 21300000, guid: d931e5d2bf02e4af3ac134e4be3780fa, type: 3}
   - {fileID: 2104633196, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
   - {fileID: -48358946, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
@@ -95,6 +97,10 @@ SpriteAtlas:
   - {fileID: 1578650420, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
   - {fileID: -1723875953, guid: 8e3300e2e97eb422c88e42d85d7f09dd, type: 3}
   - {fileID: 21300000, guid: 02b3a7138fad1604694cf245ab1ca59d, type: 3}
+  - {fileID: -250436411, guid: 4f042e13422e14867af9f9655e43304e, type: 3}
+  - {fileID: 1802155411, guid: 4f042e13422e14867af9f9655e43304e, type: 3}
+  - {fileID: -57364100, guid: 4f042e13422e14867af9f9655e43304e, type: 3}
+  - {fileID: 1522895466, guid: 4f042e13422e14867af9f9655e43304e, type: 3}
   - {fileID: 21300000, guid: cefa2b23d10c33e4182f330dffd33b92, type: 3}
   - {fileID: 21300000, guid: 29e31833c32435a479338cf97dff5d06, type: 3}
   - {fileID: 21300000, guid: feca5663bb4a24ea0b830a31588592f0, type: 3}
@@ -437,6 +443,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5a439fff18a35334ca3d76dc7446532d, type: 3}
   m_PackedSpriteNamesToIndex:
   - Free Flat Menu 9 Icon
+  - Icon_Front
   - Free Flat Lock Closed Icon
   - Free Flat Magnify Plus Icon
   - Free Flat Arrow 6 E Icon
@@ -472,6 +479,7 @@ SpriteAtlas:
   - Slider_Ant_8
   - Slider_Ant_10
   - Free Flat Media Right Icon
+  - Icon_BG
   - SplashFole
   - Floors2_4
   - Floors2_1
@@ -479,6 +487,10 @@ SpriteAtlas:
   - Floors2_3
   - Floors2_2
   - RightArrowC_Simple_Icons_UI
+  - New_logos_3
+  - New_logos_2
+  - New_logos_1
+  - New_logos_0
   - Free Flat Menu 11 Icon
   - DownArrowC_Simple_Icons_UI
   - La
