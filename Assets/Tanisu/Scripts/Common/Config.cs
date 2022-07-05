@@ -80,6 +80,7 @@ public class Config : MonoBehaviour
                 lang = LANG.EN;
                 break;
         }
+        
     }
 
     public void SwitchController(int _controller)
@@ -130,6 +131,7 @@ public class Config : MonoBehaviour
         {
             PlayerPrefs.SetString("UnlockedPlayer", PlayerPrefs.GetString("UnlockedPlayer") + "," + _name);
         }
-       // Debug.Log(PlayerPrefs.GetString("UnlockedPlayer"));
+        unlockedPlayers = PlayerPrefs.GetString("UnlockedPlayer").Split(",");
+        
     }
 }

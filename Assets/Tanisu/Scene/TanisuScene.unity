@@ -3198,7 +3198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190934249053465336, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4190934249053465336, guid: d2b80eefc0f3fa54893b9e57e8337031, type: 3}
       propertyPath: m_AnchorMax.x
@@ -13914,7 +13914,7 @@ RectTransform:
   m_GameObject: {fileID: 908954836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2487, y: 0.2487, z: 0.2487}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1506481214}
@@ -13922,8 +13922,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -152, y: 305}
-  m_SizeDelta: {x: 100, y: 91.29}
+  m_AnchoredPosition: {x: -140, y: 305}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908954838
 MonoBehaviour:
@@ -25984,9 +25984,10 @@ MonoBehaviour:
   closeButton: {fileID: 83760529}
   batuButton: {fileID: 186498494}
   titleButton: {fileID: 1967308002}
-  slidePanel: {fileID: 2036601765}
+  optionPanel: {fileID: 2036601765}
   BGMSlider: {fileID: 2066836009}
   fade: {fileID: 640454962}
+  stageSelector: {fileID: 223851640}
 --- !u!114 &1506481211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30128,8 +30129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148, y: 306}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 140, y: 306}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789169389
 MonoBehaviour:
