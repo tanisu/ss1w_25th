@@ -249,9 +249,10 @@ MonoBehaviour:
   closeButton: {fileID: 1375080730}
   batuButton: {fileID: 4190934249734286626}
   titleButton: {fileID: 4190934249734286625}
-  slidePanel: {fileID: 1471645655}
+  optionPanel: {fileID: 1471645655}
   BGMSlider: {fileID: 280149500}
   fade: {fileID: 930975332}
+  stageSelector: {fileID: 1573267179}
 --- !u!1 &247967800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,8 +3073,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 145.6, y: 303}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 140, y: 303}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3307399467050868637
 MonoBehaviour:

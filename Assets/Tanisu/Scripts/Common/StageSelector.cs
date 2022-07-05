@@ -18,7 +18,15 @@ public class StageSelector : MonoBehaviour
         increment.onClick.AddListener(() => _incrementStage());
         decrement.onClick.AddListener(() => _decrementStage());
         maxStageNum = PlayerPrefs.GetInt("maxCup");
-        currentStageNum = maxStageNum;
+        if(SceneController.I.GetCurrentScene() == "TanisuScene")
+        {
+            currentStageNum = GameManager.I.currentCup;
+        }
+        else
+        {
+            currentStageNum = maxStageNum;
+        }
+        
         ChangeLangView();
         _updateStageText();
     }
@@ -46,6 +54,21 @@ public class StageSelector : MonoBehaviour
 
     }
 
+    public void UpdateCurrentStage()
+    {
+        if (SceneController.I.GetCurrentScene() == "TanisuScene")
+        {
+            currentStageNum = GameManager.I.currentCup;
+            
+        }
+        else
+        {
+            currentStageNum = maxStageNum;
+        }
+        ChangeLangView();
+        _updateStageText();
+    }
+
     public void ChangeLangView()
     {
         if (Config.I.lang == Config.LANG.JP)
@@ -57,10 +80,12 @@ public class StageSelector : MonoBehaviour
             stagesText = Config.I.stages;
         }
         UpdateStageText();
+
     }
 
     public void UpdateStageText()
     {
+        
         stageText.text = $"{currentStageNum + 1}\n{stagesText[currentStageNum]}";
     }
     

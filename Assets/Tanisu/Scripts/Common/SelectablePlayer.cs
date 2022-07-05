@@ -14,7 +14,12 @@ public class SelectablePlayer : MonoBehaviour
         btn = GetComponent<Button>();
         reward = GameObject.FindWithTag("Admob").GetComponent<AdMobReward>() ;
         btn.onClick.AddListener(() => {
-            reward.ShowAdmobReward(gameObject.name);
+            if(isLocked == true)
+            {
+                
+                reward.ShowAdmobReward(gameObject.name);
+            }
+            
         });
     }
 

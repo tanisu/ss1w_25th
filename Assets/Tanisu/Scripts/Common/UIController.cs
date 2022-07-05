@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class UIController : MonoBehaviour
 {
     [SerializeField] Button  soundButton,closeButton,batuButton,titleButton;
-    [SerializeField] GameObject slidePanel;
+    [SerializeField] GameObject optionPanel;
     [SerializeField] Slider BGMSlider;
     [SerializeField] FadeSample fade;
+    [SerializeField] StageSelector stageSelector;
+    
 
     GameManager.GAMESTATE beforState;
     bool isPlaing;
@@ -49,6 +51,7 @@ public class UIController : MonoBehaviour
     //パネルの表示に時間差(ボタン音の後に）
     IEnumerator showPanelCO()
     {
+        
         yield return new WaitForSeconds(0.35f);
         if (isPlaing)
         {
@@ -56,8 +59,9 @@ public class UIController : MonoBehaviour
             beforState = GameManager.I.gameState;
             GameManager.I.gameState = GameManager.GAMESTATE.WAIT;
         }
-        slidePanel.SetActive(true);
-
+        stageSelector.UpdateCurrentStage();
+        optionPanel.SetActive(true);
+        
     }
 
 
@@ -81,7 +85,7 @@ public class UIController : MonoBehaviour
 
         }
         SoundManager.I.PlaySE(SESoundData.SE.MENU_OUT);
-        slidePanel.SetActive(false);
+        optionPanel.SetActive(false);
 
     }
 
