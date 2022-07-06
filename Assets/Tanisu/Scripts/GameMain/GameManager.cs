@@ -110,15 +110,15 @@ public class GameManager : MonoBehaviour
 
         //    SceneController.I.ToTitle();
         //}
-        if ((Input.GetKeyDown(KeyCode.Space) && gameState == GAMESTATE.PLAY))
-        {
-            StartCoroutine(_moveNext());
-        }
+        //if ((Input.GetKeyDown(KeyCode.Space) && gameState == GAMESTATE.PLAY))
+        //{
+        //    StartCoroutine(_moveNext());
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            GameOver();
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    GameOver();
+        //}
 
         if (gameState == GAMESTATE.PLAY && cupClear)
         {
@@ -135,8 +135,6 @@ public class GameManager : MonoBehaviour
             gameOver = false;
             _currentCupReset();
             player.SetRetry();
-       
-            
         }
        
 
